@@ -5054,9 +5054,9 @@ expressed without it.
 
 \item $t$, $t_1$, $t_2$, $t_3$ mean different touches from the machine 
 
-\item $a_\lambda$ means a's eyes are open or a opens its eyes 
+\item $a\wedge$ means a's eyes are open or a opens its eyes 
 
-\item $a_v$ means a's eyes are shut or a shuts its eyes 
+\item $a\vee$ means a's eyes are shut or a shuts its eyes 
 
 \item $a\equiv b$ means a blows on b's hand 
 
@@ -5098,8 +5098,8 @@ may be falling toward you. You must instantly jump aside.
 
 \begin{tabular}
 	\begin{tabular}
-		$s_1\lambda$ & $s_{1v}$ \\
-		$u\lambda$ & $(t\longdivision{u})$ \\
+		$s_1\wedge$ & $s_1\vee$ \\
+		$u\wedge$ & $(t\longdivision{u})$ \\
 	\end{tabular} &
 	$u\lrcorner$ \\
 \end{tabular}
@@ -5110,7 +5110,7 @@ may be falling toward you. You must instantly jump aside.
 tackle you. You must instantly jump to one side. 
 
 		\begin{tabular}
-			$u\lambda$ & \begin{tabular}
+			$u\wedge$ & \begin{tabular}
 				$s\overbracket{u}$ \\
 				$(t\overbrace{u})$ \\
 			\end{tabular} & $u\lrcorner$ \\
@@ -5120,7 +5120,7 @@ tackle you. You must instantly jump to one side.
 be about to shove from behind. Jump to one side. 
 
 		\begin{tabular}
-			$u\lambda$ & \begin{tabular}
+			$u\wedge$ & \begin{tabular}
 				$s^\infty u$\\
 				$(t\supset u)$ \\
 			\end{tabular} & $u\lrcorner$ \\
@@ -5134,11 +5134,11 @@ tackles you, a touch shoves you, or you can't keep your mind on the exhibit
 immediately open your eyes. 
 
 		\begin{tabular}
-			$u_v$ & \begin{tabular}
+			$u\vee$ & \begin{tabular}
 				$t\overbrace{u}$ \\ \midrule
 				$t\supset u$ \\ midrule
 				$u$ inattentive \\
-			\end{tabular} & $u\lambda$ \\
+			\end{tabular} & $u\wedge$ \\
 		\end{tabular}
 
 \emph{(A horizontal line between action symbols means \emph{or.} With it, instructions can be combined)}
@@ -5149,7 +5149,7 @@ immediately open your eyes.
 falling on you. You must instantly jump to the side away from the breath. 
 
 		\begin{tabular}
-			$u_v$ & \begin{tabular}
+			$u\vee$ & \begin{tabular}
 				$t_1\equiv u$ \\
 				$t_2\longdivision{u}$ \\
 			\end{tabular} & $u\lrcorner$ \\
@@ -5163,7 +5163,7 @@ falling on you. You must instantly jump to the side away from the breath.
 you. You must instantly jump aside. 
 
 \begin{tabular}
-	$u_v$ & \begin{tabular}
+	$u\vee$ & \begin{tabular}
 		$s^\infty u$ \\
 		($t\overbrace{u}$) \\
 	\end{tabular} & $u\lrcorner$ \\
@@ -5173,7 +5173,7 @@ you. You must instantly jump aside.
 may be about to shove you from behind. Jump aside. 
 
 \begin{tabular}
-	$u_v$ & \begin{tabular}
+	$u\vee$ & \begin{tabular}
 		$t_1\overbracket{u}$ \\
 		($t_2\supset u$) \\
 	\end{tabular} & $u\lrcorner$ \\
@@ -5184,7 +5184,7 @@ close your eyes and go around with your hands in front of you, shoving
 touches whenever you feel them. 
 
 \begin{tabular}
-	$u_v$ & $u\supset t$ \\
+	$u\vee$ & $u\supset t$ \\
 \end{tabular}
 
 \textsc{Now try instr. 8, remembering and following the other instructions about closed eyes (instr. 4--7).
@@ -5200,7 +5200,7 @@ your eyes.
 \textsc{Before you follow this instruction you must have mastered the preceeding instructions about closed eyes.}
 
 $$
-u_\lambda\ s_2\lambda(s_1\longdivision{s_2}) u_v
+u\wedge\ s_2\wedge(s_1\longdivision{s_2}) u\vee
 $$
 
 (Keep going) 
@@ -5214,9 +5214,9 @@ sight about to be tackled has closed eyes, you must immediately shadow
 them. 
 
 \begin{tabular}
-	$u\lambda$ & \begin{tabular}
-		$s_2\lambda$ & $s_1\overbrace{s_2}$ & $u\overbracket{s_1s_2}$ \\ \midrule
-		$s_{2v}$ & $(s_1\overbrace{s_2})$ & $u^\infty s_2$
+	$u\wedge$ & \begin{tabular}
+		$s_2\wedge$ & $s_1\overbrace{s_2}$ & $u\overbracket{s_1s_2}$ \\ \midrule
+		$s_2\vee$ & $(s_1\overbrace{s_2})$ & $u^\infty s_2$
 	\end{tabular} \\
 \end{tabular}
 
@@ -5226,9 +5226,9 @@ about to be pushed has closed eyes, you must immediately jump over both
 sights. 
 
 \begin{tabular}
-	$u\lambda$ & \begin{tabular}
-		$s_2\lambda$ & $(s_1\supset s_2)$ & $u^\infty s_2$ \\ \midrule
-		$s_2v$ & $(s_1\supset s_2)$ & $u\overbracket{s_1s_2}$ \\
+	$u\wedge$ & \begin{tabular}
+		$s_2\wedge$ & $(s_1\supset s_2)$ & $u^\infty s_2$ \\ \midrule
+		$s_2\vee$ & $(s_1\supset s_2)$ & $u\overbracket{s_1s_2}$ \\
 	\end{tabular} \\
 \end{tabular}
 \end{enumerate}
@@ -5255,7 +5255,7 @@ You are now in the second phase of transforming yourself with the
 perception-dissociator. Throughout this phase, you must stoop or crouch 
 somewhat. That is, you must keep yourself below the height of your neck 
 when you stand straight---except when you jump over a sight. The symbol is 
-$u\sfrac{3}{4}$. $u\sfrac{3}{4}\lambda$ means that you crouch and close your eyes. Now crouch. 
+$u\sfrac{3}{4}$. $u\sfrac{3}{4}\wedge$ means that you crouch and close your eyes. Now crouch. 
 
 The numbered instructions for this phase are so similar to those in the 
 preceeding phase that they will be given in symbols only. Changes are noted 
@@ -5264,20 +5264,20 @@ parenthetically. You may turn back if you forget symbols.
 \begin{enumerate}
 \item \begin{tabular}
 		\begin{tabular}
-			$s_1\lambda$ & $s_1v$ \\
-			$u\sfrac{3}{4}\lambda$ & $(t\longdivision{u})$ \\
+			$s_1\wedge$ & $s_1\vee$ \\
+			$u\sfrac{3}{4}\wedge$ & $(t\longdivision{u})$ \\
 		\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}\lambda$ & \begin{tabular}
+		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
 			$s\overbracket{u}$ \\
 			$t\overbrace{u}$ \\
 		\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}\lambda$ & \begin{tabular}
+		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
 			$t\equiv u$ \\
 			$t_2\supset u$ \\
 		\end{tabular} & $u\lrcorner$ \\
@@ -5285,22 +5285,22 @@ parenthetically. You may turn back if you forget symbols.
 \emph{(change component blows on you instead of shadowing you)}
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}v$ & \begin{tabular}
+		$u\sfrac{3}{4}\vee$ & \begin{tabular}
 			$t\overbrace{u}$ \\ \midrule
 			$t\supset u$ \\ \midrule
 			$u$ inattentive \\
-		\end{tabular} & $u\lambda$ \\
+		\end{tabular} & $u\wedge$ \\
 \end{tabular}
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}v$ & \begin{tabular}
+		$u\sfrac{3}{4}\vee$ & \begin{tabular}
 			$t_1\equiv u$ \\
 			$(t_2\longdivision{u})$ \\
 		\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}v$ & \begin{tabular}
+		$u\sfrac{3}{4}\vee$ & \begin{tabular}
 			$s^\infty u$ \\
 			$(t\overbrace{u})$ \\
 		\end{tabular} & $u\lrcorner$ \\
@@ -5314,7 +5314,7 @@ parenthetically. You may turn back if you forget symbols.
 \end{tabular}
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}v$ & $u\supset t$ \\
+		$u\sfrac{3}{4}\vee$ & $u\supset t$ \\
 \end{tabular}
 
 The big change comes next. 
@@ -5324,8 +5324,8 @@ The big change comes next.
 \clearpage
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}\lambda s_2\lambda (s_1\longdivision{s_2}) uv$ & and also \\
-	$u\sfrac{3}{4}\lambda s_2v (s_1\longdivision{s_2})$ & $u\equiv s_2$ \\
+		$u\sfrac{3}{4}\wedge s_2\wedge (s_1\longdivision{s_2}) u\vee$ & and also \\
+	$u\sfrac{3}{4}\wedge s_2\vee (s_1\longdivision{s_2})$ & $u\equiv s_2$ \\
 \end{tabular}
 
 That is, if you see a sight falling or stepping on another sight with closed 
@@ -5333,16 +5333,16 @@ eyes, you must immediately blow on the sight on the ground. This is an
 addition. 
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}\lambda$ & \begin{tabular}
-			$s_2\lambda (s_1\overbrace{s_2}) u\overbracket{s_1s_2}$ \\ \midrule
-			$s_2v (s_1\overbrace{s_2}) u^\infty s_2$ \\
+		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
+			$s_2\wedge (s_1\overbrace{s_2}) u\overbracket{s_1s_2}$ \\ \midrule
+			$s_2\vee (s_1\overbrace{s_2}) u^\infty s_2$ \\
 		\end{tabular}
 \end{tabular}
 
 \item \begin{tabular}
-		$u\sfrac{3}{4}\lambda$ & \begin{tabular}
-			$s_2\lambda (s_1\supset s_2) u\equiv s_2$ \\ \midrule
-			$s_2 v (s_1\supset s_2) u\overbracket{s_1s_2}$ \\
+		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
+			$s_2\wedge (s_1\supset s_2) u\equiv s_2$ \\ \midrule
+			$s_2\vee (s_1\supset s_2) u\overbracket{s_1s_2}$ \\
 		\end{tabular}
 \end{tabular}
 \emph{(change: you blow on $s_2$)}
@@ -5359,9 +5359,17 @@ If you can't practice the instructions because all the components have
 vanished, skip to Page 18. 
 
 
-12. Adding to Instruction 8, if you have time left over from following 
+\item Adding to Instruction 8, if you have time left over from following 
 other instructions, you may also keep your eyes open and jump over, blow 
 on, or shadow sights. 
+
+\begin{tabular}
+	$u\sfrac{3}{4}\wedge$ & \begin{tabular}
+		$u\overbracket{s}$ \\ \midrule
+		$u^\infty s$ \\ \midrule
+		$u\equiv s$ \\
+	\end{tabular} \\
+\end{tabular}
 
 \emph{(page 12)}
 
