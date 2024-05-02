@@ -55,6 +55,9 @@
 	\end{hangparas}
 	}
 
+\newcommand{\postulate}[1]{
+	\emph{Postulate #1}.}
+
 \begin{document}
 
 \graphicspath{{img/}}
@@ -7221,12 +7224,12 @@ could we convey the substance underlying the notations which we call
 admissble contradictions, and motivate the unusual collection of postulates 
 which we will adopt. 
 
-All properties will be thought of as 'parameters,' such as time, 
+All properties will be thought of as "parameters," such as time, 
 location, color, density, acidity, etc. Different parameters will be represented 
 by the letters x, y, z, .... Different values of one parameter, say x, will be 
-represented by x1, X9, .... Each parameter has a domain, the set of all values 
-it can assume. An ensembie (Xo, Yo: Zo, ...) will stand for the single possible 
-phenomenon which has x-value xg, y-value yo, etc. Several remarks are in 
+represented by $x_1$, $x_2$, .... Each parameter has a domain, the set of all values 
+it can assume. An ensembie ($x_0$, $y_0$, $z_0$, ...) will stand for the single possible 
+phenomenon which has x-value $x_0$, y-value $y_0$, etc. Several remarks are in 
 order. My ensembles are a highly refined version of Rudolph Carnap's 
 intensions or intension sets (sets of all possible entities having a given 
 property). The number of parameters, or properties, must be supposed to be 
@@ -7235,30 +7238,23 @@ parameter, I assure that there will be only one such possible phenomenon. In
 other words, my intension sets are all singletons. Another point is that if we 
 specify some of the parameters and specify their ranges, we limit the 
 phenomena which can be represented by our "ensembles." If our first 
-parameter is time and its range ts R, and our second parameter is spatial 
-
-
-location and its range is R , then we are limited to phenomena which are 
-point phenomena in space and time. !f we have a parameter for speed of 
+parameter is time and its range is $R$, and our second parameter is spatial 
+location and its range is $R^2$, then we are limited to phenomena which are 
+point phenomena in space and time. If we have a parameter for speed of 
 motion, the motion will have to be infinitesimal. We cannot have a 
 parameter for weight at all; we can only have one for density. The physicist 
 encounters similar conceptual problems, and does noi find them 
 insurmountable. 
 
-Let (x4, y, Z, ...), (x9, y, Z, -..), etc. stand for possible phenomena 
-
-
-195 
-
-
+Let ($x_1$, $y$, $z$, ...), ($x_2$, $y$, $z$, ...), etc. stand for possible phenomena 
 which all differ from each other in respect to parameter x but are identical in 
-respect to every other parameter y, z, ... . {If the ensembles were intension 
-sets, they would be disjoint precisely because x takes a different value in 
-each.) A "simple contradiction family" of ensembles is the family [(x4,y, 2, 
-aay (x9, y, Z, ...), «J. The family may have any number of ensembles. It 
-actually represents many families, because y, z, ... are allowed to vary; but 
+respect to every other parameter $y$, $z$, ... . (If the ensembles were intension 
+sets, they would be disjoint precisely because $x$ takes a different value in 
+each.) A "simple contradiction family" of ensembles is the family [($x_1$,$y$,$z$, 
+...), ($x_2$, $y$, $z$, ...), ...]. The family may have any number of ensembles. It 
+actually represents many families, because $y$, $z$, ... are allowed to vary; but 
 each of these parameters must assume the same value in all ensembles in any 
-one family. x, on the other hand, takes different values in each ensemble in 
+one family. $x$, on the other hand, takes different values in each ensemble in 
 any one family, values which may be fixed. A parameter which has the same 
 value throughout any one family will be referred to as a consistency 
 parameter. A parameter which has a different value in each ensemble in a 
@@ -7280,12 +7276,12 @@ i.e. more than one parameter satisfying all the conditions we put on x. Such
 con families are not "simple." Let the cardinality of a con family be 
 indicated by a number prefixed to "family," and let the number of con 
 parameters be indicated by a number prefixed to "con." Remembering that 
-consistency parameters are understood, a 2-con °-family would appear as 
-(x4, Yq). (x9, y), sei. 
+consistency parameters are understood, a 2-con $\infty$-family would appear as 
+[($x_1$, $y_1$). ($x_2$, $y_2$), ...].
 
-A "contradiction" or "y - object" is not explicitly defined, but it is 
-notated by putting "y" in front of a con family. The characteristics of y 
--objects, or cons, are established by introducing additional postulates in the 
+A "contradiction" or "$\varphi$-object" is not explicitly defined, but it is 
+notated by putting "$\varphi$" in front of a con family. The characteristics of $\varphi$-objects, 
+or cons, are established by introducing additional postulates in the 
 theory. 
 
 In this theory, every con is either "admissible" or "not admissible." 
@@ -7296,11 +7292,6 @@ on 1-con families.) However, the postulate will specify other requirements for
 admissibility besides having the given con parameter. The requisite 
 cardinality of the con family will be specified. Also, the subsets will be 
 specified to which the con parameter must be restricted in each ensemble in 
-
-
-196 
-
-
 the con. A con must satisfy all postulated requirements before it is admitted 
 by the postulate. 
 
@@ -7309,117 +7300,107 @@ cons postulated to be am implies the admissibility of any other cons. The
 method we have developed for solving such problems will be expressed as a 
 collection of posiulates for our theory. 
 
-Postulate 1. Given y[(x € A), (x € B}, ...] am, where x ¢ A, xe B, ... are the 
-restrictions on the con parameter, and given A1CA, By CB, ..., where Ay, By, 
-.. & @, then gl(x € Ay), (x € By),...] is am. This postulate is obviously 
-equivalent to the postulate that y[{x € ANC), (xe BNC),...] is am, where C is 
-a subset of x's domain end the intersections are non-empty. (Proof: Choose 
-C= A, UB... .) 
+\postulate{1} Given $\varphi[(x\in A),(x\in B),\ldots]$ am, where $x\in A$, $x\in B$, ... are the 
+restrictions on the con parameter, and given $A_1\subset A$, $B_1\subset B$, ..., where $A_1,B_1,...\neq\emptyset$, then 
+$\varphi[(x\in A_1),(x\in B_1),...]$ is am. This postulate is obviously 
+equivalent to the postulate that $\varphi[(x\in A\cap C),(x\in B\cap C),...]$ is am, where $C$ is 
+a subset of $x$'s domain end the intersections are non-empty. (Proof: Choose 
+$C=A_1\cup B_1\cup\ldots$ .) 
 
-Postulate 2. If x and y are simple amcon parameters, then a con with con 
-parameters x and y is am if it satisfies the postulated requirements 
-concerning amcons on x and the postulated requirements concerning amcons 
-on y. 
+\postulate{2} If $x$ and $y$ are simple amcon parameters, then a con with con 
+parameters $x$ and $y$ is am if it satisfies the postulated requirements 
+concerning amcons on $x$ and the postulated requirements concerning amcons 
+on $y$. 
 
-The effect of all! our assumptions up to now is to make parameters 
+The effect of all our assumptions up to now is to make parameters 
 totally independent. They do not interact with each other at all. 
 
-We will now introduce some specific amcons by postulate. If s is speed, 
-consideration of the waterfall illusion suggests that we postulate y[(s>O), 
-{s=O)] to be am. (But with this postulate, we have come a long way from 
-the literary description of the waterfall illusion! } Note the implicit 
-requirements that the con family must be a 2-family, and that s must be 
-selected from [O] in one ensemble and from [s: s>O] in the other ensemble. 
+We will now introduce some specific amcons by postulate. If $s$ is speed, 
+consideration of the waterfall illusion suggests that we postulate 
+$\varphi[(s>O),(s=O)]$ to be am. (But with this postulate, we have come a long way from 
+the literary description of the waterfall illusion!) Note the implicit 
+requirements that the con family must be a 2-family, and that $s$ must be 
+selected from $[O]$ in one ensemble and from ${s:s>O}$ in the other ensemble. 
 
-If tis time, t € R, consideration of the phrase "b years ago," which is an 
-amcon in the natural language, suggests that we postulate y[(t): a-b<t<v-b & 
-av] to be am, where a is a fixed time expressed in years A.D., bisa fixed 
-number of years, and v is a variable--the time of the present instant in years 
+If $t$ is time, $t\in R$, consideration of the phrase "b years ago," which is an 
+amcon in the natural language, suggests that we postulate $\varphi[(t):a-b\leq t\leq v-b &a\leq v]$ to be am,
+where $a$ is a fixed time expressed in years A.D., $b$ is a fixed 
+number of years, and $v$ is a variable---the time of the present instant in years 
 A.D. The implicit requirements are that the con family must have the 
-cardinality of the continuum, and that every value of t from a-b to v-b must 
-appear in an ensemble, where v is a variable. Ensembles are thus continually 
+cardinality of the continuum, and that every value of $t$ from $a-b$ to $v-b$ must 
+appear in an ensemble, where $v$ is a variable. Ensembles are thus continually 
 added to the con family. Note that there is the non-trivial possibility of using 
-this postulate more than once. We could admit a con for a = 1964, b=, 
-then admit another for a=1963, b=2, and admit stifl another for a=1963, 
-b=1; etc. 
+this postulate more than once. We could admit a con for $a=1964$, $b=\sfrac{1}{2}$
+then admit another for $a=1963$, $b=2$, and admit still another for $a=1963$,
+$b=1$; etc. 
 
-Let p be spatial location, p é R2. Let P; be a non-empty, bounded, 
-connected subset of R2. Restriction subsets will be selected from the P;. 
-Specifically, let Py APs = ¢. Consideration of a certain dreamed illusion 
-
-
-suggests that we admit y[(p € P;), (p € Py)]. The implicit requirements are 
+Let $p$ be spatial location, $p\in R^2$. Let $P_i$ be a non-empty, bounded, 
+connected subset of $R^2$. Restriction subsets will be selected from the $P_i$.
+Specifically, let $P_1\cap P_2=\emptyset$. Consideration of a certain dreamed illusion 
+suggests that we admit $\varphi[(p\in P_1),(p\in P_2)]$. The implicit requirements are 
 obvious. But in this case, there are more requirements in the postulate of 
-
-
-197 
-
-
-admissibility. Vay we apply the postulate twice? May we admit first y[(pe 
-P4), (pe P5)} and then y[(peP3), (pePg)], where P2 and Py are arbitrary 
-P;'s different from P; and Po? The answer is no. We may admit y [(p € P4), 
-(p € Po)] for arbitrary Py and Po, Py OP = «3, but having made this "initial 
-choice," the postulate cannot be reused for arbitrary P3 and Pg. A second 
-con y[(p € Pa), (p € P4)], PgNP4 = 6, may be postulated to be am only if 
-P4UP3, PoUP3, PUP, and PoUP4 are not connected. In other words, you 
-may postulate many cons of the form y[(p é Pi), (p € Pi)] to be am, but 
+admissibility. May we apply the postulate twice? May we admit first 
+$\varphi[(p\in P_1),(p\in P_2)]$ and then $\varphi[(p\in P_3),(p\in P_4)]$, where $P_3$ and $P_4$ are arbitrary 
+$P_i$'s different from $P_1$ and $P_2$? The answer is no. We may admit 
+$\varphi[(p\in P_1),(p\in P_2)]$ for arbitrary $P_1$ and $P_2$, $P_1\cap P_2=\emptyset$, but having made this "initial 
+choice," the postulate cannot be reused for arbitrary $P_3$ and $P_4$. A second 
+con $\varphi[(p\in P_3),(p\in P_4)]$, $P_3\cap P_4=\emptyset$, may be postulated to be am only if 
+$P_1\cup P_3$,$P_2\cup P_3$,$P_1\cup P_4$, and $P_2\cup P_4$ are not connected. In other words, you 
+may postulate many cons of the form $\varphi[(p\in P_i),(p\in P_j)]$ to be am, but 
 your first choice strongly circumscribes your second choice, etc. 
 
 We will now consider certain results in the logic of amcons which were 
 established by extensive elucidation of our intuitions. The issue is whether 
 our present axiomization produces the same results. We will express the 
 results in our latest notation as far as possible. Two more definitions are 
-necessary. The parameter @ is the angle of motion of an infinitesimally 
+necessary. The parameter $\theta$ is the angle of motion of an infinitesimally 
 moving phenomenon, measured in degrees with respect to some chosen axis. 
-Then, recalling the set Py, choose Ps and Pa so that Py = P5UPs and 
-PEOPe=¢. 
+Then, recalling the set $P_1$, choose $P_5$ and $P_6$ so that $P_1=P_5\cup P_6$ and 
+$P_5\cap P_6=\emptyset$. 
 
 The results by which we will judge our axiomization are as follows. 
 
-1: glS, C,UCs] can be inferred to be am. 
+\begin{enumerate} % TODO with colons?
+
+	\item $\varphi[S, C_1\cup C_2]$ can be inferred to be am. 
 
 Our present notation cannot express this result, because it does not 
 distinguish between different types of uniform motion throughout a finite 
-region, i.e. the types M, Cy, Co, Dy, and Do. Instead, we have infinitesimal 
+region, \ie the types $M$, $C_1$, $C_2$, $D_1$, and $D_2$. Instead, we have infinitesimal 
 motion, which is involved in all the latter types of motion. Questions such as 
-"whether the admissibility of » [M, S] implies the admissibility of y[C,, S}" 
+"whether the admissibility of $\varphi[M,S]$ implies the admissibility of $\varphi[C_1,S]$" 
 drop out. The reason for the omission in the present theory is our choice of 
 parameters and domains, which we discussed earlier. Our present version is 
 thus not exhaustive. However, the deficiency is not intrinsic to our method; 
 and it does not represent any outright falsification of our intuitions. Thus, 
 we pass over the deficiency. 
 
-2: [(pe Py, SQ), (pe Po, SqQ)] and other such cons can be inferred to be am. 
+\item $\varphi[(p\in P_1,s_0),(p\in P_2,S_0)]$ and other such cons can be inferred to be am. 
 With our new, powerful approach, this result is trivial. It is guaranteed by 
 what we said about consistency parameters. 
 
-3: There is no way to infer that y[C1, Cg] is am; and no way to infer that 
-y[ (45°, SQ>O), (60°,s=s¢)] is am. 
+\item There is no way to infer that $\varphi[C_1,C_2]$ is am; and no way to infer that 
+$\varphi[(45^\circ,s_0\greater O),(60^\circ,s=s_0)]$ is am. 
 
 The first part of the result drops out. The second part is trivial with our new 
-method as long as we do not postulate that cons on @ are am. 
+method as long as we do not postulate that cons on $\theta$ are am. 
 
-4: p [(pe Po), (p € P5)] can be inferred to be am. 
+\item $\varphi[(p\in P_2),(p\in P_5)]$ can be inferred to be am. 
 
 Yes, by Postulate 1. 
 
-5: v [(s>O, p € Py), (s=O, pe Po)] and y [(s>O, pe Po), (s=O, p € P4)] can 
-
-
-198 
-
-
+\item $\varphi[(s>O, p\in P_1),(s=O, p\in P_2)]$ and $\varphi[(s>O, p\in P_2),(s=O, p\in P_1)]$ can 
 be inferred to be am. 
 
 Yes, by Postulate 2. These two amcons are distinct. The question of whether 
 they should be considered equivalent is closely related to the degree to 
 which con parameters are independent of each other. 
 
-6: There is no way to infer that y [(p € Ps), (pe Pg)] or p[(pe Py), (p € P3) 
-] is am. Our special requirement in the postulate of admissibility for y [(p € 
-P+), (p € Po)] guarantees this result. 
+\item There is no way to infer that $\varphi[(p\in P_5),(p\in P_6)]$ or $\varphi[(p\in P_1),(p\in P_3)]$
+is am. Our special requirement in the postulate of admissibility for 
+$\varphi[(p\in P_1),(p\in P_2)]$ guarantees this result. 
 
-The reason for desiring this last result requires some discussion. [In 
+The reason for desiring this last result requires some discussion. In 
 heuristic terms, we wish to avoid admitting both location in New York in 
 Greensboro and location in Manhattan and Brooklyn. We also wish to avoid 
 admitting location in New York in Greensboro and location in New York in 
@@ -7434,12 +7415,13 @@ from this implication. However, the intuitive meaning of either combination
 would make them proxies for the con on the 3-family. 
 
 A closely related consideration is that in the preceding chapter, it 
-appeared that the admission of y[(p € P;), (pe Po)] and y[(p € Ps), (pe Pe)] 
-would tend to require the admission of the object y[(p € Po), e [(p € Ps), (p 
-€ Pg) ]] {a Type 1 chain). Further, it this implication held, then by the same 
-rationale the admission of y[(p € P4}, (p € Pa)] and y[(s> O, Pg € Py), (s=O, 
-P=Ppo)1], both of which are am, would require the admission of the object 
-vl{p € Pa), yl(s> O, pg € Py), (s=O, P=PqQ)]]. We may now say, however, 
+appeared that the admission of $\varphi[(p\in P_1),(p\in P_2)]$ and $\varphi[(p\in P_5),(p\in P_6)]$
+would tend to require the admission of the object $\varphi[(p\in P_2),\varphi[(p\in P_5),(p\in P_6)]]$
+(a Type 1 chain). Further, it this implication held, then by the same 
+rationale the admission of $\varphi[(p\in P_1),(p\in P_2)]$ and $\varphi[(s>O,p_0\in P_1),(s=O,p=p_0)]$,
+		both of which are am, would require the admission of the object 
+$\varphi[(p\in P_2), \varphi[(s>O,p_0\in P_1),(s=O, p=p_0)]]$. 
+We may now say, however, 
 that the postulates of our theory emphatically do not require us to accept 
 these implications. If there is an intuitively valid notion underlying the chain 
 on s and p, it reduces to the amcons introduced in result 5. As for the chain 
@@ -7451,19 +7433,15 @@ present approach allows us to forget about chains for now.
 Our conclusion is that the formal approach of this chapter is in good 
 agreement with our intuitively established results. 
 
-
-199 
-
-
-Note on the overall significance of the logic of amcons: 
+\section*{Note on the overall significance of the logic of amcons:}
 
 When traditional logicians said that something was logically impossible, 
 they meant to imply that it was impossible to imagine or visualize. But this 
 implication was empirically false. The realm of the logically possible is not 
 the entire realm of connotative thought; it is just the realm of normal 
 perceptual routines. When the mind is temporarily freed from normal 
-perceptual routines--especially in perceptual illusions, but also in dreams and 
-even in the use of certain "illogical" natural language phrases--it can imagine 
+perceptual routines---especially in perceptual illusions, but also in dreams and 
+even in the use of certain "illogical" natural language phrases---it can imagine 
 and visualize the "logically impossible." Every text on perceptual 
 psychology mentions this fact, but logicians have never noticed its immense 
 significance. The logically impossible is not a blank; it is a whole layer of 
@@ -7474,12 +7452,7 @@ sustained period of time, so he can freely think the logically impossible. He
 will then perform rigorous deductions and computations in the logic of 
 amcons. 
 
-
-200 
-
-
-20. Subjective Propositional Vibration-work in progress 
-
+\chapter{Subjective Propositional Vibration (Work in Progress)}
 
 Up until the present, the scientific study of language has treated 
 language as if it were reducible to the mechanical manipulation of counters 
@@ -7492,72 +7465,73 @@ constructs are not derivable from the models of the existing linguistic
 sciences. In fact, the existing linguistic sciences overlook the possibility of 
 such constructs. 
 
-Consider the ambiguous schema 'ADB&C', expressed in words as 'C and 
-B if A'. An example is 
+Consider the ambiguous schema '$A\supset B&C$', expressed in words as '$C$ and 
+$B$ if $A$'. An example is 
 
-Jack will soon leave and Bill will laugh if Don speaks. (1) 
+\begin{equation}
+	\label{firstvib}
+	\parbox{Jack will soon leave and Bill will laugh if Don speaks.}
+\end{equation}
 
 In order to get sense out of this utterance, the reader has to supply it with a 
 comma. That is, in the jargon of logic, he has to supply it with grouping. Let 
 us make the convention that in order to read the utterance, you must 
-mentally supply grouping to it, or 'bracket' it. If you construe the schema 
-as 'AD (B &C)', you will be said to bracket the conjunction. If you construe 
-the. schema as '(ADB) & C', you will be said to bracket the conditional There 
-is an immediate syntactical issue. If you are asked to copy (1), do you write 
+mentally supply grouping to it, or "bracket" it. If you construe the schema 
+as '$A\supset (B&C)$', you will be said to bracket the conjunction. If you construe 
+the. schema as '(A\supset B)&C', you will be said to bracket the conditional. There 
+is an immediate syntactical issue. If you are asked to copy \ref{firstvib}, do you write 
 "Jack will soon leave and Bill will laugh if Don speaks"; or do you write 
 "Jack will soon leave, and Bill will laugh if Don speaks" if that is the way 
-you are reading (1) at the moment? A distinction has to be made between 
+you are reading \ref{firstvib} at the moment? A distinction has to be made between 
 reading the proposition, which involves bracketing; and viewing the 
 proposition, which involves reacting to the ink-marks solely as a pattern. 
 Thus, any statement about an ambiguous grouping proposition must specify 
 whether the reference is to the proposition as read or as viewed. 
 
-Some additional conventions are necessary. With respect to (1), we 
+Some additional conventions are necessary. With respect to \ref{firstvib}, we 
 distinguish two possibilities: you are reading it, or you are not looking at it 
-(or are only viewing it). Thus, a "single reading' of (1) refers to an event 
-which separates two consecutive periods of not looking at {1) (or only 
+(or are only viewing it). Thus, a "single reading" of \ref{firstvib} refers to an event 
+which separates two consecutive periods of not looking at \ref{firstvib} (or only 
 viewing it). During a single reading, you may switch between bracketing the 
 conjunction and bracketing the conditional. These switches demarcate a 
-series of "states" of the reading, which alternately correspond to 'Jack will 
-
-
-201 
-
-
-¢ 
-
-
-soon leave, and Bill will laugh if Don speaks' or 'Jack will soon leave and Bill 
-will laugh, if Don speaks'. Note that a state is like a complete proposition. 
-We stipulate that inasmuch as (1) is read at all, it is the present meaning or 
-state that counts--if you are asked what the proposition says, whether it is 
-true, etc. 
+series of "states" of the reading, which alternately correspond to "Jack will 
+soon leave, and Bill will laugh if Don speaks" or "Jack will soon leave and Bill 
+will laugh, if Don speaks". Note that a state is like a complete proposition. 
+We stipulate that inasmuch as \ref{firstvib} is read at all, it is the present meaning or 
+state that counts---if you are asked what the proposition says, whether it is 
+true, \etc
 
 Another convention is that the logical status of 
+\begin{quotation}
 (Jack will soon leave and Bill will laugh if Don speaks) if and only if (Jack 
 will soon leave and Bill will laugh if Don speaks) 
+\end{quotation}
 is not that of a normal tautology, even though the biconditional when 
-viewed has the form 'A=A'. The two ambiguous cemponents wil! not 
+viewed has the form '$A\equiv A$'. The two ambiguous components will not 
 necessarily be bracketed the same way in a state. 
 
-We now turn to an example which is more substantial that (1). 
+We now turn to an example which is more substantial than \ref{firstvib}.
+
 Consider 
-Your mother is a whore and you are now bracketing the conditional! in (2) if 
+
+\begin{quotation}
+Your mother is a whore and you are now bracketing the conditional in (2) if 
 you are now bracketing the conjunction in (2). (2) 
+\end{quotation}
+
 If you read this proposition, then depending on how you bracket it, the 
-reading wil! either be internally false or else wil! call your mother a whore. In 
+reading will either be internally false or else will call your mother a whore. In 
 general, ambiguous grouping propositions are constructs in which the mental 
 aspect plays a fairly explicit role in the language. We have included (2) to 
 show that the contents of these propositions can provide more complications 
-than would be suggested by (1). 
+than would be suggested by \ref{firstvib}.
 
-
-There is another way of bringing out the mental! aspect of language, 
+There is another way of bringing out the mental aspect of language, 
 however, which is incomparably more powerful than ambiguous grouping. 
 We will turn to this approach immediately, and will devote the rest of the 
-paper to it. The cubical frame is asimple reversible perspective figure 
-which can either be seen oriented upward like Q _ or oriented downward 
-like ©, . Both positions are implicit in the same ink-on-paper image; it is 
+paper to it. The cubical frame \cubeframe\ is a simple reversible perspective figure 
+which can either be seen oriented upward like \cubeup\ or oriented downward 
+like \cubedown. Both positions are implicit in the same ink-on-paper image; it is 
 the subjective psychological response of the perceiver which differentiates 
 the positions. The perceiver can deliberately cause the perspective to reverse, 
 or he can allow the perspective to reverse without resisting. The perspective 
@@ -7568,24 +7542,21 @@ Suppose that each of the positions is assigned a different meaning, and
 the figure is used as a notation. We will adopt the following definitions 
 because they are convenient for our purposes at the moment. 
 
-> (for '3' if it appears to be oriented like Q 
-
-for 'O' (zero) if it appears to be oriented like @! 
+$$ \cubeframe \left\{\parbox{for '3' if it appears to be oriented like \cubeup \linebreak
+for '0' if it appears to be oriented like \cubedown}\right\} $$
 
 We may now write 
 
+\begin{equation}
+	\label{cubefour}
+1+\cubeframe = 4 
+\end{equation}
 
-1 +B = 4 (3) 
-We must further agree that (3), or any proposition containing such 
-
-
-202 
-
-
+We must further agree that \ref{cubefour}, or any proposition containing such 
 notation, is to be read to mean just what it seems to mean at any given 
-instant. [f, at the moment you read the proposition, the cube seems to be 
-up, then the proposition means 1+3=4; but if the cube seems to be down, 
-the proposition means 1+O=4. The proposition has an unambiguous 
+instant. If, at the moment you read the proposition, the cube seems to be 
+up, then the proposition means $1+3=4$; but if the cube seems to be down, 
+the proposition means $1+O=4$. The proposition has an unambiguous 
 meaning for the reader at any given instant, but the meaning may change in 
 the next instant due to a subjective psychological change in the reader. The 
 reader is to accept the proposition for what it is at any instant. The result is 
@@ -7593,13 +7564,13 @@ subjectively triggered propositional vibration, or SPV for short. The
 distinction between reading and viewing a proposition, which we already 
 made in the case of ambiguous grouping, is even more important in the case 
 of SPV. Reading now occurs only when perspective is imputed. In reading 
-(3) you don't think about the ink graph any more than you think about the 
+\ref{cubefour} you don't think about the ink graph any more than you think about the 
 type face. 
 
-in a definition such as that of ' 8 '3° and 'OQ' will be called the 
-assignments. A single reading is defined as before. During a single reading, (3) 
+in a definition such as that of '\cubeframe', '3' and 'O' will be called the 
+assignments. A single reading is defined as before. During a single reading, \ref{cubefour}
 will vibrate some number of times. The series of states of the reading, which 
-alternately correspond to '1 + 3 = 4' or '1+ O = 4', are demarcated by 
+alternately correspond to '$1+3=4$' or '$1+O=4$', are demarcated by 
 these vibrations. The portion of a state which can change when vibration 
 occurs will be called a partial. It is the partials in a reading that correspond 
 directly to the assignments in the definition. 
@@ -7610,32 +7581,22 @@ ordinary theory of properties which have to do with the form of expressions
 as viewed is not applicable when SPV notation is present. Not only is a 
 biconditional not a tautology just because its components are the same when 
 viewed; it cannot be considered an ordinary tautology even if the one 
-component's states have the same truth value, as in the case of '1 + & # 
-2'. Secondly, and even more important, SPV notation has to be present 
+component's states have the same truth value, as in the case of '$1+\cubeframe\neq2$'. 
+Secondly, and even more important, SPV notation has to be present 
 explicitly or it is not present at all. SPV is not the idea of an expression with 
 two meanings, which is commonplace in English; SPV is a double meaning 
 which comes about by a perceptual experience and thus has very special 
 properties. Thus, if a quantifier should be used in a proposition containing 
 SPV notation, the "range" of the "variable" will be that of conventional 
-
-
-ser 
-
-
-logic. You cannot write ' RS ' for 'x' in the statement matrix 'x 
-= we ' 
+logic. You cannot write '\cubeframe' for '$x$' in the statement matrix 
+'$x=\cubeframe$'.
 
 We must now elucidate at considerable length the uniqué properties of 
 SPV. When the reader sees an SPV figure, past perceptual training will cause 
 him to impute one or the other orientation to it. This phenomenon is not a 
 mere convention in the sense in which new terminology is a convention. 
 There are already two clear-cut possibilities. Their reality is entirely mental; 
-the external. ink-on-paper aspect does not change in any manner whatever. 
-
-
-203 
-
-
+the external, ink-on-paper aspect does not change in any manner whatever. 
 The change that can occur is completely and inherently subjective and 
 mental. By mental effort, the reader can consciously control the orientation. 
 If he does, involuntary vibrations will occur because of neural noise or 
@@ -7664,30 +7625,31 @@ there is no psycheme, no mental change of notation. It is the clear-cut,
 mental, involuntary change of notation which is the essence of SPV. Without 
 psychemes, there can be no truly involuntary mental changes of meaning. 
 
-
 In order to illustrate the preceding remarks, we will use an SPV 
 notation defined as follows. 
-« fis an affirmative, read "definitely," if it appears to be oriented 
-BH ijlike O 
 
-is a negative, read "not," if it appears to be oriented like fy 
+\begin{equation*}
+	\cubeframe \left\{\parbox{is an affirmative, read "definitely," if it appears to be oriented 
+	like \cubeup\linebreak
+	is a negative, read "not," if it appears to be oriented like \cubedown}\right\}
+\end{equation*}
+
 The proposition which follows refers to the immediate past, not to all past 
-time; that is, it refers to the preceding vebration. 
+time; that is, it refers to the preceding vibration. 
 
-You have i deliberately vibrated (4). (4) 
+\begin{quotation}
+You have \cubeframe deliberately vibrated (4). (4) 
+\end{quotation}
 
 
 This proposition refers to itself, and its truth depends on an aspect of the 
 reader's subjectivity which accompanies the act of reading. However, the 
 same can be said for the next proposition. 
 
+\begin{quotation}
 The bat is made of wood, and you have just decided that the second 
-
-
 word in (5) refers to a flying mammal. (5) 
-
-
-204 
+\end{quotation}
 
 
 Further, the same can be said for (2). We must compare (5), (2), and (4) in 
@@ -7704,7 +7666,7 @@ supply it by a deliberate act of thought. The comma is not, strictly speaking,
 a notation, because it is entirely voluntary. The reader might as well be 
 supplying a denotation io an equivocal expression: (5) and (2) can be 
 reduced to the same principle. As for (4), it cannot be mistaken for ordinary 
-English. It has an equivocal "proto-notation," ' 74] ". You automatically 
+English. It has an equivocal "proto-notation," '\cubeframe'. You automatically 
 impute perspective to the proto-notation before you react to it as language. 
 Thus, a notation with a mental component comes into being involuntarily. 
 This notation has an unequivocal denotation. However, deliberate, 
@@ -7733,27 +7695,22 @@ empirically that (4) represents a new order of language to an extent to which
 
 To make our point even clearer, let us introduce an operation, called 
 "collapsing," which may be applied to propositions containing SPV 
-
-
-205 
-
-
 proto-notation. The operation consists in redefining the SPV figure in a given 
 proposition so that its assignments are the states of the original proposition. 
 Let us collapse (4). We redefine 
 
-for 'You have deliberately vibrated (4)' if it appears to be oriented 
-t_* like @J 
-
-for 'You have not deliberately vibrated (4)' if it appears to be oriented 
-
-like 
-
+\begin{equation*}
+	\cubeframe \left\{\parbox{for 'You have deliberately vibrated (4)' if it appears to be oriented 
+	like \cubeup\linebreak
+	for 'You have not deliberately vibrated (4)' if it appears to be oriented 
+	like \cubedown}\right\}
+\end{equation*}
 
 (4) now becomes 
 
-
-# (4) 
+\begin{quotation}
+\cubeframe (4) 
+\end{quotation}
 
 
 We emphasize that the reader must actually read (4), for the effect is 
@@ -7763,8 +7720,8 @@ necessary.
 The claim we want to make for (4) is probably that it is the most 
 clear-cut case yet constructed in which thought becomes an object for itself. 
 Just looking at a reversible perspective figure which is not a linguistic 
-utterance--an approach which perceptual psychologists have already 
-tried--does not yield results which are significant with respect to "thought." 
+utterance---an approach which perceptual psychologists have already 
+tried---does not yield results which are significant with respect to "thought." 
 In order to obtain a significant case, the apparent orientation or imputed 
 perspective must be a proposition; it must be true or false. Then, (5) and (2) 
 are not highly significant, because the mental act of supplying the missing 
@@ -7778,129 +7735,4 @@ of thought." We have invented an instance of thought (as opposed to
 perception) which can be accomodated in the ontology of the perceptual 
 psychologist. 
 
-
-206 
-
-
-¥ 
-
-
-Henry Flynt, Blueprint for a Higher Civilization 
-(Milano, Multhipla Edizioni, 1975) 
-ERRATA 
-
-
-p. 4 delete 5/15/1962 
-Adams House 
-p.- 24 delete 5/15/1962 
-audience, 
-ppe 26-32 middle of p. 26 to top of p. 32 
-should come after p. 60 
-pe 27 line 5 fact it 
-line 7 of them, which 
-pe 42 line 4 bodies 
-"statements", it 
-pe 53 delete 2/22/1963 
-February 27, 1963 
-pe 55 line 7 mind', 
-pe 72 delete third line from bottom 
-pe 74 delete 2/22/1963 
-February 27, 1963 
-p. 84 delete 2/22/1963 
-February 27, 1963 
-
-
-(photo 
-pe 86 line 26 transformation 
-p. 94 line 2 from bottom is true, 
-p. 96 lines 12-14 all S to have superscript D 
-line 13 250 
-under the figure: given 25 S X5yy 
-pe 97 line 14 D-Memory 
-p. 99 lines 13, 14, 15 right-hand 
-p. 100 line 3 from bottom 1962 
-p. 101 line 19 Chicago." 
-line 25 sun," 
-p. 102 line 4 from bottom assertion." 
-pe 104 line 8 switch 
-line 26 A, ar 
-i 
-line 28 A." 
-; as 
-
-
-pe 105 between lines 25, 26 
-
-
-Conclusion 3.1. Conscious remembering occurs in 
-some mental state. 
-
-
-I j 7 *j-a 
-p. 108 line 20. x.,--x. 
-
-
-j-1 j 
-lines 4, 5 from bottom j+4 
-
-
-p. 109 line 2 2.4 %-Memories 
-pe 114 line 5 from bottom "A single 
-pe 120 line 5 26 
-
-
-pe 106 line 7 x 
-
-
-Page 1 
-
-
-Henry Flynt, Blueprint for a Higher Civilization Page 2 
-(Milano, Multhipla Edizioni, 1975) 
-
-
-ERRATA 
-
-
-pe. 125 bottom line table. See Carnap, Meaning and Necessity. 
-
-
-p. 129 line 1 —s. 7 
-line 12 from bottom 
-fotally determinate innperseq' iff an innpersea 
-line 10 from bottom 
-Tantecedentally indeterminate innperseq! iff an innperseq 
-line 8 from bottom 
-*halpointally indeterminate innperseq' iff an innperseq 
-
-
-pp. 134-151 These pages should have tab pagination identifying 
-them as pp. 1-18 of the "Guidebook." 
-
-
-Also, the Guidebook must start on a right-hand 
-page. 
-
-
-p. 139 line 13 a_lb 
-p. 141 line 15 NOW--CLOSE 
-pe 145 in Instr. 1-3. (t SS ) 
-line 6 from bottom 9. 
-p. 147 line 3 'a 
-p. 152 delete 2/22/1963 
-Februery 27, 1963 
-(photo 
-p. 158 line 23 most fears 
-line 24 imposed 
-p.- 179 bottom line definite 
-p. 180 line 5 categories, 
-p. 187 delete 2/22/1963 
-February 27, 1963 
-p. 195 line 12 admissible 
-p. 201 line 19 'AD (BEC)', 
-. line 20 conditional. 
-p. 202 line 12 than (1). 
-p. 204 line 7 from bottom vibration 
-p. 206 lines 4-7 definitions in braces { } 
-
-
+\end{document}
