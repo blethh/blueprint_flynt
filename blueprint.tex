@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside,draft]{memoir}
+\documentclass[10pt,twoside]{memoir}
 
 \usepackage{salitter}
 \usletterlayout
@@ -58,10 +58,24 @@
 \newcommand{\postulate}[1]{
 	\emph{Postulate #1}.}
 
+\newcommand{\dreamdate}[1]{
+	\plainbreak{1} \uline{#1}\\ }
+\newcommand{\dreamdatecomment}[2]{
+	\plainbreak{1} \uline{#1} --- \textit{#2}\\ }
+
+\newcommand{\cubeframe}{
+	\includegraphics[width=1em]{img/cubeframe}}
+\newcommand{\cubeup}{
+	\includegraphics[width=1em]{img/cubeup}}
+\newcommand{\cubedown}{
+	\includegraphics[width=1em]{img/cubedown}}
+
 \begin{document}
 
 \graphicspath{{img/}}
 \pagestyle{ruled}
+\chapterstyle{tandh}
+\openany
 
 {
 \thispagestyle{empty}
@@ -335,7 +349,7 @@ presumably not inherent in my intelectual modality; but under present
 social conditions isolation is a prerequisite for its existence. 
 
 
-\part{PHILOSOPHY}
+\part{Philosophy}
 
 
 \chapter{The Flaws Underlying Beliefs}
@@ -4398,7 +4412,7 @@ envelope, which bears the injunction not to have more than one sheet out at
 a time. Three of the tens of thousands of partials are represented. 
 
 
-\chapter{Representation of the Memory of an Energy Cube Organism (ORIGINAL 1961 VERSION)}
+\chapter{Representation of the Memory of an Energy Cube Organism (Original 1961 Version)}
 
 \section*{Foreward}
 
@@ -5888,7 +5902,7 @@ watches out for the other's bogies. Here are some sample intrusions.
 \begin{tabular}{ r c c c }
 	\textsc{Game} & \textsc{Distraction} & \textsc{Bogy} & \textsc{Modulation} \\
 	AA 1. & cough & shout in other's face & each take a different drug \\
-	2. & talk and laugh \linebreak get out of step & $\rightarrow$ \linebreak (stomp hard) & & \\
+	2. & talk and laugh \linebreak get out of step & $\rightarrow$ \linebreak (stomp hard) & \\
 	3. & spin around & $\rightarrow$ & \\
 	AB 1. & cough \linebreak talk and laugh & gasp \linebreak silently pass palm back \& forth in front of other's face & \\
 	2. & & & \\
@@ -7323,7 +7337,7 @@ requirements that the con family must be a 2-family, and that $s$ must be
 selected from $[O]$ in one ensemble and from ${s:s>O}$ in the other ensemble. 
 
 If $t$ is time, $t\in R$, consideration of the phrase "b years ago," which is an 
-amcon in the natural language, suggests that we postulate $\varphi[(t):a-b\leq t\leq v-b &a\leq v]$ to be am,
+amcon in the natural language, suggests that we postulate $\varphi[(t):a-b\leq t\leq v-b \&a\leq v]$ to be am,
 where $a$ is a fixed time expressed in years A.D., $b$ is a fixed 
 number of years, and $v$ is a variable---the time of the present instant in years 
 A.D. The implicit requirements are that the con family must have the 
@@ -7399,6 +7413,7 @@ which con parameters are independent of each other.
 \item There is no way to infer that $\varphi[(p\in P_5),(p\in P_6)]$ or $\varphi[(p\in P_1),(p\in P_3)]$
 is am. Our special requirement in the postulate of admissibility for 
 $\varphi[(p\in P_1),(p\in P_2)]$ guarantees this result. 
+\end{enumerate}
 
 The reason for desiring this last result requires some discussion. In 
 heuristic terms, we wish to avoid admitting both location in New York in 
@@ -7465,20 +7480,20 @@ constructs are not derivable from the models of the existing linguistic
 sciences. In fact, the existing linguistic sciences overlook the possibility of 
 such constructs. 
 
-Consider the ambiguous schema '$A\supset B&C$', expressed in words as '$C$ and 
+Consider the ambiguous schema '$A\supset B\&C$', expressed in words as '$C$ and 
 $B$ if $A$'. An example is 
 
 \begin{equation}
 	\label{firstvib}
-	\parbox{Jack will soon leave and Bill will laugh if Don speaks.}
+	\parbox{4in}{Jack will soon leave and Bill will laugh if Don speaks.}
 \end{equation}
 
 In order to get sense out of this utterance, the reader has to supply it with a 
 comma. That is, in the jargon of logic, he has to supply it with grouping. Let 
 us make the convention that in order to read the utterance, you must 
 mentally supply grouping to it, or "bracket" it. If you construe the schema 
-as '$A\supset (B&C)$', you will be said to bracket the conjunction. If you construe 
-the. schema as '(A\supset B)&C', you will be said to bracket the conditional. There 
+as '$A\supset (B\&C)$', you will be said to bracket the conjunction. If you construe 
+the schema as '$(A\supset B)\&C$', you will be said to bracket the conditional. There 
 is an immediate syntactical issue. If you are asked to copy \ref{firstvib}, do you write 
 "Jack will soon leave and Bill will laugh if Don speaks"; or do you write 
 "Jack will soon leave, and Bill will laugh if Don speaks" if that is the way 
@@ -7542,7 +7557,7 @@ Suppose that each of the positions is assigned a different meaning, and
 the figure is used as a notation. We will adopt the following definitions 
 because they are convenient for our purposes at the moment. 
 
-$$ \cubeframe \left\{\parbox{for '3' if it appears to be oriented like \cubeup \linebreak
+$$ \cubeframe \left\{\parbox{4in}{for '3' if it appears to be oriented like \cubeup \linebreak
 for '0' if it appears to be oriented like \cubedown}\right\} $$
 
 We may now write 
@@ -7629,7 +7644,7 @@ In order to illustrate the preceding remarks, we will use an SPV
 notation defined as follows. 
 
 \begin{equation*}
-	\cubeframe \left\{\parbox{is an affirmative, read "definitely," if it appears to be oriented 
+	\cubeframe \left\{\parbox{4in}{is an affirmative, read "definitely," if it appears to be oriented 
 	like \cubeup\linebreak
 	is a negative, read "not," if it appears to be oriented like \cubedown}\right\}
 \end{equation*}
@@ -7700,7 +7715,7 @@ proposition so that its assignments are the states of the original proposition.
 Let us collapse (4). We redefine 
 
 \begin{equation*}
-	\cubeframe \left\{\parbox{for 'You have deliberately vibrated (4)' if it appears to be oriented 
+	\cubeframe \left\{\parbox{4in}{for 'You have deliberately vibrated (4)' if it appears to be oriented 
 	like \cubeup\linebreak
 	for 'You have not deliberately vibrated (4)' if it appears to be oriented 
 	like \cubedown}\right\}
