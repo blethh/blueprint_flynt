@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside]{memoir}
+\documentclass[10pt,twoside,draft]{memoir}
 
 \usepackage{salitter}
 \usletterlayout
@@ -30,6 +30,12 @@
 \newcommand{\y}{$y$}
 
 \newcommand{\redact}[1]{\xout{#1}}
+
+\newcommand{\greater}{>}
+\newcommand{\less}{<}
+
+% TODO because of something tricky ill need to debug later
+\newcommand{\bimg}[1]{(img #1)}
 
 % --- typesetting aids for some subtle syntax of flynt
 \newcommand{\formulation}[1]{'\textit{#1}'}
@@ -2772,14 +2778,11 @@ present state
 $\begin{pmatrix}
 	p & p \\
 	f & p
-\end{pmatrix}$
-
-to another state such as
-
+\end{pmatrix}$ to another state such as
 $\begin{pmatrix}
 	p & f \\
 	p & p
-\end{pmatrix}$
+\end{pmatrix}$.
 
 However, 
 we want to exclude some changes. The change that changes nothing is 
@@ -3337,33 +3340,33 @@ Innperseqs Diagram
 
 "Sentences" at 
 
-	\begin{tabular}{c r l}
-		\img{time1} & $time_1$: & $a_1 a_2 a_3 a_4 a_5 a_6 a_7 b$ \\
+	\begin{tabular}{ c r l }
+		\bimg{time1} & $time_1$: & $a_1 a_2 a_3 a_4 a_5 a_6 a_7 b$ \\
 		& & $a_1,a_2 \rightarrow\ b$ \\
 	\end{tabular}
 
 	\begin{tabular}{c r l}
-		\img{time2} & $time_2$: & $a_2 a_3 a_4 a_5 a_6 a_7 b c$ \\
+		\bimg{time2} & $time_2$: & $a_2 a_3 a_4 a_5 a_6 a_7 b c$ \\
 		& & $a_3 \rightarrow\ c$ \\
 	\end{tabular}
 
 	\begin{tabular}{c r l}
-		\img{time3} & $time_3$: & $a_4 a_5 a_6 a_7 b c d$ \\
+		\bimg{time3} & $time_3$: & $a_4 a_5 a_6 a_7 b c d$ \\
 		& & $a_4,a_5 \rightarrow\ d$ \\
 	\end{tabular}
 
 	\begin{tabular}{c r l}
-		\img{time4} & $time_4$: & $a_6 a_7 b c d e$ \\
+		\bimg{time4} & $time_4$: & $a_6 a_7 b c d e$ \\
 		& & $a_6,b \rightarrow\ e$ \\
 	\end{tabular}
 
 	\begin{tabular}{c r l}
-		\img{time5} & $time_5$: & $a_7 b c d e f$ \\
+		\bimg{time5} & $time_5$: & $a_7 b c d e f$ \\
 		& & $a_7,c \rightarrow\ f$ \\
 	\end{tabular}
 
 	\begin{tabular}{c r l}
-		\img{time6} & $time_6$: & $c d e f g$ \\
+		\bimg{time6} & $time_6$: & $c d e f g$ \\
 		& & $d,e \rightarrow\ g$ \\
 	\end{tabular}
 
@@ -3513,7 +3516,7 @@ D-Memory, here is an
 and spacing words so that each sentence ends at the time in parentheses after 
 it. Do not pause netween sentences.) 
 
-\begin{tabular}
+\begin{tabular}{ r l }
 	($event_1$) &  All men are mortal. (17") \\
 
 	($Sentence_1=event_2s$) &  The first utterance lasted 17" and ended at 17"; and lasted 15" and ended 1" ago. (59") \\
@@ -3541,10 +3544,11 @@ thinking of the jth D-sentence, for all j.
 
 Two sentences "imply" another if and only if all three are the same; or else 
 the three are adjacent (and can be written $S_{j+1},S_j,S_{j-1}$), and are such 
-that $\delta_j=x_{j+1}-x_j\greater z_j,$ $S^D_{j-1}$ is the implicand. (The function of $S_{j+1}$ is to 
+that $\delta_j=x_{j+1}-x_j> z_j,$ $S^D_{j-1}$ is the implicand. (The function of $S_{j+1}$ is to 
 give the duration $\delta_j=x_{j+1}-x_j$ of $S_j$. $S_j$ states that $event_j$, the first 
 thinking of $S^{D}_{j-1}$, ended at a distance $z_j$ into the past, where $z_j$ is smaller 
 than $S^D_j$'s own duration. The diagram indicates the relations.) 
+\end{sysrules}
 
 \img{infallsdiag}
 
@@ -3607,8 +3611,8 @@ preceding the-first (second, third) period in the entire series.
 \midheading{"Haphazard System"}
 
 \begin{sysrules}
-A "sentence" is a the duration D-sentences \triangle\ ($\mathparagraph^m$) conclude these 
-"\Phi*-Reflection," or the future Assumption voluntarily force of 
+A "sentence" is a the duration D-sentences $\triangle\ (\mathparagraph^m)$ conclude these 
+"$\Phi*$-Reflection," or the future Assumption voluntarily force of 
 conviction for conclusion the Situation or by ongoing that this 
 system? be given telling between the Situation 1. 
 
@@ -3616,11 +3620,11 @@ Two sentences "imply" a third if and only if the two sentences is\slash was
 contained not have to the acceptance that a certain and malleable 
 study what an event involves material specifically mathematics: 
 construct accompanies the rest, extra-linguistically image organism 
-can fantasy not remembering \Phi*-Memory, the future interval defined 
+can fantasy not remembering $\Phi*$-Memory, the future interval defined 
 in dream the third. 
 
 An "axiom" is a sentence that internally D-sentences, just as the 
-"\Phi*-Memory" sentences $A_{a_1}$ is $A_{a_2}$. 
+"$\Phi*$-Memory" sentences $A_{a_1}$ is $A_{a_2}$. 
 
 In the final stage, I cancel the smallest number of words I have to in 
 order to make the rules grammatical. 
@@ -3912,6 +3916,7 @@ remembered that "he has been doing $A_{a_i}$," That is, he does not remember
 the dream; and he does not remember that he thought the sentence. These 
 conditions would permit the existence of an M-Memory or else a memory 
 indistinguishable to all intents and purposes from an M-Memory. 
+\end{enumerate}
 
 What I have in mind in \conclusion{1.6} is dreams which are produced 
 artificially but otherwise have all the remarkable qualities of natural dreams. 
@@ -3990,7 +3995,7 @@ appears in it only in the following sentences: "$Event_j$ occurred in the interv
 % TODO\<F11><F12> ? whats up with AF
 of time which is $x_j-x_{j-1}$ long and ended at $x_j$ AF, and is Yj long and ended $z_j$
 \ ago," where $x_j$, $y_j$ and $z_j$ are positive numbers of time units (such as hours) 
-and '$AF$' means "after a fixed beginning time." $x_O=O;$ $x_j\greater x_{j-1}$; and at any 
+and '$AF$' means "after a fixed beginning time." $x_O=O;$ $x_j> x_{j-1}$; and at any 
 one fixed time, the intervals $|z_j, z_j+y_j|$ nowhere overlap. $y_j+z_j\leq x_j$ For an
 integer $m$, the $m$th sentence acquires the force of memory, is added to the 
 memory, at the fixed time $x_m$. $j=1, ..., f(t)$, where the number of sentences 
@@ -4018,11 +4023,11 @@ partly cover the time up to now without overlapping.
 
 Suppose you find the deck of n cards 
 
-{\centering
+{ \centering
 \framebox[1.1\width]{
-	$event_j$ \\
-	$z_j$ ago}
-\par}
+	\centering
+	$event_j$ \linebreak
+	$z_j$ ago}}
 
 
 ($j=1,...,n$ and $z_j$ is a positive number of days), and you have no 
@@ -4143,7 +4148,7 @@ thought in
 minimum time. Assume that the duration $\triangle$ of a D-paragraph depends only 
 on the number of D-sentences and the $\delta_j$. We can write 
 
-$$ \triangle(\mathparagraph^m)=\sum_{j=1)^{m} \delta_j $$
+$$ \triangle(\mathparagraph^m)=\sum_{j=1}^{m} \delta_j $$
 
 The permutations of the D-sentences, as well as the D-paragraphs, can be 
 indexed with the $a_i$, just as the possible methods are. 
@@ -4223,7 +4228,7 @@ on one face of the liquid to its edge on the other.
 The energy cube organism has a conscious memory (by which I mean 
 strictly a memory of what it did and what happened to it, the past events of 
 its existence). The memory consists of symbols which are given "meaning" 
-by their extra-linguistic mental! associations--in human terms, it consists of 
+by their extra-linguistic mental associations---in human terms, it consists of 
 language. The complete memory contains tens of thousands of partial 
 memories, which the organism can only have one at a time. Going through 
 the partials---which it does as if they were the phonemes of one long 
@@ -4406,9 +4411,9 @@ by their lengths and ends, but instead give their beginnings and ends.
 In the fourth paragraph, there are two different versions of the 
 correspondence between possible methods and sequences of units, and of 
 why any sequence is acceptable. Passages belonging exclusively to the 
-"multiplex" version are set off by the sign #. Passages which belong 
+"multiplex" version are set off by the sign \#. Passages which belong 
 exclusively to the "style" version and which should be deleted if the 
-"multiplex" version is used are placed between slashes. The "style" version is 
+"multiplex" version is used are placed between slashes (\slash). The "style" version is 
 the main version. In the fifth paragraph, a notion appears which is 
 interesting, but unconvincingly explained. It is not clear whether this notion 
 relates only to the "multiplex" version, or whether it would relate to the 
@@ -4497,8 +4502,8 @@ progress were made, whether when they were "really" made stayed the same
 and changed, or whether the memory is inconsistent about it, or what. 
 
 \item I will now turn to the aspect of the memory concerned with the 
-method the organism has used to move itself. $\ltimes$ Methodologically, the 
-memory is a multiplex symbol. $\rtimes$ A "single method" is everything to be done 
+method the organism has used to move itself. \# Methodologically, the 
+memory is a multiplex symbol. \# A "single method" is everything to be done 
 by the organism, to move itself, throughout the total time it takes to reach 
 the destination edge; so that the organism could not use two different 
 "single methods," must, after it chooses its method, continue with it alone 
@@ -4506,7 +4511,7 @@ throughout. The organism has available different (single) methods, has
 different methods it could try. The different sequences, of all units, are 
 assigned to the different (single) methods available to the organism to signify 
 them; are symbols for them. (Thus, the number of available methods 
-increases as units are added to the memory.) Now all this only approximates 
+increases as units are added to the memory.) \slash Now all this only approximates 
 what is the case, because contrary to what I may have implied, which 
 method is used is not a matter of "fact" as are the temporal intervals and 
 amounts of progress. As I have said, having all units in any succession 
@@ -4519,7 +4524,7 @@ content, of language. Different styles exclude each other, but not what is
 said in each other's being true.$\rtimes$ Thus it is that the number of available 
 methods can increase; and that any sequence of all units can constitute the 
 total memory, total recall ("factually"), although different sequences signify 
-different methods used. $\ltimes$ As an indicator of the method used, the whole 
+different methods used. \slash \# As an indicator of the method used, the whole 
 memory is a multiplex symbol. Names for each of the methods are combined 
 in a single symbol, the totality of units. In remembering, the organism 
 separates any single name by going through all the units in succession, and 
@@ -4528,7 +4533,7 @@ information about the method used. I will not be concerned to "explain"
 the matter of the increasing number of available methods; or the matter of 
 any sequence of all units' constituting the complete reading, the total 
 memory, total recall, but different sequences' signifying different methods 
-used. $\rtimes$
+used. \#
 
 \item I will give just an indication of what the available methods [and 
 their relations through the multiplex memory] are like. Throughout this 
@@ -4830,7 +4835,7 @@ An "inn`perseq" iff a sequence of sequences of halpoints such that all the
 halpoints are on one (initial) radius of a halo; the members of the first 
 sequence are initpoints; for each of the other sequences, the first member (a 
 consequent) is got from the non-first members of the preceding sequence 
-{the antecedents) by being the inner endpoint of the radial segment in the 
+(the antecedents) by being the inner endpoint of the radial segment in the 
 vague outer ring when they are on the segment, and the other members (if 
 any) are initpoints or first members of preceding sequences; all first members 
 of sequences other than the last [two] appear as non-first members, and 
@@ -4844,12 +4849,13 @@ one member.
 A $\ulcorner$totally determinate innperseq' iff an innperseq$\urcorner$ in which one is aware of 
 (specifies) all halpoints. 
 
-An $\ulcorner$antecedentally indeterminate innperseq' iff an innperseq$\urconer$ in which one is 
+An $\ulcorner$antecedentally indeterminate innperseq' iff an innperseq$\urcorner$ in which one is 
 aware of (specifies) only each consequent and the radial seqment beyond it. 
 
 A $\ulcorner$halpointally indeterminate innperseq' iff an innperseq$\urcorner$ in which one is 
 aware of (specifies) only the radial segment in the vague outer ring, and its 
 inner endpoint, as it progresses inward. 
+\end{sysrules}
 
 \subsection*{Innperseqs Diagram}
 
@@ -5124,8 +5130,8 @@ Instructions 1--3 apply \textsc{when your eyes are open.}
 \item If you see a sight close its eyes, a heavy touch from the machine 
 may be falling toward you. You must instantly jump aside.
 
-\begin{tabular}
-	\begin{tabular}
+\begin{tabular}{ c c }
+	\begin{tabular}{ c c }
 		$s_1\wedge$ & $s_1\vee$ \\
 		$u\wedge$ & $(t\longdivision{u})$ \\
 	\end{tabular} &
@@ -5137,22 +5143,22 @@ may be falling toward you. You must instantly jump aside.
 \item If a sight in front of you jumps over you, a touch may be about to 
 tackle you. You must instantly jump to one side. 
 
-		\begin{tabular}
-			$u\wedge$ & \begin{tabular}
-				$s\overbracket{u}$ \\
-				$(t\overbrace{u})$ \\
-			\end{tabular} & $u\lrcorner$ \\
-		\end{tabular}
+\begin{tabular}{ r c l }
+	$u\wedge$ & \begin{tabular}{ c }
+		$s\overbracket{u}$ \\
+		$(t\overbrace{u})$ \\
+	\end{tabular} & $u\lrcorner$ \\
+\end{tabular}
 
 \item If a sight waves its hands in front of your open eyes, a touch may 
 be about to shove from behind. Jump to one side. 
 
-		\begin{tabular}
-			$u\wedge$ & \begin{tabular}
-				$s^\infty u$\\
-				$(t\sqsupset u)$ \\
-			\end{tabular} & $u\lrcorner$ \\
-		\end{tabular}
+\begin{tabular}{ r c l }
+	$u\wedge$ & \begin{tabular}{ c }
+		$s^\infty u$\\
+		$(t\sqsupset u)$ \\
+	\end{tabular} & $u\lrcorner$ \\
+\end{tabular}
 
 \textsc{If there are any sights, try standing around and following these instructions for a short while.}
 
@@ -5161,13 +5167,13 @@ tackles you, a touch shoves you, or you can't keep your mind on the exhibit
 (which you should also consider to be an effect of the machine). Then you 
 immediately open your eyes. 
 
-		\begin{tabular}
-			$u\vee$ & \begin{tabular}
-				$t\overbrace{u}$ \\ \midrule
-				$t\sqsupset u$ \\ midrule
-				$u$ inattentive \\
-			\end{tabular} & $u\wedge$ \\
-		\end{tabular}
+\begin{tabular}{ r c l }
+	$u\vee$ & \begin{tabular}{ c }
+		$t\overbrace{u}$ \\ \midrule
+		$t\sqsupset u$ \\ \midrule
+		$u$ inattentive \\
+	\end{tabular} & $u\wedge$ \\
+\end{tabular}
 
 \emph{(A horizontal line between action symbols means \emph{or.} With it, instructions can be combined)}
 
@@ -5176,22 +5182,22 @@ immediately open your eyes.
 \item If you feel a breath blowing on one of your hands, a touch may be 
 falling on you. You must instantly jump to the side away from the breath. 
 
-		\begin{tabular}
-			$u\vee$ & \begin{tabular}
-				$t_1\equiv u$ \\
-				$t_2\longdivision{u}$ \\
-			\end{tabular} & $u\lrcorner$ \\
-		\end{tabular}
+\begin{tabular}{ r c l }
+	$u\vee$ & \begin{tabular}{ c }
+		$t_1\equiv u$ \\
+		$t_2\longdivision{u}$ \\
+	\end{tabular} & $u\lrcorner$ \\
+\end{tabular}
 
-(Turn page and convinue) 
+(Turn page and continue) 
 
 \clearpage
 
 \item If your closed eyes are shadowed, a touch may be about to tackle 
 you. You must instantly jump aside. 
 
-\begin{tabular}
-	$u\vee$ & \begin{tabular}
+\begin{tabular}{ r c l }
+	$u\vee$ & \begin{tabular}{ c }
 		$s^\infty u$ \\
 		($t\overbrace{u}$) \\
 	\end{tabular} & $u\lrcorner$ \\
@@ -5200,8 +5206,8 @@ you. You must instantly jump aside.
 \item If you sense a massive touch going above your head, another touch 
 may be about to shove you from behind. Jump aside. 
 
-\begin{tabular}
-	$u\vee$ & \begin{tabular}
+\begin{tabular}{ r c l }
+	$u\vee$ & \begin{tabular}{ c }
 		$t_1\overbracket{u}$ \\
 		($t_2\sqsupset u$) \\
 	\end{tabular} & $u\lrcorner$ \\
@@ -5211,7 +5217,7 @@ may be about to shove you from behind. Jump aside.
 close your eyes and go around with your hands in front of you, shoving 
 touches whenever you feel them. 
 
-\begin{tabular}
+\begin{tabular}{ c c }
 	$u\vee$ & $u\sqsupset t$ \\
 \end{tabular}
 
@@ -5235,14 +5241,13 @@ $$
 
 \clearpage
 
-
 \item If you see a sight about to tackle another whose eyes are open, run 
 until you face the sight about to be tackled and jump over both sights. If the 
 sight about to be tackled has closed eyes, you must immediately shadow 
 them. 
 
-\begin{tabular}
-	$u\wedge$ & \begin{tabular}
+\begin{tabular}{ r c }
+	$u\wedge$ & \begin{tabular}{ c c c }
 		$s_2\wedge$ & $s_1\overbrace{s_2}$ & $u\overbracket{s_1s_2}$ \\ \midrule
 		$s_2\vee$ & $(s_1\overbrace{s_2})$ & $u^\infty s_2$
 	\end{tabular} \\
@@ -5253,8 +5258,8 @@ behind, you must shadow the sight about to be pushed. But if the sight
 about to be pushed has closed eyes, you must immediately jump over both 
 sights. 
 
-\begin{tabular}
-	$u\wedge$ & \begin{tabular}
+\begin{tabular}{ r c }
+	$u\wedge$ & \begin{tabular}{ c c c }
 		$s_2\wedge$ & $(s_1\sqsupset s_2)$ & $u^\infty s_2$ \\ \midrule
 		$s_2\vee$ & $(s_1\sqsupset s_2)$ & $u\overbracket{s_1s_2}$ \\
 	\end{tabular} \\
@@ -5289,58 +5294,59 @@ preceeding phase that they will be given in symbols only. Changes are noted
 parenthetically. You may turn back if you forget symbols. 
 
 \begin{enumerate}
-\item \begin{tabular}
-		\begin{tabular}
+\item \begin{tabular}{ c l }
+		\begin{tabular}{ c c }
 			$s_1\wedge$ & $s_1\vee$ \\
 			$u\sfrac{3}{4}\wedge$ & $(t\longdivision{u})$ \\
 		\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
+\item \begin{tabular}{ c c c }
+		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
 			$s\overbracket{u}$ \\
 			$t\overbrace{u}$ \\
 		\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
+\item \begin{tabular}{ c c c }
+		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
 			$t\equiv u$ \\
 			$t_2\sqsupset u$ \\
 		\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
+
 \emph{(change component blows on you instead of shadowing you)}
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\vee$ & \begin{tabular}
-			$t\overbrace{u}$ \\ \midrule
-			$t\sqsupset u$ \\ \midrule
-			$u$ inattentive \\
-		\end{tabular} & $u\wedge$ \\
+\item \begin{tabular}{ c c c }
+	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
+		$t\overbrace{u}$ \\ \midrule
+		$t\sqsupset u$ \\ \midrule
+		$u$ inattentive \\
+	\end{tabular} & $u\wedge$ \\
 \end{tabular}
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\vee$ & \begin{tabular}
-			$t_1\equiv u$ \\
-			$(t_2\longdivision{u})$ \\
-		\end{tabular} & $u\lrcorner$ \\
+\item \begin{tabular}{ c c c }
+	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
+		$t_1\equiv u$ \\
+		$(t_2\longdivision{u})$ \\
+	\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\vee$ & \begin{tabular}
-			$s^\infty u$ \\
-			$(t\overbrace{u})$ \\
-		\end{tabular} & $u\lrcorner$ \\
+\item \begin{tabular}{ c c c }
+	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
+		$s^\infty u$ \\
+		$(t\overbrace{u})$ \\
+	\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}v$ & \begin{tabular}
-			$t_1\overbracket{u}$ \\
-			$(t_2\sqsupset u)$ \\
-		\end{tabular} & $u\lrcorner$ \\
+\item \begin{tabular}{ c c c }
+	$u\sfrac{3}{4}v$ & \begin{tabular}{ c }
+		$t_1\overbracket{u}$ \\
+		$(t_2\sqsupset u)$ \\
+	\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
-\item \begin{tabular}
+\item \begin{tabular}{ c c }
 		$u\sfrac{3}{4}\vee$ & $u\sqsupset t$ \\
 \end{tabular}
 
@@ -5350,8 +5356,8 @@ The big change comes next.
 
 \clearpage
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\wedge s_2\wedge (s_1\longdivision{s_2}) u\vee$ & and also \\
+\item \begin{tabular}{ c c }
+	$u\sfrac{3}{4}\wedge s_2\wedge (s_1\longdivision{s_2}) u\vee$ & and also \\
 	$u\sfrac{3}{4}\wedge s_2\vee (s_1\longdivision{s_2})$ & $u\equiv s_2$ \\
 \end{tabular}
 
@@ -5359,18 +5365,18 @@ That is, if you see a sight falling or stepping on another sight with closed
 eyes, you must immediately blow on the sight on the ground. This is an 
 addition. 
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
-			$s_2\wedge (s_1\overbrace{s_2}) u\overbracket{s_1s_2}$ \\ \midrule
-			$s_2\vee (s_1\overbrace{s_2}) u^\infty s_2$ \\
-		\end{tabular}
+\item \begin{tabular}{ r c }
+		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
+		$s_2\wedge (s_1\overbrace{s_2}) u\overbracket{s_1s_2}$ \\ \midrule
+		$s_2\vee (s_1\overbrace{s_2}) u^\infty s_2$ \\
+	\end{tabular}
 \end{tabular}
 
-\item \begin{tabular}
-		$u\sfrac{3}{4}\wedge$ & \begin{tabular}
-			$s_2\wedge (s_1\sqsupset s_2) u\equiv s_2$ \\ \midrule
-			$s_2\vee (s_1\sqsupset s_2) u\overbracket{s_1s_2}$ \\
-		\end{tabular}
+\item \begin{tabular}{ c c }
+	$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
+		$s_2\wedge (s_1\sqsupset s_2) u\equiv s_2$ \\ \midrule
+		$s_2\vee (s_1\sqsupset s_2) u\overbracket{s_1s_2}$ \\
+	\end{tabular}
 \end{tabular}
 \emph{(change: you blow on $s_2$)}
 
@@ -5388,8 +5394,8 @@ vanished, skip to Page 18.
 other instructions, you may also keep your eyes open and jump over, blow 
 on, or shadow sights. 
 
-\begin{tabular}
-	$u\sfrac{3}{4}\wedge$ & \begin{tabular}
+\begin{tabular}{ r c }
+	$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
 		$u\overbracket{s}$ \\ \midrule
 		$u^\infty s$ \\ \midrule
 		$u\equiv s$ \\
@@ -5424,8 +5430,8 @@ your hands in front of you. If you encounter touches standing higher than
 you, tackle them. If you encounter touches as near the ground as you, shove 
 them. You must be sensitive and judge heights with eyes closed. 
 
-\begin{tabular}
-	$u\sfrac{1}{2}\vee$ & \begin{tabular}
+\begin{tabular}{ r c }
+	$u\sfrac{1}{2}\vee$ & \begin{tabular}{ c }
 		$t_\greater u\overbrace{t}$ \\ \midrule
 		$t_\less u\sqsupset t$ \\
 	\end{tabular} \\
@@ -5436,8 +5442,8 @@ $t\less$ means "if t is near ground relative to you")}
 
 9. No change. 
 
-\begin{tabular}
-	$u\sfrac{1}{2}$ & \begin{tabular}
+\begin{tabular}{ r c }
+	$u\sfrac{1}{2}$ & \begin{tabular}{ c }
 		$s_2\wedge (s_1\longdivision{s_2}) u\vee$ \\ \midrule
 		$s_2\vee (s_1\longdivision{s_2}) u\equiv s_2$ \\
 	\end{tabular}
@@ -5446,10 +5452,10 @@ $t\less$ means "if t is near ground relative to you")}
 10. The previous Instr. 10 applies if $s_2$ is near the ground, that is, it 
 applies unless $s_2$ is too high for you to jump or shadow it. 
 
-\begin{tabular}
-	$u\sfrac{1}{2}$ & \begin{tabular}
-		$s_2\wedge\less\ (s_1\overgrace{s_2}) u\overbracket{s_1 s_2}$ \\ \midrule
-		$s_2\vee\less\ (s_1\overgrace{s_2}) u^\infty s_2$ \\
+\begin{tabular}{ r c }
+	$u\sfrac{1}{2}$ & \begin{tabular}{ c }
+		$s_2\wedge\less\ (s_1\overbrace{s_2}) u\overbracket{s_1 s_2}$ \\ \midrule
+		$s_2\vee\less\ (s_1\overbrace{s_2}) u^\infty s_2$ \\
 	\end{tabular}
 \end{tabular}
 
@@ -5477,13 +5483,15 @@ vanished, the third phase is over. Turn to Page 14 and the fourth phase.
 your eyes open and blow on sights. You may also shadow or jump over 
 sights unless they are too high. 
 
-\begin{tabular}
-	$u\sfrac{1}{2}\wedge$ & \begin{tabular}
+\begin{tabular}{ r c }
+	$u\sfrac{1}{2}\wedge$ & \begin{tabular}{ c }
 		$u\equiv s$ \\ \midrule
-		$s\less$ & \begin{tabular}
-			$u^\infty s$ \\ \midrule
-			$u\overbracket{s}$ \\
-		\begin{tabular} \\
+		\begin{tabular}{ r c }
+			$s\less$ & \begin{tabular}{ c }
+				$u^\infty s$ \\ \midrule
+				$u\overbracket{s}$ \\
+			\end{tabular}\\
+		\end{tabular} \\
 	\end{tabular} \\
 \end{tabular}
 
@@ -5502,17 +5510,15 @@ instructions are greatly limited, and they will be restated fully.
 \item If you see a sight close its eyes, a touch may be falling or stepping 
 on you, and you must immediately scramble aside. 
 
-\begin{tabular}
-	\begin{tabular}
+\begin{tabular}{ c l }
+	\begin{tabular}{ c c }
 		$s_1\wedge$ & $s_1\vee$ \\
 		$u\sfrac{1}{4}\wedge$ & $(t\longdivision{u})$ \\
 	\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
-\item
-
-\begin{tabular}
-	$u\sfrac{1}{4}\wedge$ & \begin{tabular}
+\item \begin{tabular}{ r c l }
+	$u\sfrac{1}{4}\wedge$ & \begin{tabular}{ c }
 		$t_1\equiv u$ \\
 		$(t_2\sqsupset u)$ \\
 	\end{tabular} & $u\lrcorner$ \\
@@ -5522,33 +5528,32 @@ on you, and you must immediately scramble aside.
 
 \item When to reopen your eyes. 
 
-\begin{tabular}
-	$u\sfrac{1}{4}\vee$ & \begin{tabular}
+\begin{tabular}{ r c l }
+	$u\sfrac{1}{4}\vee$ & \begin{tabular}{ c }
 		$t\sqsupset u$ \\ \midrule
 		$u$ inattentive \\
 	\end{tabular} & $u\wedge$
 \end{tabular}
 
-
 \item If your closed eyes are shadowed, a touch may be falling or 
 stepping on you. Scramble aside. 
 
-\begin{tabular}
-	$u\frac{1}{4}\vee$ & \begin{tabular}
+\begin{tabular}{ r c l }
+	$u\frac{1}{4}\vee$ & \begin{tabular}{ c }
 		$s^\infty u$ \\
 		$(t\longdivision{u}$
 	\end{tabular} & $u\lrcorner$
 \end{tabular}
 
-\item \begin{tabular}
-	$u\frac{1}{4}\vee$ & \begin{tabular}
+\item \begin{tabular}{ c c c }
+	$u\frac{1}{4}\vee$ & \begin{tabular}{ c }
 		$t_1\overbracket{u}$ \\
 		$(t_2\sqsupset u)$ \\
 	\end{tabular} & $u\lrcorner$ \\
 \end{tabular}
 
-\item \begin{tabular}
-	$u\sfrac{1}{4}\vee$ \begin{tabular}
+\item \begin{tabular}{ r c }
+	$u\sfrac{1}{4}\vee$ \begin{tabular}{ c c }
 		$t\greater$ & $u\overbrace{t}$ \\ \midrule
 		$t\sfrac{1}{4}$ & $u\sqsupset t$ \\
 	\end{tabular}
@@ -5561,8 +5566,8 @@ stepping on you. Scramble aside.
 
 The rest of the instructions apply when your eyes are open. 
 
-\item \begin{tabular}
-	$u\sfrac{1}{4}\wedge$ & \begin{tabular}
+\item \begin{tabular}{ r c }
+	$u\sfrac{1}{4}\wedge$ & \begin{tabular}{ c c c }
 		$s_2\wedge$ & $(s_1\longdivision{s_2})$ & $u\vee$ \\ \midrule
 		$s_2\vee\less$ & $(s_1\longdivision{s_2})$ & $u^\infty s_2$ \\
 	\end{tabular} \\
@@ -5570,19 +5575,20 @@ The rest of the instructions apply when your eyes are open.
 
 If $s_2$'s eyes are closed, you must shadow them unless they are too high. 
 
-\item $$u\sfrac{1}{4}\wedge\ s\wedge\less\ (s_1\sqsupsets_2)\ u\equiv s_2$$
+\item $$u\sfrac{1}{4}\wedge\ s\wedge\less\ (s_1\sqsupset s_2)\ u\equiv s_2$$
 
 You blow on $s_2$'s hand unless it is too high. 
 
 \item Adding to Instr. 6, if you have time left over from following 
 instructions, you may also shadow or blow on sights if they aren't too high. 
 
-\begin{tabular}
-	$u\sfrac{1}{4}\wedge$ & $s\less$ & \begin{tabular}
+\begin{tabular}{ c c c }
+	$u\sfrac{1}{4}\wedge$ & $s\less$ & \begin{tabular}{ c }
 		$u^\infty s$ \\ \midrule
 		$u\equiv s$ \\
 	\end{tabular} \\
 \end{tabular}
+\end{enumerate}
 
 You must now put these nine instructions into practice until you have 
 learned them thoroughly in practice; and even continue after that until you 
