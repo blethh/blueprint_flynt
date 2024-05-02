@@ -3,26 +3,51 @@
 \usepackage{salitter}
 \usletterlayout
 
+\usepackage{amsmath}
 \usepackage{mwe}
 \usepackage{csquotes}
 \usepackage{bbold}
 \usepackage{stix}
 \usepackage{xfrac}
+\usepackage{ulem}
 
 \coelfont
 
 \newcommand{\speech}[1]{
 	\textquote{\emph{#1}}}
 
+\newcommand{\said}[1]{ % oops
+	\speech{#1}}
+
 \newcommand{\essaytitle}[1]{
 	\emph{#1}}
 
 \newcommand{\gap}{\plainbreak{2}}
 
+\newcommand{\inlineaside}[1]{\textit{(#1)}}
+
+\newcommand{\x}{$x$}
+\newcommand{\y}{$y$}
+
+\newcommand{\redact}[1]{\xout{#1}}
+
 % --- typesetting aids for some subtle syntax of flynt
 \newcommand{\formulation}[1]{'\textit{#1}'}
 
 \newcommand{\triquote}[1]{'''#1'''}
+
+% TODO these should be considered placeholders basically
+\newcommand{\name}[1]{\textbf{#1}}
+
+% "linguistic expression"
+\newcommand{\lexpression}[1]{"\emph{#1}"}
+\newcommand{\expression}[1]{\lexpression{#1}}
+
+\newenvironment{sysrules}{
+	\begin{hangparas}{3em}{1}
+	}{
+	\end{hangparas}
+	}
 
 \begin{document}
 
@@ -822,6 +847,7 @@ Comments from the audience
 \item \textsc{Stop believing that these instructions have any objective meaning.}
 
 \item \textsc{You are now free to walk through walls (if you can find them).}
+\end{enumerate}
 
 \chapter{Some Objections to My Philosophy}
 
@@ -2038,7 +2064,7 @@ part of what is essential in believing "that others have minds", points I
 anticipated in the second chapter. 
 
 Finally, many philosophers will violently object to rejection of 
-temporal beliefs of a certain kind, namely beliefs of the form "If \x, then y 
+temporal beliefs of a certain kind, namely beliefs of the form "If \x, then \y\ 
 will follow in the future", especially if \y\ is something one wants, and \x\ is 
 something one can do. (After all, doesn't it happen that one throws the 
 switch, and the light goes on?) They object so strongly because they fear 
@@ -2320,6 +2346,7 @@ when work will be abolished. Rather than holding out utopian promises, it is
 better to give whoever can grasp it the realization that the experience 
 beyond art already occurs in his life---but is totally suppressed by the general 
 repressiveness of society. 
+\end{enumerate}
 
 
 Note: The avant-garde artist may raise a final question. Can't art or 
@@ -2552,9 +2579,12 @@ drudgery---send me a copy if you can.
 { \raggedleft 3/12/1963 \par }
 Henry 
 
-\begin{tabular}
-	\redact{Jazz} & \redact{Cage} & \redact{"Folk Music} & \redact{Communism} & 
-		\begin{tabular}
+\begin{tabular}{ c c c c c }
+	\redact{Jazz} & 
+	\redact{Cage} & 
+	\redact{"Folk Music"} & 
+	\redact{Communism} & 
+		\begin{tabular}{ c }
 			(anti-art?) \\
 			------ \\
 			(communism) \\
@@ -2608,7 +2638,7 @@ people off---and let them wait for the next revision or explication.
 Dear Henry, March 18, 1963 
 
 
-As I said before, my main reactions to yr lecture & ideas is that I'm for 
+As I said before, my main reactions to yr lecture \& ideas is that I'm for 
 Henry Flynt but not for his ideas. I think the spirit you show in carrying on 
 yr crusade is admirable and exciting. However, I am not against art and think 
 that any artist who would say that he is or think that he is would be 
@@ -2627,7 +2657,7 @@ Diane Wakoski
 \section{}
 
 "Dear Mr. Flynt...Since I may be depending on o-ganized culture for my 
-loot & livelihood I can wish you only a limited success in your movement... 
+loot \& livelihood I can wish you only a limited success in your movement... 
 Cornelius Cardew" [froma postcard of June 7, 1963] 
 
 
@@ -2738,8 +2768,6 @@ We have said that our topic is a certain change; we can now indicate
 more precisely what this change is. As long as we have a 2x2 array, there are 
 16 ways it can be filled with p's and f's. That is, there are 16 imaginable 
 states. The changes we are interested in, then, are specific changes from the 
-
-
 present state
 $\begin{pmatrix}
 	p & p \\
@@ -2766,7 +2794,7 @@ changes in the place of the one f; the change to the state having only p's;
 and finally 
 
 
-\begin{tabular}
+\begin{tabular}{ r c l }
 	$\begin{pmatrix}
 		p & p \\
 		f & p
@@ -2850,7 +2878,7 @@ has to be done to the photons and electrons to produce the changes. It is the
 same as with time travel: the hard part is deciding what it is and the even 
 harder part is making it happen. 
 
-\breatk
+\visbreak
 
 However, the foundations of our qualitative theory are not yet 
 satisfactory, We have assumed that the physicist will be able to identify the 
@@ -2927,7 +2955,7 @@ empirical importance of Alten's idea is thet it raises the question of what the
 perceptual frustration of the will (as we defined it) would do to the sense of 
 futurity. 
 
-\breatk
+\visbreak
 
 We now come to some considerations which will help us develop the 
 state descriptions, and which also show that from one point of view, the 
@@ -3046,7 +3074,7 @@ innovations.
 
 The formalist position goes as follows. Pure mathematics is the 
 manipulation of the meaningless and arbitrary, but typographically 
-well-defined ink-shapes on paper 'w,' 'x,' 'y,' 'z,' '{}',' '(,' '),' '\downarrow,' and '$\in$.' 
+well-defined ink-shapes on paper 'w,' 'x,' 'y,' 'z,' '{}',' '(,' '),' '$\downarrow$,' and '$\in$.' 
 These shapes are manipulated according to arbitrary but well-detined 
 mechanical rules. Actually, the rules mimic the structure of primitive 
 systems such as Euclid's geometry. There are formation rules, mechanical 
@@ -3178,7 +3206,7 @@ oneself that the vertical line is not longer than the other, and then
 trying to see the lines as equal in length; constructing similar 
 figures with a variety of real (measured) ratios and practicing 
 judging these ratios; and so forth. 
-\begin{sysrules}
+\end{sysrules}
 
 \img{illusions}
 
@@ -3196,7 +3224,7 @@ Property 4, it is normally the case that when an implication is repeated, a
 given occurrence of one of the sentences involved is unique to a specific 
 occurrence of the implication. In "Illusions," however, if two equal 
 sentences are next smaller than X, the occurrence of X does not uniquely 
-belong to either of the two occurrences of the implication. Compare '\begin{tabular} t & h & e \\ h &   &   \\ e &   & \end{tabular}', 
+	belong to either of the two occurrences of the implication. Compare '\begin{tabular}{c c c} t & h & e \\ h &   &   \\ e &   & \end{tabular}', 
 where the occurrence of 't' is not unique to either occurrence of 'the'. 
 Subject to this explanation, "Illusions" has Property 4. "Illusions" has 
 Property 8, but it goes without saying that the type of implication is not 
@@ -3298,8 +3326,10 @@ In the diagram on the following page, different positions of the vague outer
 ring at different times are suggested by different shadings. The 
 outer segment moves "down the page." The figure is by no means 
 an innperseq, but is supposed to help explain the definition. 
+\end{sysrules}
 
-\ccw{Successive bands represent the vague outer ring at successive times as it fades in toward the small bright light.}
+Successive bands represent the vague outer ring at successive times as it fades in 
+toward the small bright light.
 
 Innperseqs Diagram 
 
@@ -3307,32 +3337,32 @@ Innperseqs Diagram
 
 "Sentences" at 
 
-	\begin{tabular}
+	\begin{tabular}{c r l}
 		\img{time1} & $time_1$: & $a_1 a_2 a_3 a_4 a_5 a_6 a_7 b$ \\
 		& & $a_1,a_2 \rightarrow\ b$ \\
 	\end{tabular}
 
-	\begin{tabular}
+	\begin{tabular}{c r l}
 		\img{time2} & $time_2$: & $a_2 a_3 a_4 a_5 a_6 a_7 b c$ \\
 		& & $a_3 \rightarrow\ c$ \\
 	\end{tabular}
 
-	\begin{tabular}
+	\begin{tabular}{c r l}
 		\img{time3} & $time_3$: & $a_4 a_5 a_6 a_7 b c d$ \\
 		& & $a_4,a_5 \rightarrow\ d$ \\
 	\end{tabular}
 
-	\begin{tabular}
+	\begin{tabular}{c r l}
 		\img{time4} & $time_4$: & $a_6 a_7 b c d e$ \\
 		& & $a_6,b \rightarrow\ e$ \\
 	\end{tabular}
 
-	\begin{tabular}
+	\begin{tabular}{c r l}
 		\img{time5} & $time_5$: & $a_7 b c d e f$ \\
 		& & $a_7,c \rightarrow\ f$ \\
 	\end{tabular}
 
-	\begin{tabular}
+	\begin{tabular}{c r l}
 		\img{time6} & $time_6$: & $c d e f g$ \\
 		& & $d,e \rightarrow\ g$ \\
 	\end{tabular}
