@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside,draft]{memoir}
+\documentclass[10pt,twoside]{memoir}
 
 \usepackage{salitter}
 \usletterlayout
@@ -10,6 +10,7 @@
 \usepackage{stix}
 \usepackage{xfrac}
 \usepackage{ulem}
+\usepackage{enumitem}
 
 % fonts
 \coelfont
@@ -24,7 +25,7 @@
 	\speech{#1}}
 
 \newcommand{\essaytitle}[1]{
-	\emph{#1}}
+	\textit{#1}}
 
 \newcommand{\gap}{\plainbreak{2}}
 
@@ -74,12 +75,17 @@
 \newcommand{\cubedown}{
 	\includegraphics[width=1em]{img/cubedown}}
 
+
 \begin{document}
 \frontmatter
 \graphicspath{{img/}}
 \pagestyle{ruled}
 \chapterstyle{tandh}
 \openany
+
+\renewcommand*{\cftpartfont}{\bfseries\scshape}
+\renewcommand*{\cftchapterfont}{\normalfont}
+\renewcommand*{\cftsectionfont}{\itshape}
 
 % Title
 \thispagestyle{empty}
