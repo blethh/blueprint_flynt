@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside]{memoir}
+\documentclass[10pt,twoside,draft]{memoir}
 
 \usepackage{salitter}
 \usletterlayout
@@ -24,8 +24,7 @@
 \newcommand{\said}[1]{ % oops
 	\speech{#1}}
 
-\newcommand{\essaytitle}[1]{
-	\textit{#1}}
+\newcommand{\essaytitle}[1]{\textit{#1}}
 
 \newcommand{\gap}{\plainbreak{2}}
 
@@ -75,7 +74,6 @@
 \newcommand{\cubedown}{
 	\includegraphics[width=1em]{img/cubedown}}
 
-
 \begin{document}
 \frontmatter
 \graphicspath{{img/}}
@@ -113,9 +111,12 @@
 
 \photopage{img/creep}{Henry Flynt presents "Creep" lecture in Adam Hovre upper common room, Harvard University, May 15, 1962}{Tony Conrad}
 
-\tableofcontents*
 
 \input{essays/introduction.tex}
+
+\tableofcontents*
+
+\clearpage
 
 \mainmatter
 \part{Philosophy}
@@ -127,9 +128,13 @@
 \input{essays/philosophy_proper.tex}
 
 \part{Esthetics}
+\input{extra/general_acognitive_culture.tex}
 \input{essays/down_with_art.tex}
 \input{essays/art_or_brend.tex}
 \input{essays/letters.tex}
+\input{extra/poem_1.tex}
+\input{extra/poem_4.tex}
+\input{extra/philosophy_of_concept_art.tex}
 
 \part{Para-science}
 \input{essays/dissociation_physics.tex}
@@ -141,6 +146,7 @@
 \input{essays/energy_cube1966.tex}
 \input{essays/energy_cube1961.tex}
 \input{essays/concept_art.tex}
+\input{extra/structure_art_pure_mathematics.tex}
 \input{essays/perception_dissociator.tex}
 \input{essays/exercise_awareness_states.tex}
 \input{essays/mock_risk_games.tex}
