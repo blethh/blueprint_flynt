@@ -3,17 +3,18 @@
 \usepackage{salitter}
 \usletterlayout
 
-\usepackage{amsmath}
 \usepackage{mwe}
-\usepackage{csquotes}
-\usepackage{bbold}
+\usepackage{amsmath}
 \usepackage{stix}
 \usepackage{xfrac}
-\usepackage{ulem}
+\usepackage{bbold}
+\usepackage{csquotes}
+\usepackage[normalem]{ulem}
 \usepackage{enumitem}
 
 % fonts
-\coelfont
+\newpxfont
+
 
 % \usepackage{cabin}
 % \newfontfamily{\specialheadersfont}{Cabin}
@@ -24,7 +25,7 @@
 \newcommand{\said}[1]{ % oops
 	\speech{#1}}
 
-\newcommand{\essaytitle}[1]{\textit{#1}}
+\newcommand{\essaytitle}[1]{\uline{#1}}
 
 \newcommand{\gap}{\plainbreak{2}}
 
@@ -84,6 +85,14 @@
 \renewcommand*{\cftpartfont}{\bfseries\scshape}
 \renewcommand*{\cftchapterfont}{\normalfont}
 \renewcommand*{\cftsectionfont}{\itshape}
+% \setlength\beforechapskip{10pt}
+\renewcommand*{\chapterheadstart}{\vskip 1pt}
+
+
+\setlist{itemsep=3pt}
+\setlist{parsep=0pt}
+\setlist{topsep=3pt}
+\setlist{leftmargin=1cm}
 
 % Title
 \thispagestyle{empty}
@@ -111,8 +120,9 @@
 
 \photopage{img/creep}{Henry Flynt presents "Creep" lecture in Adam Hovre upper common room, Harvard University, May 15, 1962}{Tony Conrad}
 
-
 \input{essays/introduction.tex}
+
+\clearpage
 
 \tableofcontents*
 
@@ -128,13 +138,13 @@
 \input{essays/philosophy_proper.tex}
 
 \part{Esthetics}
-\input{extra/general_acognitive_culture.tex}
+% \input{extra/general_acognitive_culture.tex}
 \input{essays/down_with_art.tex}
 \input{essays/art_or_brend.tex}
 \input{essays/letters.tex}
-\input{extra/poem_1.tex}
-\input{extra/poem_4.tex}
-\input{extra/philosophy_of_concept_art.tex}
+% \input{extra/poem_1.tex}
+% \input{extra/poem_4.tex}
+% \input{extra/philosophy_of_concept_art.tex}
 
 \part{Para-science}
 \input{essays/dissociation_physics.tex}
@@ -146,7 +156,7 @@
 \input{essays/energy_cube1966.tex}
 \input{essays/energy_cube1961.tex}
 \input{essays/concept_art.tex}
-\input{extra/structure_art_pure_mathematics.tex}
+% \input{extra/structure_art_pure_mathematics.tex}
 \input{essays/perception_dissociator.tex}
 \input{essays/exercise_awareness_states.tex}
 \input{essays/mock_risk_games.tex}
