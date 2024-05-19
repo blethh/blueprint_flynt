@@ -57,20 +57,30 @@
     \let\oldnormalfont\normalfont
     \def\normalfont{\oldnormalfont\mdseries}}
 
-% ---- font (coelacanth)
+% ---- font (day roman)
 
 \newcommand{\dayromanfont}[0]{
-    \usepackage[nf]{coelacanth}
     \usepackage[T1]{fontenc}
+    %\usepackage{newpxtext,eulerpx}}
+    \usepackage{newpxtext}}
 
-    \let\oldnormalfont\normalfont
-    \def\normalfont{\oldnormalfont\mdseries}}
+% ---- font (garamond)
 
+\newcommand{\garafont}{
+	%\usepackage[cmintegrals,cmbraces]{newtxmath}
+	%\usepackage{ebgaramond-maths}
+	\usepackage{ebgaramond}
+	\usepackage[T1]{fontenc}}
+
+% ---- font gyre schola
+\newcommand{\scholafont}{
+	\usepackage{fontspec}
+	\setmainfont[Mapping=tex-text]{TeX Gyre Schola}}
 
 % ---- metadata for a title page
 
 \newcommand{\visbreak}{
-	\fancybreak{\vskip 1em {$\diamond$ \hskip 0.5in $\star$ \hskip 0.5in $\star$ \hskip 0.5in $\diamond$}\vskip 1em}}
+	\fancybreak{\vskip 1em {$\diamond$ \hskip 0.5in $\diamond$ \hskip 0.5in $\diamond$}\vskip 1em}}
 
 % ---- semantic punctuation, etc
 % quoting a word when speaking of a word itself
@@ -149,6 +159,9 @@
 
 \newcommand{\chapterauthor}[1]{
     {\large \itshape #1 \par }}
+
+% footnotes with a special font to indicate us as editor
+\newcommand{\editornote}[1]{\footnote{ \sffamily #1 --- S.W. Editors}}
 
 % ---- symbols etc
 

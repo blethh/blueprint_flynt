@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside,draft]{memoir}
+\documentclass[10pt,twoside]{memoir}
 
 \usepackage{salitter}
 \usletterlayout
@@ -7,13 +7,17 @@
 \usepackage{mwe}
 \usepackage{csquotes}
 \usepackage{bbold}
+% \usepackage{logix}
 \usepackage{stix}
 \usepackage{xfrac}
 \usepackage{ulem}
 \usepackage{enumitem}
 
 % fonts
-\coelfont
+% \coelfont
+% \garafont
+% \scholafont
+\dayromanfont
 
 % \usepackage{cabin}
 % \newfontfamily{\specialheadersfont}{Cabin}
@@ -85,6 +89,9 @@
 \renewcommand*{\cftchapterfont}{\normalfont}
 \renewcommand*{\cftsectionfont}{\itshape}
 
+\newcommand{\emt}[1]{\textit{#1}}
+\setlist{nosep}
+
 % Title
 \thispagestyle{empty}
 {
@@ -114,6 +121,8 @@
 
 \input{essays/introduction.tex}
 
+\clearpage
+
 \tableofcontents*
 
 \clearpage
@@ -126,15 +135,23 @@
 \input{essays/flyntian_modality.tex}
 \input{essays/some_objections.tex}
 \input{essays/philosophy_proper.tex}
+% primary study?
 
 \part{Esthetics}
 \input{extra/general_acognitive_culture.tex}
 \input{essays/down_with_art.tex}
 \input{essays/art_or_brend.tex}
 \input{essays/letters.tex}
-\input{extra/poem_1.tex}
-\input{extra/poem_4.tex}
+\input{extra/the_art_connection.tex}
+
+\part{Reflections on Concept Art}
 \input{extra/philosophy_of_concept_art.tex}
+\input{extra/challenge_conceptual_artists.tex}
+% \input{extra/challenge_early_returns.tex}
+% https://henryflynt.org/meta_tech/crystal.html
+% https://henryflynt.org/meta_tech/invalidmath.html
+% https://henryflynt.org/meta_tech/token.html
+% 
 
 \part{Para-science}
 \input{essays/dissociation_physics.tex}
@@ -156,9 +173,12 @@
 \input{essays/social_recognition.tex}
 \input{essays/creep.tex}
 \input{essays/three_levels_of_politics.tex}
+\input{extra/radicalism_of_unbelief.tex}
 
 \part{Science (Logic)}
 \input{essays/admissible_contradictions.tex}
 \input{essays/propositional_vibration.tex}
+\input{extra/repressed_content.tex}
+% \input{extra/apprehension_of_plurality.tex}
 
 \end{document}
