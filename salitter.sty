@@ -77,6 +77,12 @@
 	\usepackage{fontspec}
 	\setmainfont[Mapping=tex-text]{TeX Gyre Schola}}
 
+% ---- font (newpx)
+
+\newcommand{\newpxfont}[0]{
+    \usepackage[T1]{fontenc}
+    \usepackage{newpxtext}}
+
 % ---- metadata for a title page
 
 \newcommand{\visbreak}{
@@ -167,3 +173,7 @@
 
 % \newcommand{\gl}{\guillemotleft}
 % \newcommand{\gr}{\guillemotright}
+
+\newcommand{\editornote}[1]{\footnote{
+\sffamily #1 --- S.W.
+}}
