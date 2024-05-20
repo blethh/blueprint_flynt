@@ -11,9 +11,9 @@
 % ---- layout - us letter, on laser printer
 \newcommand{\usletterlayout}[0]{
     \setstocksize{8.5in}{5.5in} 
-    \settrimmedsize{8in}{4.75in}{*}
-    \settrims{0.25in}{0.25in}
-    \setlrmarginsandblock{0.125in}{0.125in}{*} 
+    \settrimmedsize{8.5in}{5.5in}{*}
+    \settrims{0pt}{0pt}
+    \setlrmarginsandblock{0.5in}{0.35in}{*} 
     \setulmarginsandblock{50pt}{*}{*}
     \setheaderspaces{*}{*}{1.618}
     \checkandfixthelayout}
@@ -165,9 +165,6 @@
 
 \newcommand{\chapterauthor}[1]{
     {\large \itshape #1 \par }}
-
-% footnotes with a special font to indicate us as editor
-\newcommand{\editornote}[1]{\footnote{ \sffamily #1 --- S.W. Editors}}
 
 % ---- symbols etc
 
