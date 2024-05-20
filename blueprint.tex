@@ -1,4 +1,9 @@
-\documentclass[10pt,twoside]{memoir}
+\documentclass[10pt,twoside,draft]{memoir}
+
+
+
+
+
 
 \usepackage{salitter}
 \usletterlayout
@@ -88,6 +93,8 @@
 \pagestyle{ruled}
 \chapterstyle{tandh}
 \openany
+
+\renewcommand*{\thesection}{\Alph{section}}
 
 \renewcommand*{\cftpartfont}{\bfseries\scshape}
 \renewcommand*{\cftchapterfont}{\normalfont}
@@ -184,7 +191,7 @@
 \tocline
 \input{essays/admissible_contradictions.tex}
 \input{essays/propositional_vibration.tex}
-\input{extra/repressed_content.tex}
+% \input{extra/repressed_content.tex}
 % \input{extra/apprehension_of_plurality.tex}
 
 \backmatter
@@ -192,6 +199,7 @@
 \input{extra/structure_art_pure_mathematics.tex}
 \input{essays/exercise_awareness_states.tex}
 \input{extra/general_acognitive_culture.tex}
+\input{extra/primary_study_paraphrase.tex}
 % input{extra/philosophy_of_concept_art.tex}
 
 \end{document}
