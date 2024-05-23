@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside,draft]{memoir}
+\documentclass[10pt,twoside]{memoir}
 
 \usepackage{salitter}
 \usletterlayout
@@ -64,7 +64,7 @@
 \newenvironment{sysrules}{
 	\begin{hangparas}{3em}{1}
 	}{
-	\end{hangparas}
+	\end{hangparas} \vskip 1em
 	}
 
 \newcommand{\postulate}[1]{
@@ -109,16 +109,14 @@
 % Title
 \thispagestyle{empty}
 {
-	\centering\sffamily
+	\centering
+	\vfill
+	\vfill
+	\includegraphics[scale=1]{img/blueprint_title}
+	\vfill
+	\includegraphics[scale=1]{img/blueprint_author}
+	\vfill
 
-	\plainbreak{3}
-
-	{ \Large
-	Blueprint for a Higher Civilization \par}
-
-	\plainbreak{3}
-
-	{ \large Henry Flynt \par}
 }
 
 \clearpage
@@ -137,6 +135,10 @@
 \clearpage
 
 \tableofcontents*
+
+\clearpage
+
+\listoffigures
 
 \clearpage
 
@@ -181,7 +183,6 @@
 \input{essays/social_recognition.tex}
 \input{essays/creep.tex}
 \input{essays/three_levels_of_politics.tex}
-\input{extra/radicalism_of_unbelief.tex}
 
 \part{Science (Logic)}
 \tocline
@@ -192,11 +193,15 @@
 
 \backmatter
 \part{Appendix}
+\tocline
 \input{extra/structure_art_pure_mathematics.tex}
+\input{extra/misleading_newness.tex}
+\input{extra/anthology_non_philosophical.tex}
 \input{essays/exercise_awareness_states.tex}
 \input{extra/general_acognitive_culture.tex}
-\input{extra/primary_study_paraphrase.tex}
 \input{extra/communists_must.tex}
+\input{extra/primary_study_paraphrase.tex}
+\input{extra/radicalism_of_unbelief.tex}
 % input{extra/philosophy_of_concept_art.tex}
 
 \end{document}
