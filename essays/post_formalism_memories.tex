@@ -1,18 +1,7 @@
 \newcommand{\midheading}[1]{
 	{ \vskip 1em \centering \large \textsc{#1} \par \vskip 1em }}
 
-
-
-
-
-
-
-\newcommand{\sysname}[1]{"\textsc{#1}"}
-
-
-
-
-
+\newcommand{\sysname}[1]{\enquote{\textsc{#1}}}
 
 \chapter{Post-Formalism in Constructed Memories}
 \section{Post-Formalist Mathematics}
@@ -101,14 +90,12 @@ reputable academic figures of the twentieth century.
 Early in 1961, I constructed some systems which went beyond 
 formalist mathematics in two respects. 
 \begin{enumerate}[label=\arabic*.,nosep,itemsep=0.5em]
-	\item My sentential elements are physically different from the little ink-shapes on paper used in all formalist 
-systems. My sentences are physically different from concatenations of 
-ink-shapes. My transformation rules have nothing to do with operations on 
-ink-shapes. 
+	\item My sentential elements are physically different from the little ink-shapes on paper used in all formalist systems. My sentences are physically different from concatenations of ink-shapes. My transformation rules have nothing to do with operations on ink-shapes. 
 
 \item My systems do not necessarily follow the axiomatic-deductive, 
-sentence\-implication-axiom-proof-theorem structure. 
+sen\-ten\-ce-implication-axiom-proof-theorem structure. 
 \end{enumerate}
+\vskip 0.5em
 
 		Both of these 
 possibilities, by the way, are mentioned by Carnap in \essaytitle{Languages as 
@@ -119,7 +106,8 @@ axiomatic-deductive structure.
 As a basis for the analysis of post-formalist systems, a list of structural 
 properties of formalist systems is desirable. Here is such a list. By 
 \enquote{implication} I will mean simple, direct implication, unless I say otherwise. 
-\begin{enumerate}
+\vskip 0.5em
+\begin{enumerate}[nosep, itemsep=0.5em]
 \item A sentence can be repeated at will. 
 
 \item The rule of implication refers to elements of sentences: sentences 
@@ -144,25 +132,26 @@ implication, given early in this essay.
 recognize mechanically whether the sentence is a theorem.
 Compound indirect implication is a puzzle. 
 \end{enumerate}
+\vskip 0.5em
 
 Now for the first post-formalist system. 
 
 \midheading{\sysname{Illusions}}
 
 \begin{sysrules}
-A \enquote{sentence} is the page (page \pageref{illusions}, with figure \ref{illusions} on it) so long as the 
+A \term{sentence} is the page (page \pageref{illusions}, with figure \ref{illusions} on it) so long as the 
 apparent, perceived ratio of the length of the vertical line to that 
 of the horizontal line (the statement's \enquote{associated ratio}) does not 
 change. (Two sentences are the \enquote{same} if end only if their 
 associated ratios are the same.) 
 
-A sentence Y is \enquote{implied by} a sentence X if and only if Y is the same as X, 
-or else Y is, of all the sentences one ever sees, the sentence having 
-the associated ratio next smaller than that of X. 
+A sentence $Y$ is \term{implied by} a sentence $X$ if and only if $Y$ is the same as $X$, 
+or else $Y$ is, of all the sentences one ever sees, the sentence having 
+the associated ratio next smaller than that of $X$. 
 
-Take as the axiom the first sentence one sees. 
+Take as the \term{axiom} the first sentence one sees. 
 
-Explanation: The figure is an optical illusion such that the vertical line 
+\emph{Explanation}: The figure is an optical illusion such that the vertical line 
 normally appears longer than the horizontal line, even though their 
 lengths are equal. One can correct one's perception, come to see 
 the vertical line as shorter relative to the horizontal line, decrease 
@@ -179,10 +168,10 @@ judging these ratios; and so forth.
 	\label{illusions}
 \end{figure}
 
-\sysname{IIlusions} has Properties 1, 3--5, and 7--8. Purely to clarify this fact, the 
+\sysname{Illusions} has Properties 1, 3--5, and 7--8. Purely to clarify this fact, the 
 following sequence of integers is presented as a model of the order in which 
 associated ratios might appear in reality. (The sequence is otherwise totally 
-inadequate as a model of \sysname{Illusions.}) $4 2 1$; $4 2$; $5 4 2 1$; $4 3 1$. The 
+inadequate as a model of \sysname{Illusions.}) $4\medspace2\medspace1$; $4\medspace2$; $5\medspace4\medspace2\medspace1$; $4\medspace3\medspace1$. The 
 implication structure would then be as shown in figure \ref{illusionstructure}.
 
 \begin{figure}
@@ -191,7 +180,7 @@ implication structure would then be as shown in figure \ref{illusionstructure}.
 	\label{illusionstructure}
 \end{figure}
 
-The axiom would be 4, and 5 could not appear in a proof. \sysname{IIlusions} has 
+The axiom would be 4, and 5 could not appear in a proof. \sysname{Illusions} has 
 Property 1 on the basis that one can control the associated ratio. Turning to 
 Property 4, it is normally the case that when an implication is repeated, a 
 given occurrence of one of the sentences involved is unique to a specific 
@@ -201,7 +190,7 @@ belong to either of the two occurrences of the implication. Compare figure \ref{
 where the occurrence of `$t$' is not unique to either occurrence of `$the$'. 
 Subject to this explanation, \sysname{Illusions} has Property 4. \sysname{Illusions} has 
 Property 8, but it goes without saying that the type of implication is not 
-modus ponens. Properties 3, 5, and 7 need no comment. As for Property 2, 
+\term{modus ponens}. Properties 3, 5, and 7 need no comment. As for Property 2, 
 the rule of implication refers to a property of sentences, rather than to 
 elements of sentences. The interesting feature of \sysname{Illusions} is that it 
 reverses the situation defined by Properties 6 and 9. Compound indirect 
@@ -210,7 +199,8 @@ the difference between being smaller and being next smaller. And there is
 only one axiom (per person). 
 
 \begin{figure}
-	{\centering \begin{tabular}{c c c} t & h & e \\ h &   &   \\ e &   & \end{tabular} \par}
+	{\centering \setlength\tabcolsep{0.25em}
+	\begin{tabular}{c c c} t & h & e \\ h &   &   \\ e &   & \end{tabular} \par}
 	\caption{Structure with shared node.}
 	\label{thestructure}
 \end{figure}
@@ -242,12 +232,12 @@ the following trivial formalist system.
 \midheading{\enquote{Order}}
 
 \begin{sysrules}
-A \enquote{sentence} is a member of a finite set of integers. 
+A \term{sentence} is a member of a finite set of integers. 
 
-Sentence Y is \enquote{implied by} sentence X if and only if Y=X, or else of all the 
+Sentence Y is \term{implied by} sentence X if and only if Y=X, or else of all the 
 sentences, Y is the one next smaller than X. 
 
-Take as the axiom the largest sentence. 
+Take as the \term{axiom} the largest sentence. 
 \end{sysrules}
 
 Is the pure syntax of \sysname{Illusions} isomorphic to \sysname{Order}? The preceding 
@@ -258,7 +248,7 @@ where loops indicate multiple occurances of the same sentence, could
 adequately represent a proof in \enquote{Order,} but could not remotely represent 
 one in \sysname{Illusions.} The essence of \sysname{Illusions} is that it is coupled to the 
 reader's subjectivity. For an ink-on-paper system even to be comparable to 
-\sysname{IIlusions,} the subjectivity would have to be moved out of the reader and 
+\sysname{Illusions,} the subjectivity would have to be moved out of the reader and 
 onto the paper. This is utterly impossible. 
 
 \begin{figure}
@@ -272,7 +262,7 @@ Here is the next system.
 \midheading{\sysname{Innperseqs}}
 
 \begin{sysrules}
-Explanation: Consider the rainbow halo which appears to surround a small 
+\emph{Explanation}: Consider the rainbow halo which appears to surround a small 
 bright light when one looks at it through fogged glass (such as 
 eyeglasses which have been breathed on). The halo consists of 
 concentric circular bands of color. As the fog evaporates, the halo 
@@ -282,77 +272,79 @@ happens on one contracting radius of the halo, and specifically
 what happens on the segment of that radius lying in the vague 
 outer ring: the outer segment. 
 
-A \enquote{sentence} (or halopoint) is the changing halo color at a fixed point, in 
+A \term{sentence} (or \term{halopoint}) is the changing halo color at a fixed point, in 
 space, in the halo; until the halo contracts past the point. 
 
-Several sentences \enquote{imply} another sentence if and only if, at some instant, 
+Several sentences \term{imply} another sentence if and only if, at some instant, 
 the several sentences are on an outer segment, and the other 
 sentence is the inner endpoint of that outer segment. 
 
-An \enquote{axiom} is a sentence which is in the initial vague outer ring (before it 
+An \term{axiom} is a sentence which is in the initial vague outer ring (before it 
 contracts), and which is not an inner endpoint. 
 
-An \enquote{innperseq} is a sequence of sequences of sentences on one radius 
-satisfying the following conditions. 1. The members of the first 
-sequence are axioms, 2. For each of the other sequences, the first 
-member is implied by the non-first members of the preceding 
-sequence; and the remaining inembers (if any) are axioms or first 
-members of preceding sequences. 3. All first members, of 
-sequences other than the last two, appear as non-first members. 4. 
-No sentence appears as a non-first member more than once. 5. The 
-last sequence has one member. 
+An \term{innperseq} is a sequence of sequences of sentences on one radius 
+satisfying the following conditions. 
+	\begin{enumerate}
+		\item The members of the first sequence are axioms, 
+		\item For each of the other sequences, the first member is implied by the non-first members of the preceding sequence; and the remaining members (if any) are axioms or first members of preceding sequences. 
+		\item All first members, of sequences other than the last two, appear as non-first members. 
+		\item No sentence appears as a non-first member more than once. 
+		\item The last sequence has one member. 
+	\end{enumerate}
 \end{sysrules}
 
+\newcommand{\innprow}[4]{
+	\parbox{2.25in}{
+		\parbox{0.35in}{\includegraphics[scale=0.25]{img/time#1}}
+		\parbox{0.5in}{#2:}
+		\parbox{1.25in}{
+			\parbox{1.25in}{#3}
 
+			\parbox{1.25in}{#4}}}\vskip 0.5em}
+
+\begin{figure}
 {\centering
-\begin{minipage}{1.6in}\imgw{1.3in}{img/innperseqs}\end{minipage}
-	\begin{minipage}{2.25in}
+	\parbox{0.15in}{\rotatebox[origin=c]{90}{\
+	{\footnotesize Successive bands represent the vague outer ring at successive times as it fades in toward the small bright light.}}}\begin{minipage}{1.5in}
+		\imgw{1.3in}{img/innperseqs}\vskip 0.1em {\centering\small small bright light \par}
+	\end{minipage}\begin{minipage}{2in}
 \enquote{Sentences} at 
+\vskip 1em
 
-	\begin{tabular}{ c r l }
-		\bimg{time1} & $time_1$: & $a_1 a_2 a_3 a_4 a_5 a_6 a_7 b$ \\
-		& & $a_1,a_2 \rightarrow\ b$ \\
-	\end{tabular}
+	\innprow{1}{$time_1$}{$a_1 a_2 a_3 a_4 a_5 a_6 a_7 b$}{$a_1,a_2 \rightarrow\ b$}
 
-	\begin{tabular}{c r l}
-		\bimg{time2} & $time_2$: & $a_2 a_3 a_4 a_5 a_6 a_7 b c$ \\
-		& & $a_3 \rightarrow\ c$ \\
-	\end{tabular}
+	\innprow{2}{$time_2$}{$a_2 a_3 a_4 a_5 a_6 a_7 b c$}{$a_3 \rightarrow\ c$}
 
-	\begin{tabular}{c r l}
-		\bimg{time3} & $time_3$: & $a_4 a_5 a_6 a_7 b c d$ \\
-		& & $a_4,a_5 \rightarrow\ d$ \\
-	\end{tabular}
+	\innprow{3}{$time_3$}{$a_4 a_5 a_6 a_7 b c d$}{$a_4,a_5 \rightarrow\ d$}
 
-	\begin{tabular}{c r l}
-		\bimg{time4} & $time_4$: & $a_6 a_7 b c d e$ \\
-		& & $a_6,b \rightarrow\ e$ \\
-	\end{tabular}
+	\innprow{4}{$time_4$}{$a_6 a_7 b c d e$}{$a_6,b \rightarrow\ e$}
 
-	\begin{tabular}{c r l}
-		\bimg{time5} & $time_5$: & $a_7 b c d e f$ \\
-		& & $a_7,c \rightarrow\ f$ \\
-	\end{tabular}
+	\innprow{5}{$time_5$}{$a_7 b c d e f$}{$a_7,c \rightarrow\ f$}
 
-	\begin{tabular}{c r l}
-		\bimg{time6} & $time_6$: & $c d e f g$ \\
-		& & $d,e \rightarrow\ g$ \\
-	\end{tabular}
+	\innprow{6}{$time_6$}{$c d e f g$}{$d,e \rightarrow\ g$}
 
-\enquote{Axioms} $a_1 a_2 a_3 a_4 a_5 a_6 a_7$
+	\vskip 2em
 
+\enquote{Axioms} \\
+	\hskip 1em $a_1 a_2 a_3 a_4 a_5 a_6 a_7$ 
+
+	\vskip 2em
 
 Innperseq \\
-$(a_3,a_2,a_1)$
-$(b,a_3)$
-$(c,a_5,a_4)$
-$(d,b,a_6)$
-$(e,c,a_7)$
-$(f,e,d)$
-$(g)$
+$(a_3,a_2,a_1)$ \\
+$(b,a_3)$ \\
+$(c,a_5,a_4)$ \\
+$(d,b,a_6)$ \\
+$(e,c,a_7)$ \\
+$(f,e,d)$ \\
+$(g)$ 
 	\end{minipage}\par}
+	\vskip 1em
+	\caption{Example instance of \sysname{Innperseqs.}}
+	\label{innperdiag}
+\end{figure}
 
-In the diagram, different positions of the vague outer 
+In diagram \ref{innperdiag}, different positions of the vague outer 
 ring at different times are suggested by different shadings. The 
 outer segment moves \enquote{down the page.} The figure is by no means 
 an innperseq, but is supposed to help explain the definition. 
@@ -360,7 +352,7 @@ In \sysname{Innperseqs,} a conventional proof would be redundant unless all
 the statements were on the same radius. And even if the weakest axiom were 
 chosen (the initial outer endpoint), this axiom would imply the initial inner 
 endpoint, and from there the theorem could be reached immediately. In 
-other words, to use the standard definition of \enquote{proof} in \sysname{Innperseqs} 
+other words, to use the standard definition of \enquote{\term{proof}} in \sysname{Innperseqs} 
 would result in an uninteresting derivation structure. Thus, a more 
 interesting derivation structure is defined, the \enquote{\term{innperseq.}} The interest of 
 an \enquote{\term{innperseq}} is to be as elaborate as the many restrictions in its definition 
@@ -381,11 +373,11 @@ one is implied by the others. But when are you given sentences? If one can
 think the sentences, then relating them is easy---but it is difficult to think the 
 sentences in the first place, even though they objectively exist. The diagram 
 suggests what to look for, but the actual thinking, the actual sentences are 
-another matter. As for Property 9, when \enquote{theorems} are identified with last 
+another matter. As for Property 9, when \term{theorems} are identified with last 
 members of innperseqs, I hesitate to say whether a derivation of a given 
 sentence can be constructed mechanically. If a sentence is nearer the center 
 than the axioms are, an innperseq can be constructed for it. Or can it? The 
-answer is contingent. \enquote{Innperseqs} is indeterminate because of the difficulty 
+answer is contingent. \sysname{Innperseqs} is indeterminate because of the difficulty 
 of thinking the sentences, a difficulty which is defined into the system. It is 
 the mathematician's capabilities at a particular instant which delimit the 
 indeterminacies. Precisely because of the difficulty of thinking sentences, I 
@@ -394,80 +386,80 @@ will give several subvariants of the system.
 \midheading{Indeterminacy}
 
 \begin{sysrules}
-A \enquote{totally determinate innperseq} is an innperseq in which one thinks all the 
+A \enquote{\term{totally determinate innperseq}} is an innperseq in which one thinks all the 
 sentences. 
 
-An \enquote{implior-indeterminate innperseq} is an innperseq in which one thinks 
+An \enquote{\term{implior-indeterminate innperseq}} is an innperseq in which one thinks 
 only each implicand and the outer segment it terminates. 
 
-A \enquote{sententially indeterminate innperseq} is an innperseq in which one thinks 
-only the outer segment, and its inner endpoint, as it progresses 
-inward. 
+A \enquote{\term{sententially indeterminate innperseq}} is an innperseq in which one thinks 
+only the outer segment, and its inner endpoint, as it progresses inward. 
 \end{sysrules}
 
 
 Let us return to the matter of pure and descriptive syntax. The interest 
-of \enquote{Illusions} and \enquote{Innperseqs} is precisely that their abstract structure 
+of \sysname{Illusions} and \sysname{Innperseqs} is precisely that their abstract structure 
 cannot be separated from their physical and psychological character, and 
 thus that they are not isomorphic to any conventional ink-on-paper system. I 
 am trying to break through to unheard of, and hopefully significant, modes 
 of implication; to define implication structures (and derivation structures) 
 beyond the reach of past mathematics. 
 
-\subsection{Constructed Memory Systems}
+\clearpage
+\section{Constructed Memory Systems}
 
 In order to understand this section, it is necessary to be thoroughly 
 familiar with \essaytitle{Studies in Constructed Memories,} the essay following this 
 one. (I have not combined the two essays because their approaches are too 
 different.) I will define post-formalist systems in constructed memories, 
-beginning with a system in an M*-Memory. 
+beginning with a system in an $M^*$-Memory. 
 
 \midheading{\enquote{Dream Amalgams}}
 
 \begin{sysrules}
-A \enquote{sentence} is a possible method, an $A_{a_i}$. with respect to an M*-Memory. 
-The sentence $A_{a_p}$ \enquote{implies} the sentence $A_{a_q}$ if and only if the $a_q$th 
-M*-assertion is actually thought; and either $A_{a_q} = A_{a_p}$, or else there is 
+A \term{sentence} is a possible method, an $A_{a_i}$. with respect to an $M^*$-Memory. 
+The sentence $A_{a_p}$ \enquote{\term{implies}} the sentence $A_{a_q}$ if and only if the $a_q$th 
+$M^*$-assertion is actually thought; and either $A_{a_q} = A_{a_p}$, or else there is 
 cross-method contact of a mental state in $A_{a_q}$ with a state in $A_{q_p}$\footnote{sic?}
 
-The axioms must be chosen from sentences which satisfy two conditions. 
+The \term{axioms} must be chosen from sentences which satisfy two conditions. 
 The mental states in the sentences must have cross-method contact 
-with mental states in other sentences. And the M*-assertions 
+with mental states in other sentences. And the $M^*$-assertions 
 corresponding to the sentences must not be thought. 
 
-Explanation: As \essaytitle{Studies in Constructed Memories} says, there can be 
+\emph{Explanation}: As \essaytitle{Studies in Constructed Memories} says, there can be 
 cross-method contact of states, because a normal dream can 
 combine totally different episodes in the dreamer's life into an 
 amalgam. 
 \end{sysrules}
 
-\enquote{\textsc{Dream Amalgams}} has Properties 1--5. For the first time, sentences are 
+\sysname{Dream Amalgams} has Properties 1--5. For the first time, sentences are 
 structurally composite, with mental states being the relevant sentential 
 elements. Implication has an unusual character. The traditional type of 
 implication, modus ponens, is \enquote{directed,} because the conditional is 
 directed. Even if $\ulcorner\varphi\supset\phi\urcorner$ is true 
-$\ulcorner\varphi\supset\phi\urcorner$ may not be. Now implication is also 
-directed in \enquote{\textsc{Dream Amalgams,}} but for a very different reason. 
+$\ulcorner\phi\supset\varphi\urcorner$ may not be. Now implication is also 
+directed in \sysname{Dream Amalgams,} but for a very different reason. 
 Cross-method contact, unlike the conditional, has a symmetric character. 
 What prevents implication from being necessarily symmetrical is that the 
-implicand's M*-assertion actually has to be thought, while the implior's 
-M*-assertion does not. Thus, implication is both subjective and mechanical, 
+implicand's $M^*$-assertion actually has to be thought, while the implior's 
+$M^*$-assertion does not. Thus, implication is both subjective and mechanical, 
 it is subjective, in that it is a matter of volition which method is remembered 
 to have actually: been used. It is mechanical, in that when one is 
 remembering, one is automatically aware of the cross-method contacts of 
 states in $A_{a_q}$. The conditions on the axioms ensure that they will have 
 implications without losing Property 7. 
 
-As for compound implication in \enquote{\textsc{Dream Amalgams,}} the organism 
-with the M*-Memory can't be aware of it at all; because it can't be aware 
+As for compound implication in \sysname{Dream Amalgams,} the organism 
+with the $M^*$-Memory can't be aware of it at all; because it can't be aware 
 that at different times it remembered different methods to be the one 
 actually used. (In fact, the organism cannot be aware that the system has 
 Property 5, for the same reason.) On the other hand, to an outside observer 
-of the M*-Memory, indirect implication is not only thinkable but 
+of the $M^*$-Memory, indirect implication is not only thinkable but 
 mechanical. It is not superfluous because cross-method contact of mental 
 states is not necessarily transitive. The outside observer can decide whether a 
 sentence is a theorem by the following mechanical procedure. Check 
-whether the sentence's M*-assertion has acually been thought; if so, check all 
+whether the sentence's $M^*$-assertion has acually been thought; if so, check all 
 sentences which imply it to see if any are axioms; if not, check all the 
 sentences which imply the sentences which imply it to see if any are axioms; 
 etc. The number of possible methods is given as finite, so the procedure is 
@@ -481,23 +473,24 @@ is quite unusual but still more or less employs deductive inference, is used to
 study post-formalist modes of inference which are anything but deductive. 
 
 To aid in understanding the next system, which involves infalls in a 
-D-Memory, here is an 
+$D$-Memory, here is an 
 
 { \vskip 1.5em \centering \large \framebox[1.1\width]{\enquote{Exercise to be Read Aloud}} \par\vskip 1.5em}
 
-(Read according to a timer, reading the first word at O' O", and prolonging 
+(Read according to a timer, reading the first word at 0' 0", and prolonging 
 and spacing words so that each sentence ends at the time in parentheses after 
 it. Do not pause netween sentences.) 
-
+\vskip 1em
 \begin{tabular}{ r p{2.5in} }
 	($event_1$) &  All men are mortal. (17") \\
 
-	($Sentence_1=event_2s$) &  The first utterance lasted 17" and ended at 17"; and lasted 15" and ended 1" ago. (59") \\
+	($Sentence_1=event_2$) &  The first utterance lasted 17" and ended at 17"; and lasted 15" and ended 1" ago. (59") \\
 
 	($S_2=event_3$) & The second utterance lasted 42" and ended at 59": and lasted 50" and ended 2" ago. (1' 31") \\
 
 	($S_3=event_4$) & The third utterance lasted 32" and ended at 1' 31"; and lasted 40" and ended 1" ago. (2' 16") \\
 \end{tabular}
+\vskip 1em
 
 Since '32' in $S_3$ is greater than '2' in $S_2$, $S_2$ must say that $S_1$ ($=event_2$)
 ended 30" after $S_2$ began, or something equally unclear. The duration of $S_2$
@@ -505,42 +498,50 @@ is greater than the distance into the past to which it refers. This situation is
 not a real infall, but it should give the reader some intuitive notion of an 
 infall. 
 
-\midheading{"Infalls"}
+{
+	\clearpage %TODO shitty hacky way to get this unbroken
+\midheading{\enquote{Infalls}}
 
 \begin{sysrules}
-	A "sentence" is a D-sentence, in a D-Memory such that $event_{j+1}$ is the first 
-thinking of the jth D-sentence, for all j. 
+	A \term{sentence} is a $D$-sentence, in a D-Memory such that $event_{j+1}$ is the first 
+thinking of the $j$th $D$-sentence, for all $j$. 
 
-Two sentences "imply" another if and only if all three are the same; or else 
+Two sentences \enquote{imply} another if and only if all three are the same; or else 
 the three are adjacent (and can be written $S_{j+1},S_j,S_{j-1}$), and are such 
 that $\delta_j=x_{j+1}-x_j> z_j,$ $S^D_{j-1}$ is the implicand. (The function of $S_{j+1}$ is to 
 give the duration $\delta_j=x_{j+1}-x_j$ of $S_j$. $S_j$ states that $event_j$, the first 
 thinking of $S^{D}_{j-1}$, ended at a distance $z_j$ into the past, where $z_j$ is smaller 
-than $S^D_j$'s own duration. The diagram indicates the relations.) 
+	than $S^D_j$'s own duration. Diagram \ref{infallsdiag} indicates the relations.) 
 \end{sysrules}
+}
 
-\imgw{4in}{img/infallsdiag}
+\begin{figure}
+	\centering
+	\includegraphics[width=4in]{img/infallsdiag}
+	\caption{Implication structure of example $D$-Memory infalls.}
+	\label{infallsdiag}
+\end{figure}
 
-In this variety of D-Memory, the organism continuously thinks successive 
-D-sentences, which are all different, just as the reader of the above exercise 
+In this variety of $D$-Memory, the organism continuously thinks successive 
+$D$-sentences, which are all different, just as the reader of the above exercise 
 continuously reads successive and different sentences. Thus, the possibility 
 of repeating a sentence depends on the possibility of thinking it while one is 
 thinking another sentence---a possibility which may be far-fetched, but which 
-is not explicitly excluded by the definition of a "D-Memory." If the 
-possibility is granted, then "\textsc{Infalls}" has Properties 1--5. Direct implication is 
+is not explicitly excluded by the definition of a \enquote{$D$-Memory.} If the 
+possibility is granted, then \sysname{Infalls} has Properties 1--5. Direct implication is 
 completely mechanical; it is subjective only in that the involuntary 
-determination of the $z_j$ and other aspects of the memory is a 'subjective' 
+determination of the $z_j$ and other aspects of the memory is a \enquote{subjective}
 process of the organism. Compound implication is also mechanical to an 
 outside observer of the memory, but if the organism itself is to be aware of 
 it, it has to perform fantastic feats of multiple thinking. 
 
-"\textsc{Dream Amalgams}" and "\textsc{Infalls}" are systems constructed with 
-imaginary elements, systems whose "notation" is drawn from an imaginary 
+\sysname{Dream Amalgams} and \sysname{Infalls} are systems constructed with 
+imaginary elements, systems whose \enquote{notation} is drawn from an imaginary 
 object or system. Such systems have no descriptive syntax. Imaginary objects 
 were introduced into mathematics, or at least into geometry, by Nicholas 
 Lobachevski, and now I am using them as a notation. For these systems to 
 be nonisomorphic to any ink-on-paper systems, the mathematician must be 
-the organism with the M*-Memory or the D*-Memory. But this means that 
+the organism with the $M^*$-Memory or the $D$-Memory. But this means that 
 in this case, the mathematics which is nonisomorphic to any ink-on-paper 
 system can be performed only in an imaginary mind. 
 
@@ -549,8 +550,8 @@ the rules of a system arbitrarily. Let us take Carnap literally. I want to
 construct more systems in constructed memories---so why not construct the 
 system by a procedure which ensures that constructed memories are 
 involved, but which is otherwise arbitrary? Why not suspend the striving 
-after "interesting" systems, that last vestige of the striving after 
-"correctness," and see what happens? Why not construct the rules of a 
+after \enquote{interesting} systems, that last vestige of the striving after 
+\enquote{correctness,} and see what happens? Why not construct the rules of a 
 system by a chance procedure? 
 
 To construct a system, we have to fill in the blanks in the following rule 
@@ -561,11 +562,11 @@ schema in such a way that grammatically correct sentences result.
 \midheading{Rule Schema}
 
 \begin{sysrules}
-A "sentence" is a(n) \blankspace.
+A \term{sentence} is a(n) \blankspace.
 
-Two sentences "imply" a third if and only if the two sentences \blankspace\ the third. 
+Two sentences \term{imply} a third if and only if the two sentences \blankspace\ the third. 
 
-An "axiom" is a sentence that \blankspace.
+An \term{axiom} is a sentence that \blankspace.
 \end{sysrules}
 
 
@@ -577,96 +578,96 @@ is with this series that I will fill in the blanks in the rule schema. In the ne
 stage, I fill the first (second, third) blank with the ceries of expressions 
 preceding the-first (second, third) period in the entire series. 
 
-\midheading{"Haphazard System"}
+\midheading{\sysname{Haphazard System}}
 
 \begin{sysrules}
-A "sentence" is a the duration D-sentences $\triangle\ (\mathparagraph^m)$ conclude these 
-"$\Phi^*$-Reflec\-tion," or the future Assumption voluntarily force of 
+	A \term{sentence} is a the duration $D$-sentences $\triangle\ (\mathparagraph^m)$ conclude these 
+\enquote{$\Phi^*$-Reflec\-tion,} or the future Assumption voluntarily force of 
 conviction for conclusion the Situation or by ongoing that this 
 system? be given telling between the Situation 1. 
 
-Two sentences "imply" a third if and only if the two sentences is\slash was 
+Two sentences \term{imply} a third if and only if the two sentences is\slash was 
 contained not have to the acceptance that a certain and malleable 
 study what an event involves material specifically mathematics: 
 construct accompanies the rest, extra-linguistically image organism 
 can fantasy not remembering $\Phi^*$-Memory, the future interval defined 
 in dream the third. 
 
-An "axiom" is a sentence that internally D-sentences, just as the 
-"$\Phi^*$-Memory" sentences $A_{a_1}$ is $A_{a_2}$. 
+An \term{axiom} is a sentence that internally D-sentences, just as the 
+\enquote{$\Phi^*$-Memory} sentences $A_{a_1}$ is $A_{a_2}$. 
 
 In the final stage, I cancel the smallest number of words I have to in 
 order to make the rules grammatical. 
 \end{sysrules}
 
-\midheading{"Fantasied Amnesia"}
+\midheading{\sysname{Fantasied Amnesia}}
 
 \begin{sysrules}
-A "sentence" is a duration or the future force of conviction for the Situation 
+A \term{sentence} is a duration or the future force of conviction for the Situation 
 or this system given Situation 1. 
 
-Two sentences "imply" a third if and only if the two sentences have the 
+Two sentences \term{imply} a third if and only if the two sentences have the 
 acceptance that a certain and malleable study extra-linguistically can 
 fantasy not remembering the future interval defined in the third. 
 
-An "axiom" is a sentence that internally just sentences $A_{a_2}$.
+An \term{axiom} is a sentence that internally just sentences $A_{a_2}$.
 \end{sysrules}
 
-It becomes clear in thinking about "Fantasied Amnesia" that its 
+It becomes clear in thinking about \sysname{Fantasied Amnesia} that its 
 metametamathematics is dual. Describing the construction of the rules, the 
 metamathematics, by a systematic performance, is one thing. Taking the 
 finished metamathematics at face value, independently of its origin, and 
-studying it in the usual manner, is another. Let us take "Fantasied Amnesia" 
+studying it in the usual manner, is another. Let us take \sysname{Fantasied Amnesia}
 at face value. As one becomes used to its rules, they become somewhat more 
-meaningful. I will say that an "interpretation" of a haphazard system is an 
+meaningful. I will say that an \enquote{interpretation} of a haphazard system is an 
 explanation of its rules that makes some sense out of what may seem 
-senseless. "Interpreting" is somewhat like finding the conditions for the 
+senseless. \enquote{Interpreting} is somewhat like finding the conditions for the 
 existence of a constructed memory which seemingly cannot exist. The first 
-rule of "Fantasied Amnesia" is a disjunction of three substantives. The 
-"Situation" referred to in the second substantive expression is either 
+rule of \sysname{Fantasied Amnesia} is a disjunction of three substantives. The 
+\enquote{Situation} referred to in the second substantive expression is either 
 Situation 1 or else an unspecified situation. The third substantive expression 
-apparently means "this system, assuming Situation 1," and refers to 
-"Fantasied Amnesia" itself. The definition of "sentence" is thus meaningful, 
-but very bizarre. The second rule speaks of "the acceptance" as if it were a 
-written assent. The rule then speaks of a "malleable study" as "fantasying" 
+apparently means \enquote{this system, assuming Situation 1,} and refers to 
+\sysname{Fantasied Amnesia} itself. The definition of \enquote{sentence} is thus meaningful, 
+but very bizarre. The second rule speaks of \enquote{the acceptance} as if it were a 
+written assent. The rule then speaks of a \enquote{malleable study} as \enquote{fantasying} 
 something. This construction is quite weird, but let us try to accept it. The 
-third rule speaks of a sentence that "sentences" (in the legal sense) a possible 
+third rule speaks of a sentence that \enquote{sentences} (in the legal sense) a possible 
 method. So much for the meaning of the rules. 
 
 Turning to the nine properties of formalist systems, the reference to 
-"the future interval" in the implication rule of "Fantasied Amnesia" 
+\enquote{the future interval} in the implication rule of \sysname{Fantasied Amnesia}
 indicates that the system has Property 2; and the system can perfectly well 
 have Property 8. It does not have Property 6 in any known sense. Certainly 
-it does have Property 9. it just might have Property. 1. But as for the other 
-four properties, it seems out of the question to decide whether "Fantasied 
-Amnesia" has them. For whatever it is worth, "Fantasied Amnesia" is on 
+it does have Property 9. it just might have Property 1. But as for the other 
+four properties, it seems out of the question to decide whether \sysname{Fantasied 
+Amnesia} has them. For whatever it is worth, \sysname{Fantasied Amnesia} is on 
 balance incomparable to formalist systems. 
 
 My transformation rule schema has the form of a biconditional, in 
-which the right clause is the operative one. If a transformation rule were to 
-vary, in such a way that it could be replaced by a constant rule whose right 
+which the right-hand clause is the operative one. If a transformation rule were to 
+vary, in such a way that it could be replaced by a constant rule whose right-hand
 clause was the disjunction of the various right clauses for the variable rule, 
-then the latter would vary "trivially." 1 will say that a system whose 
-transformation rule can vary non-trivially is a "heterodeterminate" system. 
-Since 1 have constructed a haphazard metamathematics, why not a 
+then the latter would vary \enquote{trivially.} I will say that a system whose 
+transformation rule can vary non-trivially is a \enquote{heterodeterminate} system. 
+Since I have constructed a haphazard metamathematics, why not a 
 heterodeterminate metamathematics? Consider a mathematician with an 
-M-Memory, such that each $A_{a_i}$. is the consistent use of a different 
-transformation rule, a different definition of "imply," for the mathematics 
+$M$-Memory, such that each $A_{a_i}$. is the consistent use of a different 
+transformation rule, a different definition of \enquote{imply,} for the mathematics 
 in which the mathematician is discovering theorems. The consistent use of a 
 transformation rule is after all a method---a method for finding the 
 commitments premisses make, and for basing conclusions in premisses. When 
 the mathematician goes to remember which rule of inference he has actually 
-been using, he "chooses" which of the possible methods is remembered to 
+been using, he \enquote{chooses} which of the possible methods is remembered to 
 have actually been used. This situation amounts to a heterodeterminate 
-system. tn fact, the metamathematics cannot even be written out this time; I 
+system. In fact, the metamathematics cannot even be written out this time; I 
 can only describe it metametamathematically in terms of an imaginary 
 memory. 
 
 We are now in the realm of mathematical systems which cannot be 
 written out, but can only be described metametamathematically. I will 
-present a final system of this sort. It is entitled \textsc{"System Such That No One 
-Knows What's Going On."} One just has to guess whether this system exists, 
-and if it does what it is like. The preceding remark is the 
+present a final system of this sort. It is entitled \sysname{System Such That No One 
+Knows What's Going On.} One just has to guess whether this system exists, 
+and if it does what it is like.\editornote{The appendix contains a presentation of this work.} The preceding remark is the 
 metametamathematical description, or definition, of the system. 
 
 \subsection{Epilogue}
@@ -686,7 +687,7 @@ objective value that mathematics has. I would not have set down constructed
 memory theory and the post-formalist systems if I did not believe that they 
 could be applied. When and how they will be is another matter. 
 
-And what about the "validity" of formalism? The rise of the formalist 
+And what about the \enquote{validity} of formalism? The rise of the formalist 
 position is certainly understandable. The formalists had a commendable, 
 rationalistic desire to eliminate the metaphysical problems associated with 
 mathematics. Moreover, formalism helped stimulate the development of the 
@@ -695,13 +696,13 @@ spite of the productiveness of the formalist position, however, it now seems
 beyond dispute that formalism has failed to achieve its original goals. (My 
 pure philosophical writings are the last word on this issue.) Perhaps the main 
 lesson to be learned from the history of formalism is that an idea does not 
-have to be "true" to be productive. 
+have to be \enquote{true} to be productive. 
 
 
 \section*{Note}
-Early versions of \textsc{"Illusions"} and \textsc{"Innperseqs"} appeared in my essay 
-"Concept Art," published in An Anthology, ed. La Monte Young, New 
-York, 1963. An early, July 1961 version of \textsc{"System Such That No One 
-Knows What's Going On"} appeared in dimension 14, Ann Arbor, 1963, 
+Early versions of \sysname{Illusions} and \sysname{Innperseqs} appeared in my essay 
+\essaytitle{Concept Art,} published in \booktitle{An Anthology}, ed. La Monte Young, New 
+York, 1963. An early, July 1961 version of \sysname{System Such That No One 
+Knows What's Going On} appeared in \journaltitle{dimension 14}, Ann Arbor, 1963, 
 published by the University of Michigan College of Architecture and Design. 
 
