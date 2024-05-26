@@ -11,6 +11,9 @@
 \usepackage{csquotes}
 \usepackage[normalem]{ulem}
 \usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
 
 % fonts
 \newpxfont
@@ -82,6 +85,11 @@
 \newcommand{\cubedown}{
 	\includegraphics[width=1em]{img/cubedown}}
 
+\newcommand{\photopage}[4]{
+	\begin{figure}{\centering\includegraphics[width=4.5in]{#1}\par}
+		\vskip 1em\noindent #2 \vskip 1em\caption{\noindent #3}
+	{\raggedleft \itshape (photo by #4) \par}\end{figure}}
+
 \begin{document}
 \frontmatter
 \graphicspath{{img/}}
@@ -121,7 +129,9 @@
 
 \clearpage
 
-% \photopage{img/creep}{Henry Flynt presents "Creep" lecture in Adam Hovre upper common room, Harvard University, May 15, 1962}{Tony Conrad}
+\thispagestyle{empty}
+\photopage{img/creep02}{5/15/1962}{Henry Flynt presents "Creep" lecture in Adam Hovre upper common room, Harvard University, May 15, 1962}{Tony Conrad}
+\clearpage
 
 \input{essays/introduction.tex}
 
