@@ -1,3 +1,11 @@
+\newcommand{\splitrule}[2]{
+	\parbox[t]{4.25in}{
+		\parbox{2.75in}{#1}\parbox{1.25in}{#2}}}
+
+\newcommand{\gensplit}[2]{
+	\parbox[t]{4in}{
+		\parbox{2in}{#1}\parbox{2in}{#2}}}
+
 \chapter{Exhibit of a Working Model of a Perception-Dissociator}
 
 \section*{\textsc{Statement of Objectives}}
@@ -355,88 +363,86 @@ actions are simultaneous.
 
 Instructions 1--3 apply \textsc{when your eyes are open.}
 
-\vskip 1em
-\newcommand{\eqnA}{
-	\begin{tabular}{ c c }
-		\begin{tabular}{ c c }
-			$s_1\wedge$ & $s_1\vee$ \\
-			$u\wedge$ & $(t\longdivision{u})$ \\
-		\end{tabular} &
-		$u\lrcorner$ \\
-	\end{tabular}}
+\vskip 0.75em
 
-\newcommand{\splitrule}[2]{
-	\parbox[t]{4.5in}{
-		\parbox{2.75in}{#1}\parbox{1.75in}{#2}}}
-
-\newcommand{\gensplit}[2]{
-	\parbox[t]{4in}{
-		\parbox{2in}{#1}\parbox{2in}{#2}}}
+\newcommand{\eqnAB}{
+	\begin{equation*}
+	\left.\begin{gathered}
+		\eyeO{s_1}\\
+		\eyeO{u}
+	\end{gathered}\right.\:\left.
+		\begin{gathered}
+			\eyeC{s_1}\\
+			\probly{\stepson{t}{u}}
+		\end{gathered}\right.\:
+	\flee{u}
+	\end{equation*}}
 
 \begin{enumerate}[label=\arabic*.,nosep, wide]
 	\item \splitrule{If you see a sight close its eyes, a heavy touch from the machine may be falling toward you.
-		You must instantly jump aside.}{\eqnA}
+		You must instantly jump aside.}{\eqnAB}
 
 		\vskip 0.5em
 
 \textsc{You must follow this and succeeding instructions as long as you stay in the exhibit. Stay with each instruction until you have it thoroughly in memory; and check out the symbolic version so you learn to read the symbols.}
-		\vskip 1em
+		\vskip 0.75em
 
 \item \splitrule{If a sight in front of you jumps over you, a touch may be about to tackle you. You must instantly jump to one side. }{
-\begin{tabular}{ r c l }
-	$u\wedge$ & \begin{tabular}{ c }
-		$s\overbracket{u}$ \\
-		$(t\overbrace{u})$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
-		}
+\begin{equation*}
+	\eyeO{u}\:\left.\begin{gathered}
+		\jumpsover{s}{u} \\
+		\probly{\tackles{t}{u}}
+	\end{gathered}\:\right.\flee{u}
+\end{equation*}
+	}
 
-\vskip 1em
+\vskip 0.75em
 
 \item \splitrule{If a sight waves its hands in front of your open eyes, a touch may be about to shove from behind.
-	Jump to one side. }{
-\begin{tabular}{ r c l }
-	$u\wedge$ & \begin{tabular}{ c }
-		$s^\infty u$\\
-		$(t\sqsupset u)$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}}
+	Jump to one side. }{\begin{equation*}
+  \eyeO{u}\:\left.\begin{gathered}
+    \shadows{s}{u}\\
+    \probly{\pushes{t}{u}}
+  \end{gathered}\:%
+  \right.\flee{u}
+\end{equation*}}
 
-\vskip 1em
+
+\vskip 0.75em
 
 \textsc{If there are any sights, try standing around and following these instructions for a short while.}
 
-\vskip 1em
+\vskip 0.75em
 
-\item \splitrule{If you close your eyes, you must keep them closed until a touch tackles you, a touch shoves you, or you can't keep your mind on the exhibit (which you should also consider to be an effect of the machine). Then you immediately open your eyes.}{\begin{tabular}{ r c l }
-	$u\vee$ & \begin{tabular}{ c }
-		$t\overbrace{u}$ \\ \midrule
-		$t\sqsupset u$ \\ \midrule
-		$u$ inattentive \\
-	\end{tabular} & $u\wedge$ \\
-\end{tabular}}
+\item \splitrule{If you close your eyes, you must keep them closed until a touch tackles you, a touch shoves you, or you can't keep your mind on the exhibit (which you should also consider to be an effect of the machine). Then you immediately open your eyes.}{\begin{equation*}
+    \eyeC{u}\:%
+      \dfrac{\tackles{t}{u}}{
+        \dfrac{\pushes{t}{u}}{
+          u\:\text{inattentive}}}%
+  \:\eyeO{u}
+\end{equation*}}
 
-\vskip 1em
+\vskip 0.75em
 
 \emph{(A horizontal line between action symbols means \emph{or.} With it, instructions can be combined)}
 
-\vskip 1em
+\vskip 0.75em
 
 \textsc{The next three instructions tell you what to do when your eyes are closed. Learn them well.}
 
-\vskip 1em
+\vskip 0.75em
 
-\item \splitrule{If you feel a breath blowing on one of your hands, a touch may be falling on you. You must instantly jump to the side away from the breath.}{ \begin{tabular}{ r c l }
-	$u\vee$ & \begin{tabular}{ c }
-		$t_1\equiv u$ \\
-		$t_2\longdivision{u}$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
-	}
+\item \splitrule{If you feel a breath blowing on one of your hands, a touch may be falling on you. You must instantly jump to the side away from the breath.}{\begin{equation*}
+  \eyeC{u}\:\begin{gathered}
+    \blows{t_1}{u}\\
+    \probly{\stepson{t_2}{u}}
+  \end{gathered}
+  \flee{u}
+\end{equation*}}
 
 \vfill
 
-(Turn page and continue) 
+\textit{(Turn page and continue) }
 
 \vfill
 
@@ -444,91 +450,115 @@ Instructions 1--3 apply \textsc{when your eyes are open.}
 
 \lefttab{8}
 
+\vfill
 \item If your closed eyes are shadowed, a touch may be about to tackle 
 you. You must instantly jump aside. 
+\begin{equation*}
+  \eyeC{u}\begin{gathered}
+    \shadows{s}{u}\\
+    \probly{\tackles{t}{u}}
+  \end{gathered}
+  \:\:\flee{u}
+\end{equation*}
 
-\begin{tabular}{ r c l }
-	$u\vee$ & \begin{tabular}{ c }
-		$s^\infty u$ \\
-		($t\overbrace{u}$) \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
-
+\vfill
 \item If you sense a massive touch going above your head, another touch 
 may be about to shove you from behind. Jump aside. 
 
-\begin{tabular}{ r c l }
-	$u\vee$ & \begin{tabular}{ c }
-		$t_1\overbracket{u}$ \\
-		($t_2\sqsupset u$) \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+\begin{equation*}
+  \eyeC{u}\:\begin{gathered}
+    \jumpsover{t_1}{u}\\
+    \probly{\pushes{t_2}{u}}
+  \end{gathered}
+  \:\:\flee{u}
+\end{equation*}
 
+\vfill
 \item If you have any time left over from following other instructions, 
 close your eyes and go around with your hands in front of you, shoving 
 touches whenever you feel them. 
 
-\begin{tabular}{ c c }
-	$u\vee$ & $u\sqsupset t$ \\
-\end{tabular}
+\begin{equation*}
+  \eyeC{u} \:\:\: \pushes{u}{t}
+\end{equation*}
+
+\vfill
 
 \textsc{Now try instr. 8, remembering and following the other instructions about closed eyes (instr. 4--7).
 When you have to open your eyes again, as per instr. 4, check anything you forgot: and then go to the
 succeeding instructions. Now---close your eyes.}
 
+\vfill
+
 \textsc{The next three instructions apply when your eyes are open.}
 
+\vfill
 \item If you see a sight falling toward or about to step on another sight 
 whose eyes are open, run until you face the sight on the ground and close 
 your eyes. 
 
 \textsc{Before you follow this instruction you must have mastered the preceeding instructions about closed eyes.}
 
-$$
-u\wedge\ s_2\wedge(s_1\longdivision{s_2}) u\vee
-$$
+\begin{equation*}
+  \eyeO{u}\:\eyeO{s_2}\:\probly{\stepson{s_1}{s_2}}\:\eyeC{u}
+\end{equation*}
 
-(Keep going) 
+\vfill
+\textit{(Keep going) }
 
 \clearpage
 
 \righttab{9}
 
-\item If you see a sight about to tackle another whose eyes are open, run 
+\vfill
+\item If you see a sight about to tackle another whose eyes are \uline{open}, run 
 until you face the sight about to be tackled and jump over both sights. If the 
-sight about to be tackled has closed eyes, you must immediately shadow 
+sight about to be tackled has \uline{closed eyes}, you must immediately shadow 
 them. 
 
-\begin{tabular}{ r c }
-	$u\wedge$ & \begin{tabular}{ c c c }
-		$s_2\wedge$ & $s_1\overbrace{s_2}$ & $u\overbracket{s_1s_2}$ \\ \midrule
-		$s_2\vee$ & $(s_1\overbrace{s_2})$ & $u^\infty s_2$
-	\end{tabular} \\
-\end{tabular}
+\vfill
+\begin{equation*}
+  \eyeO{u}\dfrac{%
+      \eyeO{s_2}\quad\probly{\tackles{s_1}{s_2}}\quad\jumpsover{u}{s_1 s_2}%
+    }{%
+      \eyeC{s_2}\quad\probly{\tackles{s_1}{s_2}}\quad\shadows{u}{s_2}%
+    }
+\end{equation*}
 
+\vfill
 \item If you see a sight about to push another with open eyes from 
 behind, you must shadow the sight about to be pushed. But if the sight 
 about to be pushed has closed eyes, you must immediately jump over both 
 sights. 
 
-\begin{tabular}{ r c }
-	$u\wedge$ & \begin{tabular}{ c c c }
-		$s_2\wedge$ & $(s_1\sqsupset s_2)$ & $u^\infty s_2$ \\ \midrule
-		$s_2\vee$ & $(s_1\sqsupset s_2)$ & $u\overbracket{s_1s_2}$ \\
-	\end{tabular} \\
-\end{tabular}
+
+\vfill
+
+\begin{equation*}
+  \eyeO{u}\dfrac{%
+    \eyeO{s_2}\quad\probly{\pushes{s_1}{s_2}}\quad\shadows{u}{s_2}
+    }{%
+      \eyeC{s_2}\quad\probly{\pushes{s_1}{s_2}}\quad\jumpsover{u}{s_1 s_2}
+    }
+\end{equation*}
+
 \end{enumerate}
 
+\vfill
 You must now put all the instructions into practice until you have 
 learned them thoroughly by doing as they say. In other words, carry out 
 Instr. 8, and the other instructions as they apply. 
 
+\vfill
 If you can't practice the instructions because you still have not seen a 
 sight or felt a touch, skip directly to Page 18. 
 
+\vfill
+
 Learning the instructions in practice should take a good while. When 
-you have mastered them, the first phase is over. Turn to Page 10 and begin 
-the second phase. 
+you have mastered them, the first phase is over. Turn to Page 10 and \textit{begin the second phase}.
+
+\vfill
 
 \clearpage
 
