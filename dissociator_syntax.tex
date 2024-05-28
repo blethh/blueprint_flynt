@@ -1,0 +1,73 @@
+% \newcommand\splitrule[2]{\parbox[t]{4.25in}{\parbox{2.75in}{#1}\parbox{1.25in}{#2}}}
+
+\newcommand\mathbox[2]{
+	\parbox{#1}{
+		\begin{equation*}#2
+		\end{equation*}}}
+
+\newcommand\gensplitmath[2]{
+	\parbox[t]{4in}{
+		\mathbox{2in}{#1}
+		\mathbox{2in}{#2}}}
+
+\newcommand\gentrisplitmath[3]{
+	\parbox[t]{4.25in}{
+		\centering
+		\mathbox{1.25in}{#1}
+		\mathbox{1.25in}{#2}
+		\mathbox{1.25in}{#3}}}
+
+% \newcommand\gentrisplit[3]{\parbox[t]{4.5in}{\parbox{1.5in}{#1}\parbox{1.5in}{#2}\parbox{1.5in}{#3}}}
+\newcommand\jumpbox[1]{
+  \tikz[baseline=(n.base)]{
+	  \node(n)[inner sep=1pt]{$#1$};
+	  \draw[line cap=round]
+	    (n.south west)
+	    --(n.north west)
+	    --(n.north east)
+	    --(n.south east);}}
+
+\newcommand\tacklebox[1]{
+  \tikz[baseline=(n.base)]{
+    \node(n)[inner sep=1pt]{$#1$};
+    \draw[line cap=round]
+      ($ (0, 0.25em) + (n.north) $)
+      -- ($ (0.2em, -0.1em) + (n.south east) $)
+      .. controls ($ (-0.35em,0.1em) + (n.south) $)
+      .. cycle;}}
+
+\newcommand\steppy[1]{
+  \tikz[baseline=(n.base)]{
+    \node(n)[inner sep=1pt]{$#1$};
+    \draw[line cap=round]
+      (n.south west) parabola 
+      bend ($ (0.4em,0.3em)+(n.north west) $)
+      ($ (0.1em,0)+(n.north) $);}}
+
+\newcommand\eyeO[1]{\ensuremath{#1\mathord{\wedge}}}
+\newcommand\eyeC[1]{\ensuremath{#1\mathord{\vee}}}
+
+\newcommand\blows[2]{\ensuremath{#1\equiv#2}}
+\newcommand\pushes[2]{\ensuremath{#1\sqsupset#2}}
+
+\newcommand\jumpsover[2]{\ensuremath{#1\:\jumpbox{\:#2\:}}}
+\newcommand\shadows[2]{\ensuremath{#1^\infty#2}}
+\newcommand\tackles[2]{\ensuremath{#1\tacklebox{\,#2}}}
+\newcommand\stepson[2]{\ensuremath{#1\:\steppy{\:#2}}}
+\newcommand\flee[1]{\ensuremath{#1\raisebox{-1pt}{\intprod}}}
+\newcommand\probly[1]{\ensuremath{(#1)}}
+
+\newcommand\onehalf{\ensuremath{\sfrac{1}{2}}}
+\newcommand\onequarter{\ensuremath{\sfrac{1}{4}}}
+\newcommand\threequarters{\ensuremath{\sfrac{3}{4}}}
+
+\newcommand\crouch[1]{\ensuremath{#1\threequarters}}
+\newcommand\scoot[1]{\ensuremath{#1\onehalf}}
+\newcommand\crawl[1]{\ensuremath{#1\onequarter}}
+\newcommand\squat[1]{\ensuremath{\scoot{#1}}}
+
+\newcommand\aboveU[1]{\ensuremath{#1\mathord{>}}}
+\newcommand\belowU[1]{\ensuremath{#1\mathord{<}}}
+
+% change line spacing in amsmath align envs
+\setlength\jot{0.5pt}

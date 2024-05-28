@@ -6,6 +6,10 @@
 	\parbox[t]{4in}{
 		\parbox{2in}{#1}\parbox{2in}{#2}}}
 
+\newcommand{\gentrisplit}[3]{
+	\parbox[t]{4.5in}{
+		\parbox{1.5in}{#1}\parbox{1.5in}{#2}\parbox{1.5in}{#3}}}
+
 \chapter{Exhibit of a Working Model of a Perception-Dissociator}
 
 \section*{\textsc{Statement of Objectives}}
@@ -253,54 +257,52 @@ and follow the instructions, go immediately to Page 6.
 
 \righttab{5}
 
-tktk equation pile
+  \vfill
+\gentrisplitmath{
+  \probly{\jumpsover{
+      \scoot{s_1}}{
+      \probly{\shadows{s_2}{\eyeO{u}}}}}}{
+  \jumpsover{s}{
+    \jumpsover{t}{
+      u}}}{
+  \tackles{
+    \crawl{\eyeC{u}}}{t}}
+	
+  \vfill
+\gentrisplitmath{
+  \begin{gathered}
+    \shadows{s}{}\\
+    \blows{t}{}
+  \end{gathered}
+  \:\:\:\eyeC{u}}
+  {\shadows{\crouch{u}}{s_2}}
+  {\jumpsover{\scoot{u}}{
+    \pushes{
+      \belowU{\eyeC{s_1}}}{
+      \belowU{\eyeO{s_2}}}}}
+
+  \vfill
+\gentrisplitmath{
+  \tackles{
+    \eyeC{\scoot{u}}}{
+    \eyeC{\aboveU{t}}}}
+  {\probly{
+    \stepson{s_1}
+            {\eyeC{\scoot{s_2}}}}}
+  {\crawl{t}
+  \:\dfrac{\pushes{\vee}{}}{\blows{\wedge}{}}\:u}
+
+  \vfill
+\gensplitmath{
+  \flee{\crouch{\eyeC{u}}}}{
+  \dfrac{\pushes{s_1}{s_2}\:\:\pushes{s_3}{s_1}}{
+	  \dfrac{\pushes{s_2}{s_3}}{
+		  \pushes{s_3}{s_1}}
+  }}
+
+  \vfill
 
 \clearpage
-
-\newcommand{\squat}[1]{
-	\ensuremath{#1\frac{1}{2}}}
-
-\newcommand{\eyeO}[1]{
-	\ensuremath{#1\wedge}}
-
-\newcommand{\eyeC}[1]{
-	\ensuremath{#1\vee}}
-
-\newcommand{\blows}[2]{\ensuremath{#1\equiv#2}}
-\newcommand{\pushes}[2]{\ensuremath{#1\sqsupset#2}}
-
-\newcommand\jumpbox[1]{
-  \tikz[baseline=(n.base)]{\node(n)[inner sep=1pt]{$#1$};
-    \draw[line cap=round](n.south west)--(n.north west)--(n.north east)--(n.south east);
-  }
-}
-
-\newcommand\tacklebox[1]{
-  \tikz[baseline=(n.base)]{\node(n)[inner sep=1pt]{$#1$};
-    \draw[line cap=round]
-		($ (0, 0.25em) + (n.north) $)
-	    -- ($ (0.2em, -0.1em) + (n.south east) $)
-	    .. controls ($ (-0.35em,0.1em) + (n.south) $) ..
-	    cycle;
-  }
-}
-
-
-\newcommand\steppy[1]{
-	\tikz[baseline=(n.base)]{
-		\node(n)[inner sep=1pt]{$#1$};
-		\draw[line cap=round](n.south west) parabola 
-		bend ($ (0.4em,0.3em)+(n.north west) $)
-		($ (0.1em,0)+(n.north) $);
-	}
-}
-
-\newcommand{\jumpsover}[2]{\ensuremath{#1\:\jumpbox{\:#2\:}}}
-\newcommand{\shadows}[2]{\ensuremath{#1^\infty#2}}
-\newcommand{\tackles}[2]{\ensuremath{#1\tacklebox{\,#2}}}
-\newcommand{\stepson}[2]{\ensuremath{#1\:\steppy{\:#2}}}
-\newcommand{\flee}[1]{\ensuremath{#1\raisebox{-1pt}{\intprod}}}
-\newcommand{\probly}[1]{\ensuremath{(#1)}}
 
 % \img{dissoceqns}
 
@@ -415,7 +417,7 @@ Instructions 1--3 apply \textsc{when your eyes are open.}
 \vskip 0.75em
 
 \item \splitrule{If you close your eyes, you must keep them closed until a touch tackles you, a touch shoves you, or you can't keep your mind on the exhibit (which you should also consider to be an effect of the machine). Then you immediately open your eyes.}{\begin{equation*}
-    \eyeC{u}\:%
+    \quad\eyeC{u}\:%
       \dfrac{\tackles{t}{u}}{
         \dfrac{\pushes{t}{u}}{
           u\:\text{inattentive}}}%
@@ -566,76 +568,82 @@ you have mastered them, the first phase is over. Turn to Page 10 and \textit{beg
 
 \section{Second Phase}
 
+\vfill
 You are now in the second phase of transforming yourself with the 
 perception-dissociator. Throughout this phase, you must stoop or crouch 
 somewhat. That is, you must keep yourself below the height of your neck 
 when you stand straight---except when you jump over a sight. The symbol is 
-$u\sfrac{3}{4}$. $u\sfrac{3}{4}\wedge$ means that you crouch and close your eyes. Now crouch. 
+$u\sfrac{3}{4}$. $u\sfrac{3}{4}\wedge$ means that you crouch and close your eyes. \emph{Now crouch.}
 
 The numbered instructions for this phase are so similar to those in the 
 preceeding phase that they will be given in symbols only. Changes are noted 
 parenthetically. You may turn back if you forget symbols. 
 
+\vfill
 \begin{enumerate}
-\item \begin{tabular}{ c l }
+    \gensplit{\item \begin{tabular}{ c l }
 		\begin{tabular}{ c c }
 			$s_1\wedge$ & $s_1\vee$ \\
 			$u\sfrac{3}{4}\wedge$ & $(t\longdivision{u})$ \\
 		\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
-
+    \end{tabular}}{
 \item \begin{tabular}{ c c c }
 		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
 			$s\overbracket{u}$ \\
 			$t\overbrace{u}$ \\
 		\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+\end{tabular}}
 
-\item \begin{tabular}{ c c c }
+\vfill
+\gensplit{ \item \begin{tabular}{ c c c }
 		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
 			$t\equiv u$ \\
 			$t_2\sqsupset u$ \\
 		\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+\end{tabular}}{
+  \emph{(change: component blows on you instead of shadowing you)}}
 
-\emph{(change component blows on you instead of shadowing you)}
-
-\item \begin{tabular}{ c c c }
+\vfill
+\gensplit{\item \begin{tabular}{ c c c }
 	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
 		$t\overbrace{u}$ \\ \midrule
 		$t\sqsupset u$ \\ \midrule
 		$u$ inattentive \\
 	\end{tabular} & $u\wedge$ \\
-\end{tabular}
-
+\end{tabular}}{
 \item \begin{tabular}{ c c c }
 	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
 		$t_1\equiv u$ \\
 		$(t_2\longdivision{u})$ \\
 	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+\end{tabular}}
 
-\item \begin{tabular}{ c c c }
+\vfill
+\gensplit{\item \begin{tabular}{ c c c }
 	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
 		$s^\infty u$ \\
 		$(t\overbrace{u})$ \\
 	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
-
+\end{tabular}}{
 \item \begin{tabular}{ c c c }
 	$u\sfrac{3}{4}v$ & \begin{tabular}{ c }
 		$t_1\overbracket{u}$ \\
 		$(t_2\sqsupset u)$ \\
 	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+\end{tabular}}
 
+\vfill
 \item \begin{tabular}{ c c }
 		$u\sfrac{3}{4}\vee$ & $u\sqsupset t$ \\
 \end{tabular}
 
+\vfill
 The big change comes next. 
 
+\vfill
 \emph{(Keep going)}
+
+\vfill
 
 \clearpage
 \righttab{11}
