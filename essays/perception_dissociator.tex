@@ -294,13 +294,32 @@ and follow the instructions, go immediately to Page 6.
 
   \vfill
 \gensplitmath{
-  \flee{\crouch{\eyeC{u}}}}{
-  \dfrac{\pushes{s_1}{s_2}\:\:\pushes{s_3}{s_1}}{
-	  \dfrac{\pushes{s_2}{s_3}}{
-		  \pushes{s_3}{s_1}}
-  }}
+  \flee{\crouch{\eyeC{u}}}}
+  {\dfrac{\pushes{s_1}{s_2}\:\:\pushes{s_3}{s_1}}
+         {\dfrac{\pushes{s_2}{s_3}}
+		{\pushes{s_3}{s_1}}
+          \dfrac{
+  	    \pushes{s_1}{s_2}
+	      \left(\begin{gathered}
+	        \tackles{s_1}{s_3}\\
+	        \jumpsover{s_2}{u}
+	      \end{gathered}\right)}
+      {\pushes{s_2}{s_3}}}}
 
-  \vfill
+\vfill
+\gentrisplitmath{
+	\left(
+	  \begin{gathered}
+            \dfrac{\tackles{\eyeC{s_1}}{s_2}}
+		  {\tackles{\eyeC{s_1}}{s_2}}\\
+	    \dfrac{\pushes{s_2}{s_3}}
+		  {\pushes{s_2}{s_3}}
+	  \end{gathered}
+	\right)}
+{\jumpsover{\left.\begin{gathered}
+	s\\
+	t
+\end{gathered}\right.}{u}}{}
 
 \clearpage
 
@@ -573,7 +592,7 @@ You are now in the second phase of transforming yourself with the
 perception-dissociator. Throughout this phase, you must stoop or crouch 
 somewhat. That is, you must keep yourself below the height of your neck 
 when you stand straight---except when you jump over a sight. The symbol is 
-$u\sfrac{3}{4}$. $u\sfrac{3}{4}\wedge$ means that you crouch and close your eyes. \emph{Now crouch.}
+$\crouch{u}$. $\eyeC{\crouch{u}}$ means that you crouch and close your eyes. \emph{Now crouch.}
 
 The numbered instructions for this phase are so similar to those in the 
 preceeding phase that they will be given in symbols only. Changes are noted 
@@ -581,118 +600,128 @@ parenthetically. You may turn back if you forget symbols.
 
 \vfill
 \begin{enumerate}
-    \gensplit{\item \begin{tabular}{ c l }
-		\begin{tabular}{ c c }
-			$s_1\wedge$ & $s_1\vee$ \\
-			$u\sfrac{3}{4}\wedge$ & $(t\longdivision{u})$ \\
-		\end{tabular} & $u\lrcorner$ \\
-    \end{tabular}}{
-\item \begin{tabular}{ c c c }
-		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
-			$s\overbracket{u}$ \\
-			$t\overbrace{u}$ \\
-		\end{tabular} & $u\lrcorner$ \\
-\end{tabular}}
+	\gensplit{\item\BEQ{
+	\left.\begin{gathered}
+	\eyeO{s_1}\\
+	\eyeO{\crouch{u}}
+	\end{gathered}\right.
+	\:\:
+		\left.\BG{
+		\eyeC{s_1}\\
+		\probly{\stepson{t}{u}}
+	}\right.
+	\:\:
+		\flee{u}}}
+{\item\BEQ{
+	\eyeC{\crouch{u}}\:
+		\BG{\jumpsover{s}{u}\\
+		\probly{\tackles{t}{u}}}\:
+		\flee{u}}}
 
 \vfill
-\gensplit{ \item \begin{tabular}{ c c c }
-		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
-			$t\equiv u$ \\
-			$t_2\sqsupset u$ \\
-		\end{tabular} & $u\lrcorner$ \\
-\end{tabular}}{
-  \emph{(change: component blows on you instead of shadowing you)}}
+\gensplit
+  {\item\BEQ{\eyeC{\crouch{u}}\:
+	     \BG{\blows{t}{u}\\
+		 \pushes{t_2}{u}}\:
+             \flee{u}}}
+ {\emph{(change: component blows on you instead of shadowing you)}}
 
 \vfill
-\gensplit{\item \begin{tabular}{ c c c }
-	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
-		$t\overbrace{u}$ \\ \midrule
-		$t\sqsupset u$ \\ \midrule
-		$u$ inattentive \\
-	\end{tabular} & $u\wedge$ \\
-\end{tabular}}{
-\item \begin{tabular}{ c c c }
-	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
-		$t_1\equiv u$ \\
-		$(t_2\longdivision{u})$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}}
+\gensplit{\item\BEQ{
+  \eyeC{\crouch{u}}\:\:
+  \dfrac{\tackles{t}{u}}
+	{\dfrac{\pushes{t}{u}}
+	       {u\:\text{inattentive}}}\:\:
+  \flee{u}}}
+  {\item\BEQ{
+  \eyeC{\crouch{u}}\:\:
+  \BG{\blows{t_1}{u}\\
+      \probly{\tackles{t_2}{u}}}\:\:
+  \flee{u}}}
+
 
 \vfill
-\gensplit{\item \begin{tabular}{ c c c }
-	$u\sfrac{3}{4}\vee$ & \begin{tabular}{ c }
-		$s^\infty u$ \\
-		$(t\overbrace{u})$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}}{
-\item \begin{tabular}{ c c c }
-	$u\sfrac{3}{4}v$ & \begin{tabular}{ c }
-		$t_1\overbracket{u}$ \\
-		$(t_2\sqsupset u)$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}}
+\gensplit{\item\BEQ{
+  \eyeC{\crouch{u}}\:\:
+  \BG{\shadows{s}{u}\\
+      \probly{\tackles{t}{u}}}\:\:
+  \flee{u}}}
+  {\item\BEQ{
+  \eyeC{\crouch{u}}\:\:
+  \BG{\jumpsover{t_1}{u}\\
+      \probly{\pushes{t_2}{u}}}\:\:
+  \flee{u}}}
 
 \vfill
-\item \begin{tabular}{ c c }
-		$u\sfrac{3}{4}\vee$ & $u\sqsupset t$ \\
-\end{tabular}
-
-\vfill
-The big change comes next. 
-
-\vfill
-\emph{(Keep going)}
+\gensplit{\item\BEQ{
+  \eyeC{\crouch{u}}\qquad\pushes{u}{t}}}
+{The big change comes next. 
+\plainbreak{2}
+\emph{(Keep going)}}
 
 \vfill
 
 \clearpage
 \righttab{11}
 
-\item \begin{tabular}{ c c }
-	$u\sfrac{3}{4}\wedge s_2\wedge (s_1\longdivision{s_2}) u\vee$ & and also \\
-	$u\sfrac{3}{4}\wedge s_2\vee (s_1\longdivision{s_2})$ & $u\equiv s_2$ \\
-\end{tabular}
+\vfill
+\item \BEQ{\begin{array}{c c c c r}
+		\eyeO{\crouch{u}} &
+		  \eyeO{s_2} &
+		  \probly{\stepson{s_1}{s_2}}& 
+		  \eyeC{u} & \text{\uline{and also}} \\
+		\eyeO{\crouch{u}} &
+		  \eyeC{s_2} &
+		  \probly{\stepson{s_1}{s_2}} & 
+		  \blows{u}{s_2} & \end{array}}
 
-That is, if you see a sight falling or stepping on another sight with closed 
-eyes, you must immediately blow on the sight on the ground. This is an 
-addition. 
+\vfill
+That is, if you see a sight falling or stepping on another sight with \uline{closed eyes}, you must immediately blow on the sight on the ground. This is an addition.
+\vfill
+\item \[
+  \eyeO{\crouch{u}}\:\:
+  \begin{array}{c c c}
+    \eyeO{s_1} & \probly{\tackles{s_1}{s_2}} &
+      \jumpsover{u}{s_1 s_2} \\
+    \hline
+    \eyeC{s_1} & \probly{\tackles{s_1}{s_2}} &
+      \shadows{u}{s_2} \\
+  \end{array}
+\]
 
-\item \begin{tabular}{ r c }
-		$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
-		$s_2\wedge (s_1\overbrace{s_2}) u\overbracket{s_1s_2}$ \\ \midrule
-		$s_2\vee (s_1\overbrace{s_2}) u^\infty s_2$ \\
-	\end{tabular}
-\end{tabular}
+\vfill
+\splitshort{\item \[
+  \eyeO{\crouch{u}}\:\:
+  \begin{array}{c c c}
+	  \eyeO{s_2} & \probly{\pushes{s_1}{s_2}} & \blows{u}{s_2} \\
+	  \hline
+	  \eyeC{s_2} & \probly{\pushes{s_1}{s_2}} & \jumpsover{u}{s_1 s_2} \\
+  \end{array}\]}
+  {\emph{(change: you blow on $s_2$)}}
 
-\item \begin{tabular}{ c c }
-	$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
-		$s_2\wedge (s_1\sqsupset s_2) u\equiv s_2$ \\ \midrule
-		$s_2\vee (s_1\sqsupset s_2) u\overbracket{s_1s_2}$ \\
-	\end{tabular}
-\end{tabular}
-\emph{(change: you blow on $s_2$)}
-
+\vfill
 So far there have been only three changes in the instructions. Memorize 
 them. Then go on to Instr. 12, which is new, and carry it out along with the 
 other eleven instructions. 
 
+\vfill
 \textsc{As soon as you have put any changed instruction (3, 9, or 11) into practice,
 the second phase is over. Turn to page 12 and the third phase.}
 
+\vfill
 If you can't practice the instructions because all the components have 
 vanished, skip to Page 18. 
 
-\item Adding to Instruction 8, if you have time left over from following 
-other instructions, you may also keep your eyes open and jump over, blow 
-on, or shadow sights. 
+\vfill
 
-\begin{tabular}{ r c }
-	$u\sfrac{3}{4}\wedge$ & \begin{tabular}{ c }
-		$u\overbracket{s}$ \\ \midrule
-		$u^\infty s$ \\ \midrule
-		$u\equiv s$ \\
-	\end{tabular} \\
-\end{tabular}
+\splitrule{\item Adding to Instruction 8, if you have time left over from following other instructions, you may also keep your eyes open and jump over, blow on, or shadow sights.}{\[
+	\eyeO{\crouch{u}}\:\:
+	\begin{array}{c}
+		\jumpsover{u}{s} \\ \hline
+		\shadows{u}{s} \\ \hline
+		\blows{u}{s} \\
+	\end{array}
+\]}
 \end{enumerate}
 
 \clearpage 
@@ -704,94 +733,127 @@ on, or shadow sights.
 Throughout the third phase, you must squat or move on your hands 
 and knees. That is, you must always keep yourself below the height of your 
 waist when you stand straight---unless you are able to jump over a sight from 
-your low position. The symbol is $u\sfrac{1}{2}$. Now get down. 
+your low position. The symbol is $\crouch{u}$. Now get down. 
 
 Instr. 1--7 from the last phase apply here without change. They are thus 
 stated in the most abbreviated form. 
 
-1--3.
-(i will put these in when im confident in my interpretation of the syntax)
+\vfill
 
-4--7.
-(i will put these in when im confident in my interpretation of the syntax)
+\gensplit{1--3. \[
+	\eyeO{\crouch{u}} \:\: 
+	\begin{array}{c}
+		\eyeC{s} \\
+		\probly{\stepson{t}{u}} \\ \hline
+		\jumpsover{s}{u} \\
+		\probly{\tackles{t}{u}} \\ \hline
+		\blows{t_1}{u} \\
+		\probly{\pushes{t_2}{u}}
+	\end{array}\:\:
+	\flee{u}
+\]\vfill}{4--7. \[
+	\eyeC{\crouch{u}}\:\:
+	\dfrac{
+		\:\:
+	  \begin{array}{c}
+	    \tackles{t}{u} \\ \hline
+	    \pushes{t}{u} \\ \hline
+	    u \:\:\text{inattentive} \\
+	  \end{array}\qquad
+	\eyeO{u}\:\:}
+{\begin{array}{c}
+	    \blows{t_1}{u} \\
+	    \probly{\stepson{t_2}{u}} \\ \hline
+	    \shadows{s}{u} \\
+	    \probly{\tackles{t}{u}} \\ \hline
+	    \jumpsover{t_1}{u} \\
+	    \probly{\pushes{t_2}{u}} \\
+	 \end{array}\qquad
+	 \flee{u}}
+\]}
 
+\vfill
 The biggest change comes next. 
 
+\vfill
 8. If you have any time left over, close your eyes and go around with 
 your hands in front of you. If you encounter touches standing higher than 
 you, tackle them. If you encounter touches as near the ground as you, shove 
 them. You must be sensitive and judge heights with eyes closed. 
 
-\begin{tabular}{ r c }
-	$u\sfrac{1}{2}\vee$ & \begin{tabular}{ c }
-		$t_\greater u\overbrace{t}$ \\ \midrule
-		$t_\less u\sqsupset t$ \\
-	\end{tabular} \\
-\end{tabular}
+\vfill
 
-\emph{($t\greater$ means "if t stands high relative to you" \\
-$t\less$ means "if t is near ground relative to you")}
+\[
+	\eyeO{\scoot{u}}\:\:\begin{array}{c c}
+		\aboveU{t} \tackles{u}{t} \\ \hline
+		\belowU{t} \pushes{u}{t} \\
+	\end{array} \:\:
+	\left( \begin{gathered}
+		\aboveU{t} \: \text{\textsc{means "if $t$ stands high relative to you"}} \\
+		\belowU{t} \: \text{\textsc{means "if $t$ is near ground relative to you"}}
+	\end{gathered} \right)
+	\]
 
-9. No change. 
+	\vfill
 
-\begin{tabular}{ r c }
-	$u\sfrac{1}{2}$ & \begin{tabular}{ c }
-		$s_2\wedge (s_1\longdivision{s_2}) u\vee$ \\ \midrule
-		$s_2\vee (s_1\longdivision{s_2}) u\equiv s_2$ \\
-	\end{tabular}
-\end{tabular}
+9. \parbox{1.5in}{No change.}\parbox{2in}{\[
+	\eyeC{\scoot{u}} \:\: \begin{array}{c c c}
+		\eyeC{s_2} & \probly{\stepson{s_1}{s_2}} & \eyeO{u} \\ \hline
+		\eyeO{s_2} & \probly{\stepson{s_1}{s_2}} & \blows{u}{s_2}
+	\end{array}
+\]}
+\vfill
 
-10. The previous Instr. 10 applies if $s_2$ is near the ground, that is, it 
-applies unless $s_2$ is too high for you to jump or shadow it. 
+10. \gensplit{The previous Instr. 10 applies if $s_2$ is near the ground, that is, it applies unless $s_2$ is too high for you to jump or shadow it.}{\[
+	\eyeC{\scoot{u}} \:\: \begin{array}{c c c}
+		\belowU{\eyeC{s_2}} & \probly{\tackles{s_1}{s_2}} & \jumpsover{u}{s_1 s_2} \\ \hline
+		\belowU{\eyeO{s_2}} & \probly{\tackles{s_1}{s_2}} & \shadows{u}{s_2}
+	\end{array}
+\]}
 
-\begin{tabular}{ r c }
-	$u\sfrac{1}{2}$ & \begin{tabular}{ c }
-		$s_2\wedge\less\ (s_1\overbrace{s_2}) u\overbracket{s_1 s_2}$ \\ \midrule
-		$s_2\vee\less\ (s_1\overbrace{s_2}) u^\infty s_2$ \\
-	\end{tabular}
-\end{tabular}
-
+\vfill
 (Keep going) 
 
 \clearpage
 \righttab{13}
 
-11. $u\sfrac{1}{2}\wedge\ s_2\wedge\ (s_1\sqsupset s_2)\ u\equiv s_2$
+\vfill 
 
-The second half of the previous Instr. 11 is dropped. 
+11. \gensplit{\[
+	\eyeC{\scoot{u}} \:\: \eyeC{s_2} \:\: \probly{\pushes{s_1}{s_2}} \:\: \blows{u}{s_2}
+\]}{The second half of the previous Instr. 11 is dropped. }
 
+\vskip 1.5em
 Except for the instruction to tackle touches, the changes are simply 
 limitations to make the instructions feasible for $u\sfrac{1}{2}$. They should be easy 
 to remember. 
+
+\vskip 1.5em
 
 You will next go on to Instr. 12, and carry it out along with the other 
 instructions. As soon as you encounter an actual situation where you cannot 
 act because $u\sfrac{1}{2}$, the third phase will be over. 
 \textsc{At that point you must turn to page 14 and the fourth phase.}
 
+\vskip 1.5em
 If you can't carry out the instructions because all the components have 
 vanished, the third phase is over. Turn to Page 14 and the fourth phase. 
 
-12. Adding to Instr. 8, if you have time left over, you may also keep 
+\vskip 1.5em
+
+12. \gensplit{Adding to Instr. 8, if you have time left over, you may also keep 
 your eyes open and blow on sights. You may also shadow or jump over 
-sights unless they are too high. 
-
-\begin{tabular}{ r c }
-	$u\sfrac{1}{2}\wedge$ & \begin{tabular}{ c }
-		$u\equiv s$ \\ \midrule
-		\begin{tabular}{ r c }
-			$s\less$ & \begin{tabular}{ c }
-				$u^\infty s$ \\ \midrule
-				$u\overbracket{s}$ \\
-			\end{tabular}\\
-		\end{tabular} \\
-	\end{tabular} \\
-\end{tabular}
-
+sights unless they are too high. }{ \vfill 
+\[\eyeC{\scoot{u}} \:\: \dfrac{\blows{u}{s}}{
+	\belowU{s} \:\: \dfrac{\blows{u}{s}}{\jumpsover{u}{s}}}
+\]}
+\vfill 
 \clearpage
 \lefttab{14}
 
 \section{Fourth phase}
+
+
 
 You are in the fourth phase of perception-dissociation. Throughout this 
 phase, you must crawl on your stomach (keep below knee height). The 
@@ -800,109 +862,116 @@ symbol is $u\sfrac{1}{4}$. Now get on the floor.
 You can no longer be tackled, nor can you jump. Thus, the numbered 
 instructions are greatly limited, and they will be restated fully. 
 
+\vfill
+
 \textsc{The first two instructions apply when your eyes are open.}
 
+\vfill
+
 \begin{enumerate}
-\item If you see a sight close its eyes, a touch may be falling or stepping 
-on you, and you must immediately scramble aside. 
+\gensplit{\item If you see a sight close its eyes, a touch may be falling or stepping on you, and you must immediately scramble aside.}
+{\[\begin{array}{c c}
+	\eyeO{s_1} & \eyeC{s_1} \\
+	\eyeO{\crawl{u}} & \probly{\stepson{t}{u}}
+\end{array} \:\: \flee{u}\]}
 
-\begin{tabular}{ c l }
-	\begin{tabular}{ c c }
-		$s_1\wedge$ & $s_1\vee$ \\
-		$u\sfrac{1}{4}\wedge$ & $(t\longdivision{u})$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+\vfill
 
-\item \begin{tabular}{ r c l }
-	$u\sfrac{1}{4}\wedge$ & \begin{tabular}{ c }
-		$t_1\equiv u$ \\
-		$(t_2\sqsupset u)$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+		{\centering \parbox{2in}{
+\item \[ \eyeO{\crawl{u}} \:\: \begin{array}{c}
+		\blows{t_1}{u} \\
+\probly{\pushes{t_2}{u}} \end{array} \:\: \flee{u} \]}\par}
+
+\vfill
 
 \textsc{The next three instructions tell you what to do when your eyes are closed.}
 
-\item When to reopen your eyes. 
+\vfill
 
-\begin{tabular}{ r c l }
-	$u\sfrac{1}{4}\vee$ & \begin{tabular}{ c }
-		$t\sqsupset u$ \\ \midrule
-		$u$ inattentive \\
-	\end{tabular} & $u\wedge$
-\end{tabular}
+\gensplit{\item When to reopen your eyes.}{\[
+		\eyeC{\crawl{u}} \:\: \begin{array}{c}
+			\pushes{t}{u} \\ \hline
+			u \:\: \text{inattentive} \\
+		\end{array} \:\: \eyeO{u}\]}
 
-\item If your closed eyes are shadowed, a touch may be falling or 
-stepping on you. Scramble aside. 
+\vfill
 
-\begin{tabular}{ r c l }
-	$u\frac{1}{4}\vee$ & \begin{tabular}{ c }
-		$s^\infty u$ \\
-		$(t\longdivision{u}$
-	\end{tabular} & $u\lrcorner$
-\end{tabular}
+\gensplit{\item If your closed eyes are \uline{shadowed}, a touch may be falling or stepping on you. Scramble aside.}
+	{\[ \eyeC{\crawl{u}} \:\: \begin{array}{c}
+		\blows{t_1}{u} \\
+	\probly{t_2}{u} \end{array} \:\:
+		\flee{u} \]}
 
-\item \begin{tabular}{ c c c }
-	$u\frac{1}{4}\vee$ & \begin{tabular}{ c }
-		$t_1\overbracket{u}$ \\
-		$(t_2\sqsupset u)$ \\
-	\end{tabular} & $u\lrcorner$ \\
-\end{tabular}
+		\vfill
 
-\item \begin{tabular}{ r c }
-	$u\sfrac{1}{4}\vee$ \begin{tabular}{ c c }
-		$t\greater$ & $u\overbrace{t}$ \\ \midrule
-		$t\sfrac{1}{4}$ & $u\sqsupset t$ \\
-	\end{tabular}
-\end{tabular}
+\gensplit{\item \[
+	\eyeC{\crawl{u}} \:\: \begin{array}{c}
+		\jumpsover{t_1}{u} \\
+	\probly{\pushes{t_2}{u}} \end{array} \:\:
+		\flee{u} \]}{
+\item \[ \eyeC{\crawl{u}} \:\:
+		\begin{array}{c c}
+			\aboveU{t} & \tackles{u}{t} \\ \hline
+		\crawl{t} & \pushes{u}{t} \end{array} \]}
 
+		\vfill
 \textsc{Try instr. 6, remembering and following instr. 3--5.} \\
 \textsc{When you have to reopen your eyes as per instr. 3, check on anything you forgot.
 	Then go to page 15. Now---close your eyes.}
+
+\vfill
 
 \clearpage
 \righttab{15}
 
 The rest of the instructions apply when your eyes are open. 
 
-\item \begin{tabular}{ r c }
-	$u\sfrac{1}{4}\wedge$ & \begin{tabular}{ c c c }
-		$s_2\wedge$ & $(s_1\longdivision{s_2})$ & $u\vee$ \\ \midrule
-		$s_2\vee\less$ & $(s_1\longdivision{s_2})$ & $u^\infty s_2$ \\
-	\end{tabular} \\
-\end{tabular}
 
-If $s_2$'s eyes are closed, you must shadow them unless they are too high. 
+\vfill
 
-\item $$u\sfrac{1}{4}\wedge\ s\wedge\less\ (s_1\sqsupset s_2)\ u\equiv s_2$$
+\item \gensplit{\[
+		\eyeO{\crawl{u}} \:\: \begin{array}{c c c}
+			\eyeO{s_2} & \probly{\stepson{s_1}{s_2}}
+			& \eyeC{u} \\ \hline
+		\belowU{\eyeC{s_2}} & \probly{\stepson{s_1}{s_2}} & 
+			\shadows{u}{s_2}
+		\end{array} \]}{If $s_2$'s eyes are closed, you must shadow them unless they are too high. }
 
-You blow on $s_2$'s hand unless it is too high. 
+\vfill
+\item \gensplit{\[
+\eyeO{\crawl{u}} \:\: \belowU{\eyeO{s}} \:\:
+\probly{\pushes{s_1}{s_2}} \:\: \blows{u}{s_2}\]}{You blow on $s_2$'s hand unless it is too high.}
 
-\item Adding to Instr. 6, if you have time left over from following 
-instructions, you may also shadow or blow on sights if they aren't too high. 
+\vfill
+\gensplit{\item Adding to Instr. 6, if you have time left over from following instructions, you may also shadow or blow on sights if they aren't too high.}{\[
+\eyeC{\crawl{u}} \: \belowU{s} \: \dfrac{\shadows{u}{s}}{\blows{u}{s}}\]}
 
-\begin{tabular}{ c c c }
-	$u\sfrac{1}{4}\wedge$ & $s\less$ & \begin{tabular}{ c }
-		$u^\infty s$ \\ \midrule
-		$u\equiv s$ \\
-	\end{tabular} \\
-\end{tabular}
-\end{enumerate}
+\vfill
 
 You must now put these nine instructions into practice until you have 
 learned them thoroughly in practice; and even continue after that until you 
 have difficulty keeping your mind on the exhibit. 
 
+\vfill
+
 \textsc{If you can't practice the instructions because all the components have vanished, skip to page 18.}
+
+\vfill
 
 Otherwise, stay with this phase until you have difficulty keeping your 
 mind on it. Then turn to Page 16 and the final phase of 
 perception-dissociation. 
 
+\vfill
+\end{enumerate}
+
 \clearpage
 \lefttab{16}
 
+\vfill
 \section{Final Phase}
 
+\vfill
 You are now in the final phase of transforming yourself with the 
 perception-dissociator. When you finish transforming yourself, you will have 
 lost track of time, and will have ceased to notice sound. You will be dealing 
@@ -923,8 +992,12 @@ over; you won't have any extra time.)
 When you are through, you will be transformed. 
 \textsc{Now turn to page 5 and begin.}
 
+\vfill
+
 \clearpage
 \righttab{17}
+
+\vfill
 
 If you have found these words and are reading them in desperation 
 because you are completely confused; or because you have lost interest in 
@@ -945,12 +1018,15 @@ will open your eyes when the 250 seconds have passed. Now close your eyes
 and do as instructed. 
 
 
+\vfill
 It is now suggested that you leave the exhibit. Go out through the 
 curtain. 
 
+\vfill
 \clearpage
 \lefttab{18}
 
+\vfill
 Stay in the exhibit and follow every instruction that is relevant, until
 you become thirsty. 
 
@@ -962,5 +1038,6 @@ before you turned to this one.
 lf you still don't encounter components, the model must be broken. 
 Leave the exhibit by the same passage through which you entered. 
 
+\vfill 
 \clearpage
 

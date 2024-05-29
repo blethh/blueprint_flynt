@@ -5,6 +5,11 @@
 		\begin{equation*}#2
 		\end{equation*}}}
 
+\newcommand\splitshort[2]{
+	\parbox[t]{4in}{
+		\parbox{2.25in}{#1}
+		\parbox{1.7in}{#2}}}
+
 \newcommand\gensplitmath[2]{
 	\parbox[t]{4in}{
 		\mathbox{2in}{#1}
@@ -68,6 +73,10 @@
 
 \newcommand\aboveU[1]{\ensuremath{#1\mathord{>}}}
 \newcommand\belowU[1]{\ensuremath{#1\mathord{<}}}
+
+% shortcuts
+\newcommand\BEQ[1]{\begin{equation*}#1\end{equation*}}
+\newcommand\BG[1]{\begin{gathered}#1\end{gathered}}
 
 % change line spacing in amsmath align envs
 \setlength\jot{0.5pt}
