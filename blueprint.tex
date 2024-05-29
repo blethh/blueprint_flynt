@@ -29,33 +29,25 @@
 % \usepackage{cabin}
 % \newfontfamily{\specialheadersfont}{Cabin}
 
-\newcommand{\speech}[1]{
+\newcommand\speech[1]{
 	\textquote{\emph{#1}}}
 
-\newcommand{\said}[1]{ % oops
+\newcommand\said[1]{ % oops
 	\speech{#1}}
 
-\newcommand{\essaytitle}[1]{\uline{#1}}
+\newcommand\essaytitle[1]{\uline{#1}}
 
-\newcommand{\gap}{\plainbreak{2}}
+\newcommand\gap{\plainbreak{2}}
 
-\newcommand{\inlineaside}[1]{\textit{(#1)}}
+\newcommand\inlineaside[1]{\textit{(#1)}}
 
-\newcommand{\x}{$x$}
-\newcommand{\y}{$y$}
+\newcommand\x{$x$}
+\newcommand\y{$y$}
 
-\newcommand{\redact}[1]{\xout{#1}}
+\newcommand\redact[1]{\xout{#1}}
 
-\newcommand{\greater}{>}
-\newcommand{\less}{<}
-
-% TODO because of something tricky ill need to debug later
-\newcommand{\bimg}[1]{(img #1)}
-
-% --- typesetting aids for some subtle syntax of flynt
-\newcommand{\formulation}[1]{'\textit{#1}'}
-
-\newcommand{\triquote}[1]{'''#1'''}
+\newcommand\greater{>}
+\newcommand\less{<}
 
 % TODO these should be considered placeholders basically
 \newcommand{\name}[1]{\textbf{#1}}
@@ -64,31 +56,25 @@
 \newcommand{\lexpression}[1]{"\emph{#1}"}
 \newcommand{\expression}[1]{\lexpression{#1}}
 
-\newenvironment{sysrules}{
-	\begin{hangparas}{3em}{1}
-	}{
-	\end{hangparas} \vskip 1em
-	}
+\newenvironment{sysrules}{\begin{hangparas}{3em}{1}}{\end{hangparas}\vskip 1em}
 
-\newcommand{\postulate}[1]{
-	\emph{Postulate #1}.}
+\newcommand\postulate[1]{\emph{Postulate #1}.}
 
-\newcommand{\dreamdate}[1]{
-	\plainbreak{1} \uline{#1}\\ }
-\newcommand{\dreamdatecomment}[2]{
-	\plainbreak{1} \uline{#1} --- \textit{#2}\\ }
+\newcommand\dreamdate[1]{\plainbreak{1}\uline{#1}\\}
+\newcommand\dreamdatecomment[2]{\plainbreak{1}\uline{#1} --- \textit{#2}\\}
 
-\newcommand{\cubeframe}{
-	\includegraphics[width=1em]{img/cubeframe}}
-\newcommand{\cubeup}{
-	\includegraphics[width=1em]{img/cubeup}}
-\newcommand{\cubedown}{
-	\includegraphics[width=1em]{img/cubedown}}
+\newcommand\cubeframe{\includegraphics[width=1em]{img/cubeframe}}
+\newcommand\cubeup{\includegraphics[width=1em]{img/cubeup}}
+\newcommand\cubedown{\includegraphics[width=1em]{img/cubedown}}
 
-\newcommand{\photopage}[4]{
-	\begin{figure}{\centering\includegraphics[width=4.5in]{#1}\par}
-		\vskip 1em\noindent #2 \vskip 1em\caption{\noindent #3}
-	{\raggedleft \itshape (photo by #4) \par}\end{figure}}
+\newcommand\photopage[4]{
+  \begin{figure}
+    { \centering\includegraphics[width=4.5in]{#1}\par } 
+    \vskip 1em
+    \noindent #2 \vskip 1em
+    \caption{\noindent #3} 
+    { \raggedleft \itshape (photo by #4) \par }
+  \end{figure}}
 
 \begin{document}
 \frontmatter
@@ -177,6 +163,7 @@
 \input{essays/energy_cube1966.tex}
 \input{essays/energy_cube1961.tex}
 \input{essays/concept_art.tex}
+\input{dissociator_syntax.tex}
 \input{essays/perception_dissociator.tex}
 \input{essays/mock_risk_games.tex}
 \input{essays/dream_reality.tex}

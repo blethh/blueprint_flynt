@@ -107,43 +107,34 @@ and doesn't go back in.
 }
 
 \clearpage
-\newcommand{\righttab}[1]{{\raggedleft 
-	\framebox{
-		\parbox[c][2em]{2em}{
-			\centering \Huge #1 \par
-		}} 
-		\par
-	}
-	\vskip 1em
-}
+\newcommand\intab[1]{
+\framebox[1.1\width]{\parbox[c][2.5em]{4em}{
+	\centering\Huge #1}}}
 
-\newcommand{\lefttab}[1]{{\raggedright
-	\framebox{
-		\parbox[c][2em]{3em}{
-			\centering \Huge #1 \par
-		}} 
-		\par
-	}
-	\vskip 1em
-}
+\newcommand\righttab[1]{{\raggedleft\intab{#1}\par}}
 
-{
-	\righttab{1}
-	\centering
+\newcommand\lefttab[1]{{\raggedright\intab{#1}\par}}
+
+{\righttab{1}
+
+\centering
 
 \includegraphics[width=4in]{img/guidebook_01}
+
 \vfill
+
 \includegraphics[width=3.5in]{img/guidebook}
 
 \vfill
+
 \includegraphics[width=4in]{img/guidebook_02}
+
 \vfill
+
 \includegraphics[width=4in]{img/guidebook_03}
-\vfill
 
-}
+\vfill\clearpage}
 
-\clearpage
 \lefttab{2}
 
 \uline{Introduction.} The perception-dissociator is a machine which is the 
@@ -259,7 +250,7 @@ and follow the instructions, go immediately to Page 6.
 
   \vfill
 \gentrisplitmath{
-  \probly{\jumpsover{
+  \bigprobly{\jumpsover{
       \scoot{s_1}}{
       \probly{\shadows{s_2}{\eyeO{u}}}}}}{
   \jumpsover{s}{
@@ -284,29 +275,30 @@ and follow the instructions, go immediately to Page 6.
   \vfill
 \gentrisplitmath{
   \tackles{
-    \eyeC{\scoot{u}}}{
+    \eyeC{\crawl{u}}}{
     \eyeC{\aboveU{t}}}}
   {\probly{
     \stepson{s_1}
-            {\eyeC{\scoot{s_2}}}}}
+            {\eyeC{\crawl{s_2}}}}}
   {\crawl{t}
   \:\dfrac{\pushes{\vee}{}}{\blows{\wedge}{}}\:u}
 
   \vfill
-\gensplitmath{
-  \flee{\crouch{\eyeC{u}}}}
-  {\dfrac{\pushes{s_1}{s_2}\:\:\pushes{s_3}{s_1}}
-         {\dfrac{\pushes{s_2}{s_3}}
-		{\pushes{s_3}{s_1}}
-          \dfrac{
-  	    \pushes{s_1}{s_2}
-	      \left(\begin{gathered}
-	        \tackles{s_1}{s_3}\\
-	        \jumpsover{s_2}{u}
-	      \end{gathered}\right)}
-      {\pushes{s_2}{s_3}}}}
+
+\gensplitmath{\flee{\scoot{\eyeC{u}}}}
+{\begin{array}{c}\begin{array}{c c}
+    \pushes{s_1}{s_2}&\pushes{s_3}{s_1}\\\hline
+    &\pushes{s_1}{s_2}\end{array}
+  \left(\begin{array}{c}\tackles{s_1}{s_3}\\
+    \jumpsover{s_2}{u}\end{array}\right)\\\:\:
+  {\renewcommand{\arraystretch}{0.5}
+    \begin{array}{l@{}p{8em}}
+      \pushes{s_2}{s_3}\,&\hrulefill\\
+      \hrulefill&\,\pushes{s_2}{s_3}\\
+      \pushes{s_3}{s_1}\,&\\\end{array}}\end{array}}
 
 \vfill
+
 \gentrisplitmath{
 	\left(
 	  \begin{gathered}
@@ -319,8 +311,40 @@ and follow the instructions, go immediately to Page 6.
 {\jumpsover{\left.\begin{gathered}
 	s\\
 	t
-\end{gathered}\right.}{u}}{}
+\end{gathered}\right.}{u}}{
+\dfrac{\dfrac{\dfrac{\eyeC{\crawl{s_1}}}
+                    {\aboveU{\eyeO{s_1}}} \: \shadows{u}{s_1}}
+	     {\eyeO{\scoot{s_1}}} \: \probly{\pushes{s_1}{s_2}}}
+      {\eyeO{\belowU{s}}} \: \eyeC{u}}
 
+\vfill
+
+\gentrisplitmath{\jumpsover{u}{\belowU{s_3}}}
+  {\left(\;\begin{array}{c}
+	  \jumpsover{\scoot{s_1}}{\eyeO{u} }\\
+  \shadows{s_2}{u}
+  \end{array}\;\right)}
+  {\eyeO{s_3}}
+
+\vfill
+\gensplitmath{\jumpsover{u}{\begin{array}{c}
+	\pushes{\eyeC{\belowU{s_1}}}{\eyeC{\belowU{a_1}}}\\
+	\pushes{\eyeC{\belowU{s_2}}}{\eyeC{\belowU{s_1}}}
+\end{array}}}{\jumpsover{\crouch{u}}{\probly{\shadows{s_1}{\eyeO{s_2}}}}}
+
+\vfill
+\gentrisplitmath{\jumpsover{t_1}{\pushes{t_2}{\scoot{u}}}}
+{\shadows{s}{\shadows{u}{s}}}
+{\left(\begin{array}{c}
+	\jumpsover{s_2}{u} \\ \hline
+	\tackles{s_1}{s_3} \\
+\jumpsover{s_2}{u}\end{array}\right)
+\begin{array}{c}
+	\jumpsover{u}{s_1} \\ \hline
+	\jumpsover{u}{s_3} \\
+	\\
+	\\
+\end{array}}
 \clearpage
 
 % \img{dissoceqns}
@@ -486,22 +510,18 @@ you. You must instantly jump aside.
 \item If you sense a massive touch going above your head, another touch 
 may be about to shove you from behind. Jump aside. 
 
-\begin{equation*}
-  \eyeC{u}\:\begin{gathered}
+  \[\eyeC{u}\:\begin{gathered}
     \jumpsover{t_1}{u}\\
     \probly{\pushes{t_2}{u}}
   \end{gathered}
-  \:\:\flee{u}
-\end{equation*}
+  \:\:\flee{u}\]
 
 \vfill
 \item If you have any time left over from following other instructions, 
 close your eyes and go around with your hands in front of you, shoving 
 touches whenever you feel them. 
 
-\begin{equation*}
-  \eyeC{u} \:\:\: \pushes{u}{t}
-\end{equation*}
+\[\eyeC{u} \:\:\: \pushes{u}{t}\]
 
 \vfill
 
@@ -520,9 +540,7 @@ your eyes.
 
 \textsc{Before you follow this instruction you must have mastered the preceeding instructions about closed eyes.}
 
-\begin{equation*}
-  \eyeO{u}\:\eyeO{s_2}\:\probly{\stepson{s_1}{s_2}}\:\eyeC{u}
-\end{equation*}
+\[\eyeO{u}\:\eyeO{s_2}\:\probly{\stepson{s_1}{s_2}}\:\eyeC{u}\]
 
 \vfill
 \textit{(Keep going) }
@@ -538,13 +556,11 @@ sight about to be tackled has \uline{closed eyes}, you must immediately shadow
 them. 
 
 \vfill
-\begin{equation*}
-  \eyeO{u}\dfrac{%
+  \[\eyeO{u}\dfrac{%
       \eyeO{s_2}\quad\probly{\tackles{s_1}{s_2}}\quad\jumpsover{u}{s_1 s_2}%
     }{%
       \eyeC{s_2}\quad\probly{\tackles{s_1}{s_2}}\quad\shadows{u}{s_2}%
-    }
-\end{equation*}
+    }\]
 
 \vfill
 \item If you see a sight about to push another with open eyes from 
@@ -555,13 +571,11 @@ sights.
 
 \vfill
 
-\begin{equation*}
-  \eyeO{u}\dfrac{%
+  \[\eyeO{u}\dfrac{%
     \eyeO{s_2}\quad\probly{\pushes{s_1}{s_2}}\quad\shadows{u}{s_2}
     }{%
       \eyeC{s_2}\quad\probly{\pushes{s_1}{s_2}}\quad\jumpsover{u}{s_1 s_2}
-    }
-\end{equation*}
+    }\]
 
 \end{enumerate}
 
@@ -740,7 +754,7 @@ stated in the most abbreviated form.
 
 \vfill
 
-\gensplit{1--3. \[
+{1--3. \parbox[t]{1.75in}{\[
 	\eyeO{\crouch{u}} \:\: 
 	\begin{array}{c}
 		\eyeC{s} \\
@@ -751,7 +765,7 @@ stated in the most abbreviated form.
 		\probly{\pushes{t_2}{u}}
 	\end{array}\:\:
 	\flee{u}
-\]\vfill}{4--7. \[
+\]\vskip 3.5em} 4--7. \parbox[t]{2.4in}{\[
 	\eyeC{\crouch{u}}\:\:
 	\dfrac{
 		\:\:
@@ -770,7 +784,7 @@ stated in the most abbreviated form.
 	    \probly{\pushes{t_2}{u}} \\
 	 \end{array}\qquad
 	 \flee{u}}
-\]}
+ \]}
 
 \vfill
 The biggest change comes next. 
@@ -804,13 +818,6 @@ them. You must be sensitive and judge heights with eyes closed.
 \]}
 \vfill
 
-10. \gensplit{The previous Instr. 10 applies if $s_2$ is near the ground, that is, it applies unless $s_2$ is too high for you to jump or shadow it.}{\[
-	\eyeC{\scoot{u}} \:\: \begin{array}{c c c}
-		\belowU{\eyeC{s_2}} & \probly{\tackles{s_1}{s_2}} & \jumpsover{u}{s_1 s_2} \\ \hline
-		\belowU{\eyeO{s_2}} & \probly{\tackles{s_1}{s_2}} & \shadows{u}{s_2}
-	\end{array}
-\]}
-
 \vfill
 (Keep going) 
 
@@ -819,10 +826,20 @@ them. You must be sensitive and judge heights with eyes closed.
 
 \vfill 
 
+10. \gensplit{The previous Instr. 10 applies if $s_2$ is near the ground, that is, it applies unless $s_2$ is too high for you to jump or shadow it.}{\[
+	\eyeC{\scoot{u}} \: \begin{array}{c c c}
+		\belowU{\eyeC{s_2}} & \probly{\tackles{s_1}{s_2}} & \jumpsover{u}{s_1 s_2} \\ \hline
+		\belowU{\eyeO{s_2}} & \probly{\tackles{s_1}{s_2}} & \shadows{u}{s_2}
+	\end{array}
+\]}
+
+\vfill 
+
 11. \gensplit{\[
 	\eyeC{\scoot{u}} \:\: \eyeC{s_2} \:\: \probly{\pushes{s_1}{s_2}} \:\: \blows{u}{s_2}
 \]}{The second half of the previous Instr. 11 is dropped. }
 
+\vfill 
 \vskip 1.5em
 Except for the instruction to tackle touches, the changes are simply 
 limitations to make the instructions feasible for $u\sfrac{1}{2}$. They should be easy 
@@ -840,6 +857,8 @@ If you can't carry out the instructions because all the components have
 vanished, the third phase is over. Turn to Page 14 and the fourth phase. 
 
 \vskip 1.5em
+
+\vfill 
 
 12. \gensplit{Adding to Instr. 8, if you have time left over, you may also keep 
 your eyes open and blow on sights. You may also shadow or jump over 
