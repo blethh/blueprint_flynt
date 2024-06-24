@@ -1,7 +1,10 @@
-\documentclass[10pt,twoside]{memoir}
+\documentclass[10pt,twoside,draft,openany]{book}
 
 \usepackage{salitter}
-\usletterlayout
+
+\usepackage[papersize={5.5in,8.5in},includeheadfoot=true,width=4.75in,height=7.8in
+]{geometry}
+
 
 \usepackage{mwe}
 \usepackage{amsmath}
@@ -13,18 +16,20 @@
 \usepackage{enumitem}
 \usepackage{tikz}
 \usetikzlibrary{calc}
-
+\usepackage[pagestyles]{titlesec}
+\usepackage{hanging}
 
 % fonts
 \newpxfont
 
-\newcommand{\tocline}{
-	\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}}
-\setlength\cftbeforepartskip{1.1em}
-\setlength\cftbeforechapterskip{0.5em}
 
-\renewcommand{\printpartname}{}
-\renewcommand{\parttitlefont}{\normalfont\Huge\scshape}
+% \newcommand{\tocline}{
+% 	\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}}
+% \setlength\cftbeforepartskip{1.1em}
+% \setlength\cftbeforechapterskip{0.5em}
+
+% \renewcommand{\printpartname}{}
+% \renewcommand{\parttitlefont}{\normalfont\Huge\scshape}
 
 % \usepackage{cabin}
 % \newfontfamily{\specialheadersfont}{Cabin}
@@ -37,7 +42,7 @@
 
 \newcommand\essaytitle[1]{\uline{#1}}
 
-\newcommand\gap{\plainbreak{2}}
+\newcommand\gap{\vskip 2em}
 
 \newcommand\inlineaside[1]{\textit{(#1)}}
 
@@ -60,12 +65,13 @@
 
 \newcommand\postulate[1]{\emph{Postulate #1}.}
 
-\newcommand\dreamdate[1]{\plainbreak{1}\uline{#1}\\}
-\newcommand\dreamdatecomment[2]{\plainbreak{1}\uline{#1} --- \textit{#2}\\}
+\newcommand\dreamdate[1]{\vskip 1em\uline{#1}\\}
+\newcommand\dreamdatecomment[2]{\vskip 1em \uline{#1} --- \textit{#2}\\}
 
 \newcommand\cubeframe{\includegraphics[width=1em]{img/cubeframe}}
 \newcommand\cubeup{\includegraphics[width=1em]{img/cubeup}}
 \newcommand\cubedown{\includegraphics[width=1em]{img/cubedown}}
+\newcommand\sysname[1]{\enquote{\textsc{#1}}}
 
 \newcommand\photopage[4]{
   \begin{figure}
@@ -79,18 +85,52 @@
 \begin{document}
 \frontmatter
 \graphicspath{{img/}}
-\pagestyle{ruled}
-\chapterstyle{tandh}
-\openany
+
+% for portions with section/chapter defined
+\newpagestyle{salpc}[]{
+	\sethead[\chaptertitle][][]{}{}{\sectiontitle}
+	\setfoot[\thepage][][]{}{}{\thepage}}
+
+\newcommand\partstyle[2]{
+	\newpagestyle{#1}[]{
+		\sethead[\textsc{#2}][][]{}{}{\chaptertitle}
+		\setfoot[\thepage][][]{}{}{\thepage}}}
+
+\partstyle{salpre}{Preface}
+\partstyle{salphil}{Philosophy}
+\partstyle{salest}{Esthetics}
+\partstyle{salps}{Para-Science}
+\partstyle{salnm}{The New Modality}
+\partstyle{salsp}{Social Philosophy}
+\partstyle{salsci}{Science (Logic)}
+\partstyle{salapp}{Appendix}
+\pagestyle{salpre}
+\setheadrule{.4pt}
+
+% \chapterstyle{tandh}
+
+
+% \openany
+% \sloppybottom
+\raggedbottom
 
 \renewcommand*{\thesection}{\Alph{section}}
 
-\renewcommand*{\cftpartfont}{\bfseries\scshape}
-\renewcommand*{\cftchapterfont}{\normalfont}
-\renewcommand*{\cftsectionfont}{\itshape}
+% \renewcommand*{\cftpartfont}{\bfseries\scshape}
+% \renewcommand*{\cftchapterfont}{\normalfont}
+% \renewcommand*{\cftsectionfont}{\itshape}
 % \setlength\beforechapskip{10pt}
-\renewcommand*{\chapterheadstart}{\vskip 1pt}
+% \renewcommand*{\chapterheadstart}{\vskip 1pt}
+\titleformat{\part}[block]{\scshape\Huge}{\centering\thepart\vskip 1em}{1em}{\centering}
 
+\titleformat{\chapter}[block]{\scshape\Large}{\itshape\thechapter}{1em}{}[\titlerule]
+\titlespacing*{\chapter}{2em}{2em}{3em}
+
+\titleformat{\subsection}[block]{\bfseries}{\itshape}{1em}{}
+
+\newcommand\CHAP[2]{
+	% construct toc, header, and page titles
+	\chapter{#1 #2}}
 
 \setlist{itemsep=3pt}
 \setlist{parsep=0pt}
@@ -123,6 +163,7 @@
 
 \clearpage
 
+\pagestyle{empty}
 \tableofcontents*
 
 \clearpage
@@ -133,7 +174,9 @@
 
 \mainmatter
 \part{Philosophy}
-\tocline
+\pagestyle{salphil}
+\setheadrule{.4pt}
+%\tocline
 \input{essays/flaws_underlying_beliefs.tex}
 \input{essays/walking_through_walls.tex}
 \input{essays/philosophical_reflections.tex}
@@ -143,7 +186,9 @@
 % primary study?
 
 \part{Esthetics}
-\tocline
+\pagestyle{salest}
+\setheadrule{.4pt}
+%\tocline
 \input{essays/down_with_art.tex}
 \input{essays/art_or_brend.tex}
 \input{essays/letters.tex}
@@ -152,14 +197,18 @@
 % \input{extra/poem_4.tex}
 
 \part{Para-science}
-\tocline
+\pagestyle{salps}
+\setheadrule{.4pt}
+%\tocline
 \input{essays/dissociation_physics.tex}
 \input{essays/mathematical_studies.tex}
-\input{essays/post_formalism_memories.tex}
+% \input{essays/post_formalism_memories.tex}
 \input{essays/studies_in_constructed_memories.tex}
 
 \part{The New Modality}
-\tocline
+\pagestyle{salnm}
+\setheadrule{.4pt}
+%\tocline
 \input{essays/energy_cube1966.tex}
 \input{essays/energy_cube1961.tex}
 \input{essays/concept_art.tex}
@@ -169,13 +218,17 @@
 \input{essays/dream_reality.tex}
 
 \part{Social Philosophy}
-\tocline
+%\tocline
+\pagestyle{salsp}
+\setheadrule{.4pt}
 \input{essays/social_recognition.tex}
 \input{essays/creep.tex}
 \input{essays/three_levels_of_politics.tex}
 
 \part{Science (Logic)}
-\tocline
+\pagestyle{salsci}
+\setheadrule{.4pt}
+%\tocline
 \input{essays/admissible_contradictions.tex}
 \input{essays/propositional_vibration.tex}
 % \input{extra/repressed_content.tex}
@@ -183,7 +236,9 @@
 
 \backmatter
 \part{Appendix}
-\tocline
+%\tocline
+\pagestyle{salapp}
+\setheadrule{.4pt}
 \input{extra/structure_art_pure_mathematics.tex}
 \input{extra/misleading_newness.tex}
 \input{extra/anthology_non_philosophical.tex}
