@@ -18,21 +18,10 @@
 \usetikzlibrary{calc}
 \usepackage[pagestyles]{titlesec}
 \usepackage{hanging}
+\usepackage{screed}
 
 % fonts
 \newpxfont
-
-
-% \newcommand{\tocline}{
-% 	\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}}
-% \setlength\cftbeforepartskip{1.1em}
-% \setlength\cftbeforechapterskip{0.5em}
-
-% \renewcommand{\printpartname}{}
-% \renewcommand{\parttitlefont}{\normalfont\Huge\scshape}
-
-% \usepackage{cabin}
-% \newfontfamily{\specialheadersfont}{Cabin}
 
 \newcommand\speech[1]{
 	\textquote{\emph{#1}}}
@@ -82,55 +71,15 @@
     { \raggedleft \itshape (photo by #4) \par }
   \end{figure}}
 
-\begin{document}
+\LETSGOOOO
+
 \frontmatter
 \graphicspath{{img/}}
 
-% for portions with section/chapter defined
-\newpagestyle{salpc}[]{
-	\sethead[\chaptertitle][][]{}{}{\sectiontitle}
-	\setfoot[\thepage][][]{}{}{\thepage}}
-
-\newcommand\partstyle[2]{
-	\newpagestyle{#1}[]{
-		\sethead[\textsc{#2}][][]{}{}{\chaptertitle}
-		\setfoot[\thepage][][]{}{}{\thepage}}}
-
-\partstyle{salpre}{Preface}
-\partstyle{salphil}{Philosophy}
-\partstyle{salest}{Esthetics}
-\partstyle{salps}{Para-Science}
-\partstyle{salnm}{The New Modality}
-\partstyle{salsp}{Social Philosophy}
-\partstyle{salsci}{Science (Logic)}
-\partstyle{salapp}{Appendix}
-\pagestyle{salpre}
-\setheadrule{.4pt}
-
-% \chapterstyle{tandh}
-
-
-% \openany
-% \sloppybottom
 \raggedbottom
 
 \renewcommand*{\thesection}{\Alph{section}}
 
-% \renewcommand*{\cftpartfont}{\bfseries\scshape}
-% \renewcommand*{\cftchapterfont}{\normalfont}
-% \renewcommand*{\cftsectionfont}{\itshape}
-% \setlength\beforechapskip{10pt}
-% \renewcommand*{\chapterheadstart}{\vskip 1pt}
-\titleformat{\part}[block]{\scshape\Huge}{\centering\thepart\vskip 1em}{1em}{\centering}
-
-\titleformat{\chapter}[block]{\scshape\Large}{\itshape\thechapter}{1em}{}[\titlerule]
-\titlespacing*{\chapter}{2em}{2em}{3em}
-
-\titleformat{\subsection}[block]{\bfseries}{\itshape}{1em}{}
-
-\newcommand\CHAP[2]{
-	% construct toc, header, and page titles
-	\chapter{#1 #2}}
 
 \setlist{itemsep=3pt}
 \setlist{parsep=0pt}
@@ -173,10 +122,7 @@
 \clearpage
 
 \mainmatter
-\part{Philosophy}
-\pagestyle{salphil}
-\setheadrule{.4pt}
-%\tocline
+\Prt{Philosophy}
 \input{essays/flaws_underlying_beliefs.tex}
 \input{essays/walking_through_walls.tex}
 \input{essays/philosophical_reflections.tex}
@@ -185,10 +131,7 @@
 \input{essays/philosophy_proper.tex}
 % primary study?
 
-\part{Esthetics}
-\pagestyle{salest}
-\setheadrule{.4pt}
-%\tocline
+\Prt{Esthetics}
 \input{essays/down_with_art.tex}
 \input{essays/art_or_brend.tex}
 \input{essays/letters.tex}
@@ -196,18 +139,15 @@
 % \input{extra/poem_1.tex}
 % \input{extra/poem_4.tex}
 
-\part{Para-science}
-\pagestyle{salps}
-\setheadrule{.4pt}
-%\tocline
+\Prt{Para-science}
 \input{essays/dissociation_physics.tex}
 \input{essays/mathematical_studies.tex}
 % \input{essays/post_formalism_memories.tex}
 \input{essays/studies_in_constructed_memories.tex}
 
-\part{The New Modality}
-\pagestyle{salnm}
-\setheadrule{.4pt}
+\end{document}
+
+\Prt{The New Modality}
 %\tocline
 \input{essays/energy_cube1966.tex}
 \input{essays/energy_cube1961.tex}
@@ -217,28 +157,20 @@
 \input{essays/mock_risk_games.tex}
 \input{essays/dream_reality.tex}
 
-\part{Social Philosophy}
-%\tocline
-\pagestyle{salsp}
-\setheadrule{.4pt}
+\Prt{Social Philosophy}
 \input{essays/social_recognition.tex}
 \input{essays/creep.tex}
 \input{essays/three_levels_of_politics.tex}
 
-\part{Science (Logic)}
-\pagestyle{salsci}
-\setheadrule{.4pt}
-%\tocline
+\Prt{Science (Logic)}
 \input{essays/admissible_contradictions.tex}
 \input{essays/propositional_vibration.tex}
 % \input{extra/repressed_content.tex}
 % \input{extra/apprehension_of_plurality.tex}
 
 \backmatter
-\part{Appendix}
+\Prt{Appendix}
 %\tocline
-\pagestyle{salapp}
-\setheadrule{.4pt}
 \input{extra/structure_art_pure_mathematics.tex}
 \input{extra/misleading_newness.tex}
 \input{extra/anthology_non_philosophical.tex}

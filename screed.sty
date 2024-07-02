@@ -1,0 +1,49 @@
+% making latex actually work for me
+% === counters
+
+% === toc primitives
+\newcommand\rTocChp[1]{Ignore me}
+\newcommand\rTocPrt[1]{Ignore me}
+
+% === header primitives
+\newcommand\rHdrChp[1]{Ignore me}
+\newcommand\rHdrPrt[1]{Ignore me}
+
+% === page primitives
+\newcommand\rPageChp[1]{
+Page Chapter: #1}% {\raggedleft \parbox{3in}{ {\Large \value{ThaChp} --- } \parbox{2.5in}{ \raggedleft \itshape #1}}\par}}
+
+\newcommand\rPagePrt[1]{
+	{\centering
+		{\Large \Roman{\value{ThaPrt}}
+
+		{\large \scshape #1 } \par}}}
+% === divisions
+% --- Prt / part
+\newcommand\Prt[3]{
+	\stepcounter{ThaPrt}
+	\rPagePrt{#1}
+	\rTocPrt{#2}
+	\rHdrPrt{#3}
+	\stepcounter{ThaPrt}}
+
+% --- Chp / chapter
+\newcommand\Chp[3]{
+	\stepcounter{ThaChp}
+	\rPageChp{#1}
+	\rTocChp{#1}
+	\rHdrChp{#1}}
+
+% --- Sec / section
+% --- Ssc / subsection
+
+% ==== other screedshit
+\newcommand\stress[1]{\textbf{#1}}
+
+% === initshit
+\newcommand\LETSGOOOO{
+	\begin{document}
+
+	% initialize counters
+	\newcounter{ThaPrt}
+	\newcounter{ThaChp}{ThaPrt}}
